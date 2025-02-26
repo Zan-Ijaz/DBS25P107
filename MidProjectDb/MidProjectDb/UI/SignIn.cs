@@ -20,9 +20,9 @@ namespace MidProjectDb.UI
         private void signup_btn_Click(object sender, EventArgs e)
         {
             Signup signupform = new Signup();
-            signupform.Show();
             signupform.Size = this.Size;
             signupform.Location = this.Location;
+            signupform.Show();
             this.Close();
         }
 

@@ -64,6 +64,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Consumeable.cs" />
+    <Compile Include="BL\Course.cs" />
+    <Compile Include="BL\CourseSechdule.cs" />
+    <Compile Include="BL\Faculty.cs" />
+    <Compile Include="BL\Facultyadmin.cs" />
+    <Compile Include="BL\Facultycourse.cs" />
+    <Compile Include="BL\Facultyroom.cs" />
+    <Compile Include="BL\Semester.cs" />
+    <Compile Include="BL\Facultyproject.cs" />
+    <Compile Include="BL\FacultyRequestid.cs" />
     <Compile Include="UI\firstinterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +89,9 @@
     <Compile Include="UI\Forgotpassword.Designer.cs">
       <DependentUpon>Forgotpassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="BL\Lookup.cs" />
+    <Compile Include="BL\Project.cs" />
+    <Compile Include="BL\Room.cs" />
     <Compile Include="UI\SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +104,7 @@
     <Compile Include="UI\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="BL\User.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
