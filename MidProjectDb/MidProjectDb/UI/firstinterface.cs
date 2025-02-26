@@ -26,5 +26,14 @@ namespace MidProjectDb
             signinform.Location = this.Location;
             this.Close();
         }
+
+        private void Signup_btn_Click(object sender, EventArgs e)
+        {
+            Signup signupform = new Signup();
+            signupform.Show();
+            signupform.Size = this.Size;
+            signupform.Location = this.Location;
+            this.Close();
+        }
     }
 }
