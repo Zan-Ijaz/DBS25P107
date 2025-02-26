@@ -16,7 +16,9 @@ namespace MidProjectDb
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            firstinterface form1 = new firstinterface();
+            form1.Show();
+            Application.Run();
         }
     }
 }
