@@ -64,7 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\Consumeable.cs" />
+    <Compile Include="BL\Consumable.cs" />
     <Compile Include="BL\Course.cs" />
     <Compile Include="BL\CourseSechdule.cs" />
     <Compile Include="BL\Faculty.cs" />
@@ -73,7 +73,7 @@
     <Compile Include="BL\Facultyroom.cs" />
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
-    <Compile Include="BL\FacultyRequestid.cs" />
+    <Compile Include="BL\FacultyRequest.cs" />
     <Compile Include="UI\firstinterface.cs">
       <SubType>Form</SubType>
     </Compile>

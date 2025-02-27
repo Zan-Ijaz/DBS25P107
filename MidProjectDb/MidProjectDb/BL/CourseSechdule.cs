@@ -18,5 +18,17 @@ namespace MidProjectDb.BL
         public day day { get; set; }
         public DateTime starttime { get; set; }
         public DateTime Endtime { get; set; }
+
+        public CourseSechdule(int sechduleid, int? facultycourseid, int? roomid, Facultycourse facultycourse, Room room, day day, DateTime starttime, DateTime endtime)
+        {
+            Sechduleid = sechduleid;
+            this.facultycourseid = facultycourseid;
+            this.roomid = roomid;
+            this.facultycourse = facultycourse;
+            this.room = room;
+            this.day = day;
+            this.starttime = starttime;
+            Endtime = endtime;
+        }
     }
 }

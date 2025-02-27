@@ -17,6 +17,16 @@ namespace MidProjectDb.UI
 
         public int? UserId { get; set; }    
         public User FacultyUser { get; set; }
-
+        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int? userId, User facultyUser)
+        {
+            FacultyId = facultyId;
+            Name = name;
+            Email = email;
+            Contact = contact;
+            ResearchArea = researchArea;
+            TotalTeachingHours = totalTeachingHours;
+            UserId = userId;
+            FacultyUser = facultyUser;
+        }
     }
 }

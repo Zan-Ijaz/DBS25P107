@@ -14,6 +14,15 @@ namespace MidProjectDb.BL
         public string RoleName { get; set; }      
         public int? SemesterId { get; set; }              
         public Faculty Faculty { get; set; }     
-        public Semester Semester { get; set; }    
+        public Semester Semester { get; set; } 
+        public FacultyAdminRole(int adminRoleId, int? facultyId, string roleName, int? semesterId, Faculty faculty, Semester semester)
+        {
+            AdminRoleId = adminRoleId;
+            FacultyId = facultyId;
+            RoleName = roleName;
+            SemesterId = semesterId;
+            Faculty = faculty;
+            Semester = semester;
+        }
     }
 }

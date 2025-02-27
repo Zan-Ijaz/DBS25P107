@@ -18,5 +18,16 @@ namespace MidProjectDb.UI
         public Faculty facultymember { get; set; }
         public Semester Semester { get; set; }
         public Project project { get; set; }
+        public Facultyproject(int facultyprojectid, int supervisionhours, int? facultyid, int? projectid, int? semsterid, Faculty facultymember, Semester semester, Project project)
+        {
+            this.facultyprojectid = facultyprojectid;
+            this.supervisionhours = supervisionhours;
+            this.facultyid = facultyid;
+            this.projectid = projectid;
+            this.semsterid = semsterid;
+            this.facultymember = facultymember;
+            Semester = semester;
+            this.project = project;
+        }
     }
 }

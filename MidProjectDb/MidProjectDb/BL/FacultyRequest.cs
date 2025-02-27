@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MidProjectDb.BL;
 using MidProjectDb.BL.MidProjectDb.BL;
 
 namespace MidProjectDb.UI
 {
-    public class FacultyRequestid
+    public class FacultyRequest
     {
         public int requestid { get; set; }
         public int? facultyid { get; set; }
