@@ -18,6 +18,10 @@ namespace MidProjectDb.UI
         }
         private void Next_btn_Click_1(object sender, EventArgs e)
         {
+            SetPassword passwordform = new SetPassword();
+            passwordform.Show();
+            passwordform.Size = this.Size;
+            passwordform.Location = this.Location;
             this.Close();
         }
 

@@ -16,5 +16,14 @@ namespace MidProjectDb.UI
         {
             InitializeComponent();
         }
+
+        private void Update_btn_Click(object sender, EventArgs e)
+        {
+            FacultyManagement management = new FacultyManagement();
+            management.Show();
+            management.Size = this.Size;
+            management.Location = this.Location;
+            this.Close();
+        }
     }
 }

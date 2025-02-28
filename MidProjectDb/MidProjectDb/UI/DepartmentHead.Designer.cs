@@ -34,12 +34,14 @@
             this.Assignworkload_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Department_lbl = new System.Windows.Forms.Label();
+            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.logout_btn);
             this.panel1.Controls.Add(this.Allocation_btn);
             this.panel1.Controls.Add(this.Approvereq_btn);
             this.panel1.Controls.Add(this.Assignworkload_btn);
@@ -61,7 +63,7 @@
             this.Allocation_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Allocation_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Allocation_btn.ForeColor = System.Drawing.Color.White;
-            this.Allocation_btn.Location = new System.Drawing.Point(162, 345);
+            this.Allocation_btn.Location = new System.Drawing.Point(162, 334);
             this.Allocation_btn.Name = "Allocation_btn";
             this.Allocation_btn.Size = new System.Drawing.Size(496, 45);
             this.Allocation_btn.TabIndex = 8;
@@ -78,7 +80,7 @@
             this.Approvereq_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Approvereq_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Approvereq_btn.ForeColor = System.Drawing.Color.White;
-            this.Approvereq_btn.Location = new System.Drawing.Point(162, 263);
+            this.Approvereq_btn.Location = new System.Drawing.Point(162, 258);
             this.Approvereq_btn.Name = "Approvereq_btn";
             this.Approvereq_btn.Size = new System.Drawing.Size(496, 45);
             this.Approvereq_btn.TabIndex = 7;
@@ -123,6 +125,23 @@
             this.Department_lbl.TabIndex = 1;
             this.Department_lbl.Text = "Department Head";
             // 
+            // logout_btn
+            // 
+            this.logout_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.logout_btn.BorderRadius = 20;
+            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(162, 405);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(496, 45);
+            this.logout_btn.TabIndex = 9;
+            this.logout_btn.Text = "Logout";
+            // 
             // DepartmentHead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,5 +166,6 @@
         private Guna.UI2.WinForms.Guna2Button Approvereq_btn;
         private Guna.UI2.WinForms.Guna2Button Assignworkload_btn;
         private Guna.UI2.WinForms.Guna2Button Allocation_btn;
+        private Guna.UI2.WinForms.Guna2Button logout_btn;
     }
 }

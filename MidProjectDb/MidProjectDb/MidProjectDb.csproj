@@ -80,6 +80,12 @@
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
     <Compile Include="BL\FacultyRequest.cs" />
+    <Compile Include="UI\Addfaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Addfaculty.Designer.cs">
+      <DependentUpon>Addfaculty.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdministrativeStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +98,17 @@
     <Compile Include="UI\DepartmentHead.Designer.cs">
       <DependentUpon>DepartmentHead.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Faculty Members.cs">
+    <Compile Include="UI\Faculty_Members.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Faculty Members.Designer.cs">
-      <DependentUpon>Faculty Members.cs</DependentUpon>
+    <Compile Include="UI\Faculty_Members.Designer.cs">
+      <DependentUpon>Faculty_Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FacultyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FacultyManagement.Designer.cs">
+      <DependentUpon>FacultyManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\firstinterface.cs">
       <SubType>Form</SubType>
@@ -145,14 +157,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Addfaculty.resx">
+      <DependentUpon>Addfaculty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AdministrativeStaff.resx">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DepartmentHead.resx">
       <DependentUpon>DepartmentHead.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Faculty Members.resx">
-      <DependentUpon>Faculty Members.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Faculty_Members.resx">
+      <DependentUpon>Faculty_Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FacultyManagement.resx">
+      <DependentUpon>FacultyManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\firstinterface.resx">
       <DependentUpon>firstinterface.cs</DependentUpon>
