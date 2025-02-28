@@ -16,5 +16,18 @@ namespace MidProjectDb.UI
         {
             InitializeComponent();
         }
+        private void Next_btn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Signin_btn_Click(object sender, EventArgs e)
+        {
+            SignIn signinform = new SignIn();
+            signinform.Show();
+            signinform.Size = this.Size;
+            signinform.Location = this.Location;
+            this.Close();
+        }
     }
 }

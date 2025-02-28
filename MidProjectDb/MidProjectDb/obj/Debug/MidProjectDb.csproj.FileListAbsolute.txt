@@ -1,14 +1,10 @@
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\MidProjectDb.exe
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\MidProjectDb.exe.config
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\MidProjectDb.exe
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\MidProjectDb.pdb
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\Microsoft.ReportViewer.Design.dll
@@ -20,6 +16,9 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\stdole.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
@@ -30,8 +29,10 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\fr\Microsoft.ReportViewer
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
@@ -55,6 +56,7 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHT\Microsoft.ReportVi
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.csproj.AssemblyReference.cache
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.Properties.Resources.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.firstinterface.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Forgotpassword.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SignIn.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Signup.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.csproj.GenerateResource.cache
@@ -62,5 +64,8 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.csproj.CoreC
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProje.645C474E.Up2Date
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.exe
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.pdb
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\MidProjectDb.pdb
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Forgotpassword.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.DepartmentHead.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SetPassword.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\Guna.UI2.dll
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdministrativeStaff.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Faculty_Members.resources

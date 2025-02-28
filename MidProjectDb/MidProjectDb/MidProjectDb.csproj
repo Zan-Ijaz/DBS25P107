@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -53,6 +56,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +80,24 @@
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
     <Compile Include="BL\FacultyRequest.cs" />
+    <Compile Include="UI\AdministrativeStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdministrativeStaff.Designer.cs">
+      <DependentUpon>AdministrativeStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DepartmentHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DepartmentHead.Designer.cs">
+      <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Faculty Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Faculty Members.Designer.cs">
+      <DependentUpon>Faculty Members.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\firstinterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +116,12 @@
     <Compile Include="BL\Lookup.cs" />
     <Compile Include="BL\Project.cs" />
     <Compile Include="BL\Room.cs" />
+    <Compile Include="UI\SetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SetPassword.Designer.cs">
+      <DependentUpon>SetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +143,25 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\AdministrativeStaff.resx">
+      <DependentUpon>AdministrativeStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DepartmentHead.resx">
+      <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Faculty Members.resx">
+      <DependentUpon>Faculty Members.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\firstinterface.resx">
       <DependentUpon>firstinterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forgotpassword.resx">
       <DependentUpon>Forgotpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SetPassword.resx">
+      <DependentUpon>SetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
@@ -141,6 +184,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\moonknight.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

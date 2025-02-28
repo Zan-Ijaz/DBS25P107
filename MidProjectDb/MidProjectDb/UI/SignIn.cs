@@ -16,8 +16,7 @@ namespace MidProjectDb.UI
         {
             InitializeComponent();
         }
-
-        private void signup_btn_Click(object sender, EventArgs e)
+        private void Signup_btn_Click_1(object sender, EventArgs e)
         {
             Signup signupform = new Signup();
             signupform.Size = this.Size;
@@ -26,13 +25,18 @@ namespace MidProjectDb.UI
             this.Close();
         }
 
-        private void forgotpassword_btn_Click(object sender, EventArgs e)
+        private void forgot_btn_Click(object sender, EventArgs e)
         {
             Forgotpassword forgotform = new Forgotpassword();
             forgotform.Show();
             forgotform.Size = this.Size;
             forgotform.Location = this.Location;
             this.Close();
+        }
+
+        private void Next_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
