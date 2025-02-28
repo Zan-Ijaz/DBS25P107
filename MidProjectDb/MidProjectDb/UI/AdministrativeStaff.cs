@@ -25,5 +25,23 @@ namespace MidProjectDb.UI
             management.Location = this.Location;
             this.Close();
         }
+
+        private void Courseallocation_btn_Click(object sender, EventArgs e)
+        {
+            CourseAllocationfirst course = new CourseAllocationfirst();
+            course.Show();
+            course.Size = this.Size;
+            course.Location = this.Location;
+            this.Close();
+        }
+
+        private void ManageCourse_btn_Click(object sender, EventArgs e)
+        {
+            ManageCourse manageCourse = new ManageCourse();
+            manageCourse.Show();
+            manageCourse.Size = this.Size;
+            manageCourse.Location = this.Location;
+            this.Close();
+        }
     }
 }

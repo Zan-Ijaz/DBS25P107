@@ -29,18 +29,28 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Consumeable_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.room_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Semester_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Project_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.ManageCourse_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Processfaculty_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Courseallocation_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AdminStaff_lbl = new System.Windows.Forms.Label();
-            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.Consumeable_btn);
+            this.guna2Panel1.Controls.Add(this.room_btn);
+            this.guna2Panel1.Controls.Add(this.Semester_btn);
+            this.guna2Panel1.Controls.Add(this.Project_btn);
+            this.guna2Panel1.Controls.Add(this.ManageCourse_btn);
             this.guna2Panel1.Controls.Add(this.logout_btn);
             this.guna2Panel1.Controls.Add(this.Processfaculty_btn);
             this.guna2Panel1.Controls.Add(this.Courseallocation_btn);
@@ -49,8 +59,111 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(800, 450);
+            this.guna2Panel1.Size = new System.Drawing.Size(800, 508);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // Consumeable_btn
+            // 
+            this.Consumeable_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Consumeable_btn.BorderRadius = 20;
+            this.Consumeable_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Consumeable_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Consumeable_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Consumeable_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Consumeable_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Consumeable_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Consumeable_btn.ForeColor = System.Drawing.Color.White;
+            this.Consumeable_btn.Location = new System.Drawing.Point(465, 387);
+            this.Consumeable_btn.Name = "Consumeable_btn";
+            this.Consumeable_btn.Size = new System.Drawing.Size(253, 45);
+            this.Consumeable_btn.TabIndex = 16;
+            this.Consumeable_btn.Text = "Update Consumables";
+            // 
+            // room_btn
+            // 
+            this.room_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.room_btn.BorderRadius = 20;
+            this.room_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.room_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.room_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.room_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.room_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.room_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room_btn.ForeColor = System.Drawing.Color.White;
+            this.room_btn.Location = new System.Drawing.Point(31, 387);
+            this.room_btn.Name = "room_btn";
+            this.room_btn.Size = new System.Drawing.Size(253, 45);
+            this.room_btn.TabIndex = 15;
+            this.room_btn.Text = "Add rooms";
+            // 
+            // Semester_btn
+            // 
+            this.Semester_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Semester_btn.BorderRadius = 20;
+            this.Semester_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Semester_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Semester_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Semester_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Semester_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Semester_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Semester_btn.ForeColor = System.Drawing.Color.White;
+            this.Semester_btn.Location = new System.Drawing.Point(465, 320);
+            this.Semester_btn.Name = "Semester_btn";
+            this.Semester_btn.Size = new System.Drawing.Size(253, 45);
+            this.Semester_btn.TabIndex = 14;
+            this.Semester_btn.Text = "Update Semesters";
+            // 
+            // Project_btn
+            // 
+            this.Project_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Project_btn.BorderRadius = 20;
+            this.Project_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Project_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Project_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Project_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Project_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Project_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Project_btn.ForeColor = System.Drawing.Color.White;
+            this.Project_btn.Location = new System.Drawing.Point(465, 245);
+            this.Project_btn.Name = "Project_btn";
+            this.Project_btn.Size = new System.Drawing.Size(253, 45);
+            this.Project_btn.TabIndex = 13;
+            this.Project_btn.Text = "Manage Projects";
+            // 
+            // ManageCourse_btn
+            // 
+            this.ManageCourse_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ManageCourse_btn.BorderRadius = 20;
+            this.ManageCourse_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ManageCourse_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ManageCourse_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ManageCourse_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ManageCourse_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.ManageCourse_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageCourse_btn.ForeColor = System.Drawing.Color.White;
+            this.ManageCourse_btn.Location = new System.Drawing.Point(465, 169);
+            this.ManageCourse_btn.Name = "ManageCourse_btn";
+            this.ManageCourse_btn.Size = new System.Drawing.Size(253, 45);
+            this.ManageCourse_btn.TabIndex = 12;
+            this.ManageCourse_btn.Text = "Manage Courses";
+            this.ManageCourse_btn.Click += new System.EventHandler(this.ManageCourse_btn_Click);
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.logout_btn.BorderRadius = 20;
+            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(121, 451);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(496, 45);
+            this.logout_btn.TabIndex = 11;
+            this.logout_btn.Text = "Logout";
             // 
             // Processfaculty_btn
             // 
@@ -63,9 +176,9 @@
             this.Processfaculty_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Processfaculty_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Processfaculty_btn.ForeColor = System.Drawing.Color.White;
-            this.Processfaculty_btn.Location = new System.Drawing.Point(127, 319);
+            this.Processfaculty_btn.Location = new System.Drawing.Point(31, 320);
             this.Processfaculty_btn.Name = "Processfaculty_btn";
-            this.Processfaculty_btn.Size = new System.Drawing.Size(496, 45);
+            this.Processfaculty_btn.Size = new System.Drawing.Size(253, 45);
             this.Processfaculty_btn.TabIndex = 10;
             this.Processfaculty_btn.Text = "Process Faculty Request";
             // 
@@ -80,11 +193,12 @@
             this.Courseallocation_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Courseallocation_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Courseallocation_btn.ForeColor = System.Drawing.Color.White;
-            this.Courseallocation_btn.Location = new System.Drawing.Point(127, 245);
+            this.Courseallocation_btn.Location = new System.Drawing.Point(31, 245);
             this.Courseallocation_btn.Name = "Courseallocation_btn";
-            this.Courseallocation_btn.Size = new System.Drawing.Size(496, 45);
+            this.Courseallocation_btn.Size = new System.Drawing.Size(253, 45);
             this.Courseallocation_btn.TabIndex = 9;
             this.Courseallocation_btn.Text = "Manage Course Allocations";
+            this.Courseallocation_btn.Click += new System.EventHandler(this.Courseallocation_btn_Click);
             // 
             // Update_btn
             // 
@@ -97,9 +211,9 @@
             this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update_btn.ForeColor = System.Drawing.Color.White;
-            this.Update_btn.Location = new System.Drawing.Point(127, 169);
+            this.Update_btn.Location = new System.Drawing.Point(31, 169);
             this.Update_btn.Name = "Update_btn";
-            this.Update_btn.Size = new System.Drawing.Size(496, 45);
+            this.Update_btn.Size = new System.Drawing.Size(253, 45);
             this.Update_btn.TabIndex = 8;
             this.Update_btn.Text = "Update faculty profiles";
             this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
@@ -128,28 +242,11 @@
             this.AdminStaff_lbl.TabIndex = 1;
             this.AdminStaff_lbl.Text = "Administrative Staff";
             // 
-            // logout_btn
-            // 
-            this.logout_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.logout_btn.BorderRadius = 20;
-            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(127, 393);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(496, 45);
-            this.logout_btn.TabIndex = 11;
-            this.logout_btn.Text = "Logout";
-            // 
             // AdministrativeStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 508);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "AdministrativeStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -170,5 +267,10 @@
         private Guna.UI2.WinForms.Guna2Button Update_btn;
         private Guna.UI2.WinForms.Guna2Button Processfaculty_btn;
         private Guna.UI2.WinForms.Guna2Button logout_btn;
+        private Guna.UI2.WinForms.Guna2Button Project_btn;
+        private Guna.UI2.WinForms.Guna2Button ManageCourse_btn;
+        private Guna.UI2.WinForms.Guna2Button Semester_btn;
+        private Guna.UI2.WinForms.Guna2Button Consumeable_btn;
+        private Guna.UI2.WinForms.Guna2Button room_btn;
     }
 }

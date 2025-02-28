@@ -109,3 +109,8 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\System.Memory.xml
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\System.Numerics.Vectors.xml
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.CourseAllocationfirst.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.FacultyRequest.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ManageCourse.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ManageProducts.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.UpdateSem.resources

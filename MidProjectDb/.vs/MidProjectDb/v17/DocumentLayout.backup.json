@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\Codes\\DBS25P107\\MidProjectDb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\courseallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\courseallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\courseallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\courseallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\bl\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\updatesem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\updatesem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\administrativestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\administrativestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\managecourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\managecourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\codes\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\manageproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\manageproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Codes\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\faculty_members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\faculty_members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Codes\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\departmenthead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\departmenthead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,77 +46,74 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\BL\\DatabaseHelper.cs",
-              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\DatabaseHelper.cs",
-              "RelativeToolTip": "MidProjectDb\\BL\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UpdateSem.cs [Design]",
+              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\UpdateSem.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\UpdateSem.cs",
+              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\UpdateSem.cs [Design]*",
+              "RelativeToolTip": "MidProjectDb\\UI\\UpdateSem.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:57:52.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourseAllocation.cs",
-              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\CourseAllocation.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\CourseAllocation.cs",
-              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\CourseAllocation.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\CourseAllocation.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAApwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:53:10.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Signup.cs",
-              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Signup.cs",
-              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\Signup.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAD4vxQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:22:08.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T20:30:29.143Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Signup.cs [Design]",
-              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Signup.cs",
-              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs [Design]",
-              "RelativeToolTip": "MidProjectDb\\UI\\Signup.cs [Design]",
+              "Title": "ManageProducts.cs [Design]",
+              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageProducts.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\ManageProducts.cs",
+              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageProducts.cs [Design]",
+              "RelativeToolTip": "MidProjectDb\\UI\\ManageProducts.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:22:05.387Z",
+              "WhenOpened": "2025-02-28T20:23:22.183Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CourseAllocation.cs [Design]",
-              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\CourseAllocation.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\CourseAllocation.cs",
-              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\CourseAllocation.cs [Design]",
-              "RelativeToolTip": "MidProjectDb\\UI\\CourseAllocation.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "ManageCourse.cs [Design]",
+              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageCourse.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\ManageCourse.cs",
+              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageCourse.cs [Design]",
+              "RelativeToolTip": "MidProjectDb\\UI\\ManageCourse.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:20:13.478Z",
+              "WhenOpened": "2025-02-28T20:13:51.392Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "AdministrativeStaff.cs [Design]",
               "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdministrativeStaff.cs",
               "RelativeDocumentMoniker": "MidProjectDb\\UI\\AdministrativeStaff.cs",
               "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdministrativeStaff.cs [Design]",
               "RelativeToolTip": "MidProjectDb\\UI\\AdministrativeStaff.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T16:19:53.183Z",
+              "WhenOpened": "2025-02-28T20:02:18.647Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DepartmentHead.cs [Design]",
+              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\DepartmentHead.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\DepartmentHead.cs",
+              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\DepartmentHead.cs [Design]",
+              "RelativeToolTip": "MidProjectDb\\UI\\DepartmentHead.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T19:56:51.206Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Faculty_Members.cs [Design]",
+              "DocumentMoniker": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Faculty_Members.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Faculty_Members.cs",
+              "ToolTip": "D:\\Codes\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Faculty_Members.cs [Design]",
+              "RelativeToolTip": "MidProjectDb\\UI\\Faculty_Members.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T19:56:49.537Z",
               "EditorCaption": " [Design]"
             }
           ]

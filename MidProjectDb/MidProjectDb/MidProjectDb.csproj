@@ -137,16 +137,21 @@
     <Compile Include="BL\Faculty.cs" />
     <Compile Include="BL\Facultyadmin.cs" />
     <Compile Include="BL\Facultycourse.cs" />
+    <Compile Include="BL\FacultyReq.cs" />
     <Compile Include="BL\Facultyroom.cs" />
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
-    <Compile Include="BL\FacultyRequest.cs" />
-    <Compile Include="DL\FacultyDL.cs" />
     <Compile Include="UI\AdministrativeStaff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\AdministrativeStaff.Designer.cs">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consumeables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consumeables.Designer.cs">
+      <DependentUpon>Consumeables.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CourseAllocation.cs">
       <SubType>Form</SubType>
@@ -154,11 +159,23 @@
     <Compile Include="UI\CourseAllocation.Designer.cs">
       <DependentUpon>CourseAllocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CourseAllocationfirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CourseAllocationfirst.Designer.cs">
+      <DependentUpon>CourseAllocationfirst.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DepartmentHead.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\DepartmentHead.Designer.cs">
       <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FacultyRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FacultyRequest.Designer.cs">
+      <DependentUpon>FacultyRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Faculty_Members.cs">
       <SubType>Form</SubType>
@@ -184,6 +201,24 @@
     <Compile Include="BL\Lookup.cs" />
     <Compile Include="BL\Project.cs" />
     <Compile Include="BL\Room.cs" />
+    <Compile Include="UI\ManageCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManageCourse.Designer.cs">
+      <DependentUpon>ManageCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManageProducts.Designer.cs">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Rooms.Designer.cs">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +238,12 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\User.cs" />
+    <Compile Include="UI\UpdateSem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateSem.Designer.cs">
+      <DependentUpon>UpdateSem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserInputs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,11 +263,20 @@
     <EmbeddedResource Include="UI\AdministrativeStaff.resx">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consumeables.resx">
+      <DependentUpon>Consumeables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CourseAllocation.resx">
       <DependentUpon>CourseAllocation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CourseAllocationfirst.resx">
+      <DependentUpon>CourseAllocationfirst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DepartmentHead.resx">
       <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FacultyRequest.resx">
+      <DependentUpon>FacultyRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Faculty_Members.resx">
       <DependentUpon>Faculty_Members.cs</DependentUpon>
@@ -237,6 +287,15 @@
     <EmbeddedResource Include="UI\Forgotpassword.resx">
       <DependentUpon>Forgotpassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageCourse.resx">
+      <DependentUpon>ManageCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageProducts.resx">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Rooms.resx">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\SetPassword.resx">
       <DependentUpon>SetPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateSem.resx">
+      <DependentUpon>UpdateSem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserInputs.resx">
       <DependentUpon>UserInputs.cs</DependentUpon>
@@ -257,6 +319,15 @@
     <None Include="Properties\DataSources\MidProjectDb.BL.Facultyroom.datasource" />
     <None Include="Properties\DataSources\MidProjectDb.BL.MidProjectDb.BL.Consumable.datasource" />
     <None Include="Properties\DataSources\MidProjectDb.BL.Semester.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.DL.FacultyDL.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.Faculty.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.Facultyproject.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.FacultyReq.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.FacultyRequest.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.Lookup.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.Project.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.Room.datasource" />
+    <None Include="Properties\DataSources\MidProjectDb.UI.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -285,8 +356,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
