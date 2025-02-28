@@ -33,6 +33,29 @@ namespace MidProjectDb.UI
             signupform.Size = this.Size;
             signupform.Location = this.Location;
             this.Close();
+            //Select role as faculty when coding
+        }
+
+        private void Deletefaculty_btn_Click(object sender, EventArgs e)
+        {
+            UserInputs user = new UserInputs();
+            user.Userinfo_lbl.Text = "Delete Faculty";
+            user.Show();
+            user.Size = this.Size;
+            user.Location = this.Location;
+            this.Close();
+
+        }
+
+        private void update_faculty_btn_Click(object sender, EventArgs e)
+        {
+            UserInputs user = new UserInputs();
+            user.Userinfo_lbl.Text = "Update Faculty";
+            user.Show();
+            user.Size = this.Size;
+            user.Location = this.Location;
+            this.Close();
+                        
         }
     }
 }

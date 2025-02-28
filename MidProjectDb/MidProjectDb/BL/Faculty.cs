@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MidProjectDb.BL;
 
 namespace MidProjectDb.UI
 {
@@ -14,7 +15,6 @@ namespace MidProjectDb.UI
         public string Contact { get; set; }
         public string ResearchArea { get; set; }
         public int? TotalTeachingHours { get; set; }
-
         public int? UserId { get; set; }    
         public User FacultyUser { get; set; }
         public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int? userId, User facultyUser)

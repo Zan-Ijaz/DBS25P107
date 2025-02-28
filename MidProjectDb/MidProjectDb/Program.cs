@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MidProjectDb.UI;
 
 namespace MidProjectDb
 {
@@ -16,7 +17,7 @@ namespace MidProjectDb
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            firstinterface form1 = new firstinterface();
+            SignIn form1 = new SignIn();
             form1.Show();
             Application.Run();
         }

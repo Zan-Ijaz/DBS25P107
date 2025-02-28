@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.forgot_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Signup_btn = new Guna.UI2.WinForms.Guna2Button();
             this.signinpassword_txtbox = new System.Windows.Forms.TextBox();
             this.Password_lbl = new System.Windows.Forms.Label();
             this.signinusername_txtbox = new System.Windows.Forms.TextBox();
@@ -46,7 +45,6 @@
             // 
             this.panel1.Controls.Add(this.forgot_btn);
             this.panel1.Controls.Add(this.Next_btn);
-            this.panel1.Controls.Add(this.Signup_btn);
             this.panel1.Controls.Add(this.signinpassword_txtbox);
             this.panel1.Controls.Add(this.Password_lbl);
             this.panel1.Controls.Add(this.signinusername_txtbox);
@@ -93,24 +91,6 @@
             this.Next_btn.TabIndex = 15;
             this.Next_btn.Text = "Next";
             this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
-            // 
-            // Signup_btn
-            // 
-            this.Signup_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Signup_btn.BorderRadius = 20;
-            this.Signup_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Signup_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Signup_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Signup_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Signup_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Signup_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Signup_btn.ForeColor = System.Drawing.Color.White;
-            this.Signup_btn.Location = new System.Drawing.Point(314, 383);
-            this.Signup_btn.Name = "Signup_btn";
-            this.Signup_btn.Size = new System.Drawing.Size(174, 64);
-            this.Signup_btn.TabIndex = 14;
-            this.Signup_btn.Text = "Not a user?";
-            this.Signup_btn.Click += new System.EventHandler(this.Signup_btn_Click_1);
             // 
             // signinpassword_txtbox
             // 
@@ -201,7 +181,6 @@
         private System.Windows.Forms.TextBox signinusername_txtbox;
         private System.Windows.Forms.TextBox signinpassword_txtbox;
         private System.Windows.Forms.Label Password_lbl;
-        private Guna.UI2.WinForms.Guna2Button Signup_btn;
         private Guna.UI2.WinForms.Guna2Button forgot_btn;
         private Guna.UI2.WinForms.Guna2Button Next_btn;
     }

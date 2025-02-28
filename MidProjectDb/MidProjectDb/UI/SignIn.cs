@@ -18,11 +18,7 @@ namespace MidProjectDb.UI
         }
         private void Signup_btn_Click_1(object sender, EventArgs e)
         {
-            Signup signupform = new Signup();
-            signupform.Size = this.Size;
-            signupform.Location = this.Location;
-            signupform.Show();
-            this.Close();
+      
         }
 
         private void forgot_btn_Click(object sender, EventArgs e)
@@ -36,7 +32,11 @@ namespace MidProjectDb.UI
 
         private void Next_btn_Click(object sender, EventArgs e)
         {
-
+            AdministrativeStaff admin = new AdministrativeStaff();
+            admin.Show();
+            admin.Size = this.Size;
+            admin.Location = this.Location;
+            this.Close();
         }
     }
 }
