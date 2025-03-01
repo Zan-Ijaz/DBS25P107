@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Ocsp;
 
 namespace MidProjectDb.UI
 {
@@ -23,6 +24,33 @@ namespace MidProjectDb.UI
             work.Show();
             work.Size = this.Size;
             work.Location = this.Location;
+            this.Close();
+        }
+
+        private void Approvereq_btn_Click(object sender, EventArgs e)
+        {
+            Fulfulreqs req = new Fulfulreqs();
+            req.Show();
+            req.Size = this.Size;
+            req.Location = this.Location;
+            this.Close();
+        }
+
+        private void Allocation_btn_Click(object sender, EventArgs e)
+        {
+            ResourseAllocation resourseAllocation = new ResourseAllocation();
+            resourseAllocation.Show();
+            resourseAllocation.Size = this.Size;
+            resourseAllocation.Location = this.Location;
+            this.Close();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            SignIn signIn = new SignIn();
+            signIn.Show();
+            signIn.Size = this.Size;
+            signIn.Location = this.Location;
             this.Close();
         }
     }

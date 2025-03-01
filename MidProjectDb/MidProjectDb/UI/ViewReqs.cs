@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace MidProjectDb.UI
 {
-    public partial class FacultyRequest: Form
+    public partial class ViewReqs: Form
     {
-        public FacultyRequest()
+        public ViewReqs()
         {
             InitializeComponent();
         }
 
         private void Back_lbl_Click(object sender, EventArgs e)
         {
-            
+            AdministrativeStaff admin = new AdministrativeStaff();
+            admin.Show();
+            admin.Size = this.Size;
+            admin.Location = this.Location;
+            this.Close();
         }
     }
 }

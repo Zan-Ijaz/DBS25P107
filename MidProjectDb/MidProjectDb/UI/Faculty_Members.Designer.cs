@@ -68,6 +68,7 @@
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 10;
             this.logout_btn.Text = "Logout";
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // Trackreq_btn
             // 
@@ -102,6 +103,7 @@
             this.Resreq_btn.Size = new System.Drawing.Size(496, 45);
             this.Resreq_btn.TabIndex = 9;
             this.Resreq_btn.Text = "Submit Resource Request";
+            this.Resreq_btn.Click += new System.EventHandler(this.Resreq_btn_Click);
             // 
             // Assigned_btn
             // 

@@ -68,6 +68,7 @@
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 9;
             this.logout_btn.Text = "Logout";
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // Allocation_btn
             // 
@@ -85,6 +86,7 @@
             this.Allocation_btn.Size = new System.Drawing.Size(496, 45);
             this.Allocation_btn.TabIndex = 8;
             this.Allocation_btn.Text = "Manage Resourse Allocation";
+            this.Allocation_btn.Click += new System.EventHandler(this.Allocation_btn_Click);
             // 
             // Approvereq_btn
             // 
@@ -102,6 +104,7 @@
             this.Approvereq_btn.Size = new System.Drawing.Size(496, 45);
             this.Approvereq_btn.TabIndex = 7;
             this.Approvereq_btn.Text = "Approve Faculty Request";
+            this.Approvereq_btn.Click += new System.EventHandler(this.Approvereq_btn_Click);
             // 
             // Assignworkload_btn
             // 

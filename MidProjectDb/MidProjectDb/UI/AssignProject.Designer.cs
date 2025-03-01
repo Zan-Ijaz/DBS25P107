@@ -273,7 +273,7 @@
             this.panel2.Controls.Add(this.Workoad_lbl);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1394, 142);
+            this.panel2.Size = new System.Drawing.Size(1042, 142);
             this.panel2.TabIndex = 6;
             // 
             // Workoad_lbl
@@ -283,7 +283,7 @@
             this.Workoad_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.Workoad_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Workoad_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Workoad_lbl.Location = new System.Drawing.Point(362, 45);
+            this.Workoad_lbl.Location = new System.Drawing.Point(318, 46);
             this.Workoad_lbl.Name = "Workoad_lbl";
             this.Workoad_lbl.Size = new System.Drawing.Size(340, 49);
             this.Workoad_lbl.TabIndex = 1;

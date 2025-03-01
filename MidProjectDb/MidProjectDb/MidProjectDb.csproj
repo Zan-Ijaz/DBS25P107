@@ -154,6 +154,12 @@
     <Compile Include="UI\AdministrativeStaff.Designer.cs">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AssignedCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AssignedCourses.Designer.cs">
+      <DependentUpon>AssignedCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AssignProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     <Compile Include="UI\ResearchSuper.Designer.cs">
       <DependentUpon>ResearchSuper.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ResourseAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResourseAllocation.Designer.cs">
+      <DependentUpon>ResourseAllocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Rooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +299,12 @@
     <Compile Include="UI\UserInputs.Designer.cs">
       <DependentUpon>UserInputs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewReqs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ViewReqs.Designer.cs">
+      <DependentUpon>ViewReqs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\WorkLoad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdministrativeStaff.resx">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AssignedCourses.resx">
+      <DependentUpon>AssignedCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AssignProject.resx">
       <DependentUpon>AssignProject.cs</DependentUpon>
@@ -348,6 +369,9 @@
     <EmbeddedResource Include="UI\ResearchSuper.resx">
       <DependentUpon>ResearchSuper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResourseAllocation.resx">
+      <DependentUpon>ResourseAllocation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Rooms.resx">
       <DependentUpon>Rooms.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserInputs.resx">
       <DependentUpon>UserInputs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewReqs.resx">
+      <DependentUpon>ViewReqs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\WorkLoad.resx">
       <DependentUpon>WorkLoad.cs</DependentUpon>

@@ -168,6 +168,7 @@
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 11;
             this.logout_btn.Text = "Logout";
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // Processfaculty_btn
             // 
@@ -184,7 +185,7 @@
             this.Processfaculty_btn.Name = "Processfaculty_btn";
             this.Processfaculty_btn.Size = new System.Drawing.Size(253, 45);
             this.Processfaculty_btn.TabIndex = 10;
-            this.Processfaculty_btn.Text = "Process Faculty Request";
+            this.Processfaculty_btn.Text = "View Faculty Request";
             this.Processfaculty_btn.Click += new System.EventHandler(this.Processfaculty_btn_Click);
             // 
             // CourseSechdule_btn

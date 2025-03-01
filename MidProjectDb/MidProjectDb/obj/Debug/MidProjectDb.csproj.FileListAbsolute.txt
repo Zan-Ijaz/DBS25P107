@@ -123,3 +123,5 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.WorkLoad.
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AssignProject.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdminDuties.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Fulfulreqs.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ViewReqs.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ResourseAllocation.resources

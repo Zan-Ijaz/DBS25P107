@@ -47,11 +47,7 @@ namespace MidProjectDb.UI
 
         private void Processfaculty_btn_Click(object sender, EventArgs e)
         {
-            FacultyRequest fac = new FacultyRequest();
-            fac.Show();
-            fac.Size = this.Size;
-            fac.Location = this.Location;
-            this.Close();
+            
         }
 
         private void room_btn_Click(object sender, EventArgs e)
@@ -88,6 +84,15 @@ namespace MidProjectDb.UI
             Consum.Show();
             Consum.Size = this.Size;
             Consum.Location = this.Location;
+            this.Close();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            SignIn signIn = new SignIn();
+            signIn.Show();
+            signIn.Size = this.Size;
+            signIn.Location = this.Location;
             this.Close();
         }
     }

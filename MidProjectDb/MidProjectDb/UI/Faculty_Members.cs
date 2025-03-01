@@ -19,7 +19,29 @@ namespace MidProjectDb.UI
 
         private void Assigned_btn_Click(object sender, EventArgs e)
         {
+            AssignedCourses courses = new AssignedCourses();
+            courses.Show();
+            courses.Size = this.Size;
+            courses.Location = this.Location;
+            this.Close();
+        }
 
+        private void Resreq_btn_Click(object sender, EventArgs e)
+        {
+            FacultyRequest request = new FacultyRequest();
+            request.Show();
+            request.Size = this.Size;
+            request.Location = this.Location;
+            this.Close();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            SignIn signIn = new SignIn();
+            signIn.Show();
+            signIn.Size = this.Size;
+            signIn.Location = this.Location;
+            this.Close();
         }
     }
 }

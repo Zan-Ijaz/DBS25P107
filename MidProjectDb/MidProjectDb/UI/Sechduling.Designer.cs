@@ -43,10 +43,10 @@
             this.facultycourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Sechduling_lbl = new System.Windows.Forms.Label();
+            this.facultyCourseid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesteridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
@@ -186,10 +186,10 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.facultyCourseid,
             this.facultyidDataGridViewTextBoxColumn,
             this.courseidDataGridViewTextBoxColumn,
-            this.semesteridDataGridViewTextBoxColumn,
-            this.courseDataGridViewTextBoxColumn});
+            this.semesteridDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.facultycourseBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(230, 202);
             this.dataGridView1.Name = "dataGridView1";
@@ -227,6 +227,15 @@
             this.Sechduling_lbl.TabIndex = 1;
             this.Sechduling_lbl.Text = "Sechdule Courses";
             // 
+            // facultyCourseid
+            // 
+            this.facultyCourseid.DataPropertyName = "facultyCourseid";
+            this.facultyCourseid.HeaderText = "facultyCourseid";
+            this.facultyCourseid.MinimumWidth = 6;
+            this.facultyCourseid.Name = "facultyCourseid";
+            this.facultyCourseid.ReadOnly = true;
+            this.facultyCourseid.Width = 125;
+            // 
             // facultyidDataGridViewTextBoxColumn
             // 
             this.facultyidDataGridViewTextBoxColumn.DataPropertyName = "facultyid";
@@ -253,15 +262,6 @@
             this.semesteridDataGridViewTextBoxColumn.Name = "semesteridDataGridViewTextBoxColumn";
             this.semesteridDataGridViewTextBoxColumn.ReadOnly = true;
             this.semesteridDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // courseDataGridViewTextBoxColumn
-            // 
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "course";
-            this.courseDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseDataGridViewTextBoxColumn.Width = 125;
             // 
             // Sechduling
             // 
@@ -301,9 +301,9 @@
         private System.Windows.Forms.Label Course_lbl;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private Guna.UI2.WinForms.Guna2Button Next_btn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facultyCourseid;
         private System.Windows.Forms.DataGridViewTextBoxColumn facultyidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn courseidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesteridDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
     }
 }

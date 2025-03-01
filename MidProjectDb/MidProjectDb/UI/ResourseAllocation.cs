@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace MidProjectDb.UI
 {
-    public partial class FacultyRequest: Form
+    public partial class ResourseAllocation: Form
     {
-        public FacultyRequest()
+        public ResourseAllocation()
         {
             InitializeComponent();
         }
 
         private void Back_lbl_Click(object sender, EventArgs e)
         {
-            
+            DepartmentHead head = new DepartmentHead();
+            head.Show();
+            head.Size = this.Size;
+            head.Location = this.Location;
+            this.Close();
         }
     }
 }
