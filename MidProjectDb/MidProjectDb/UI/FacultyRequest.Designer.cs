@@ -31,29 +31,43 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Save_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Date_lbl = new System.Windows.Forms.Label();
+            this.Quantity_txtbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.itemname_txtbox = new System.Windows.Forms.TextBox();
+            this.itemname_lbl = new System.Windows.Forms.Label();
+            this.status_combo = new System.Windows.Forms.ComboBox();
+            this.Status_lbl = new System.Windows.Forms.Label();
             this.facultyrequest_lbl = new System.Windows.Forms.Label();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.facultyReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Facultyreq_lbl = new System.Windows.Forms.Label();
-            this.facultyReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.requestid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.Save_btn);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.Date_lbl);
+            this.panel1.Controls.Add(this.Quantity_txtbox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.itemname_txtbox);
+            this.panel1.Controls.Add(this.itemname_lbl);
+            this.panel1.Controls.Add(this.status_combo);
+            this.panel1.Controls.Add(this.Status_lbl);
             this.panel1.Controls.Add(this.facultyrequest_lbl);
             this.panel1.Controls.Add(this.Back_lbl);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -61,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1272, 450);
+            this.panel1.Size = new System.Drawing.Size(1090, 728);
             this.panel1.TabIndex = 0;
             // 
             // Save_btn
@@ -75,18 +89,102 @@
             this.Save_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Save_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save_btn.ForeColor = System.Drawing.Color.White;
-            this.Save_btn.Location = new System.Drawing.Point(948, 372);
+            this.Save_btn.Location = new System.Drawing.Point(789, 604);
             this.Save_btn.Name = "Save_btn";
             this.Save_btn.Size = new System.Drawing.Size(174, 55);
-            this.Save_btn.TabIndex = 22;
-            this.Save_btn.Text = "Save";
+            this.Save_btn.TabIndex = 31;
+            this.Save_btn.Text = "Add";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker1.Location = new System.Drawing.Point(663, 535);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(300, 22);
+            this.dateTimePicker1.TabIndex = 30;
+            // 
+            // Date_lbl
+            // 
+            this.Date_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Date_lbl.AutoSize = true;
+            this.Date_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_lbl.Location = new System.Drawing.Point(144, 535);
+            this.Date_lbl.Name = "Date_lbl";
+            this.Date_lbl.Size = new System.Drawing.Size(169, 32);
+            this.Date_lbl.TabIndex = 29;
+            this.Date_lbl.Text = "Select Date:";
+            // 
+            // Quantity_txtbox
+            // 
+            this.Quantity_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Quantity_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Quantity_txtbox.Location = new System.Drawing.Point(662, 476);
+            this.Quantity_txtbox.Name = "Quantity_txtbox";
+            this.Quantity_txtbox.Size = new System.Drawing.Size(301, 27);
+            this.Quantity_txtbox.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 476);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 32);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Enter quantity:";
+            // 
+            // itemname_txtbox
+            // 
+            this.itemname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.itemname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemname_txtbox.Location = new System.Drawing.Point(662, 426);
+            this.itemname_txtbox.Name = "itemname_txtbox";
+            this.itemname_txtbox.Size = new System.Drawing.Size(301, 27);
+            this.itemname_txtbox.TabIndex = 26;
+            // 
+            // itemname_lbl
+            // 
+            this.itemname_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.itemname_lbl.AutoSize = true;
+            this.itemname_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemname_lbl.Location = new System.Drawing.Point(144, 426);
+            this.itemname_lbl.Name = "itemname_lbl";
+            this.itemname_lbl.Size = new System.Drawing.Size(229, 32);
+            this.itemname_lbl.TabIndex = 25;
+            this.itemname_lbl.Text = "Enter item name:";
+            // 
+            // status_combo
+            // 
+            this.status_combo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.status_combo.FormattingEnabled = true;
+            this.status_combo.Items.AddRange(new object[] {
+            "Pending",
+            "Approved",
+            "Rejected",
+            "Fulfilled"});
+            this.status_combo.Location = new System.Drawing.Point(662, 378);
+            this.status_combo.Name = "status_combo";
+            this.status_combo.Size = new System.Drawing.Size(301, 24);
+            this.status_combo.TabIndex = 24;
+            // 
+            // Status_lbl
+            // 
+            this.Status_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Status_lbl.AutoSize = true;
+            this.Status_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status_lbl.Location = new System.Drawing.Point(144, 378);
+            this.Status_lbl.Name = "Status_lbl";
+            this.Status_lbl.Size = new System.Drawing.Size(190, 32);
+            this.Status_lbl.TabIndex = 23;
+            this.Status_lbl.Text = "Select Status:";
             // 
             // facultyrequest_lbl
             // 
             this.facultyrequest_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facultyrequest_lbl.AutoSize = true;
             this.facultyrequest_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facultyrequest_lbl.Location = new System.Drawing.Point(132, 143);
+            this.facultyrequest_lbl.Location = new System.Drawing.Point(144, 142);
             this.facultyrequest_lbl.Name = "facultyrequest_lbl";
             this.facultyrequest_lbl.Size = new System.Drawing.Size(241, 32);
             this.facultyrequest_lbl.TabIndex = 21;
@@ -103,7 +201,7 @@
             this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(153, 372);
+            this.Back_lbl.Location = new System.Drawing.Point(167, 604);
             this.Back_lbl.Name = "Back_lbl";
             this.Back_lbl.Size = new System.Drawing.Size(174, 55);
             this.Back_lbl.TabIndex = 20;
@@ -118,21 +216,23 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.requestid,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.dataGridViewTextBoxColumn6});
             this.dataGridView1.DataSource = this.facultyReqBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 200);
+            this.dataGridView1.Location = new System.Drawing.Point(150, 196);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1071, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(813, 150);
             this.dataGridView1.TabIndex = 6;
+            // 
+            // facultyReqBindingSource
+            // 
+            this.facultyReqBindingSource.DataSource = typeof(MidProjectDb.UI.FacultyReq);
             // 
             // panel2
             // 
@@ -143,7 +243,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1269, 125);
+            this.panel2.Size = new System.Drawing.Size(1087, 125);
             this.panel2.TabIndex = 5;
             // 
             // Facultyreq_lbl
@@ -153,15 +253,19 @@
             this.Facultyreq_lbl.BackColor = System.Drawing.Color.Transparent;
             this.Facultyreq_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Facultyreq_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Facultyreq_lbl.Location = new System.Drawing.Point(366, 43);
+            this.Facultyreq_lbl.Location = new System.Drawing.Point(275, 43);
             this.Facultyreq_lbl.Name = "Facultyreq_lbl";
             this.Facultyreq_lbl.Size = new System.Drawing.Size(574, 49);
             this.Facultyreq_lbl.TabIndex = 0;
             this.Facultyreq_lbl.Text = "Faculty Request Management";
             // 
-            // facultyReqBindingSource
+            // requestid
             // 
-            this.facultyReqBindingSource.DataSource = typeof(MidProjectDb.UI.FacultyReq);
+            this.requestid.DataPropertyName = "requestid";
+            this.requestid.HeaderText = "requestid";
+            this.requestid.MinimumWidth = 6;
+            this.requestid.Name = "requestid";
+            this.requestid.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -174,7 +278,7 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "statusid";
-            this.dataGridViewTextBoxColumn3.HeaderText = "statusid";
+            this.dataGridViewTextBoxColumn3.HeaderText = "status";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 125;
@@ -182,7 +286,7 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "itemid";
-            this.dataGridViewTextBoxColumn4.HeaderText = "itemid";
+            this.dataGridViewTextBoxColumn4.HeaderText = "item";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
@@ -203,35 +307,12 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "facultymember";
-            this.dataGridViewTextBoxColumn7.HeaderText = "facultymember";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "item";
-            this.dataGridViewTextBoxColumn8.HeaderText = "item";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "status";
-            this.dataGridViewTextBoxColumn9.HeaderText = "status";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
             // FacultyRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 450);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1090, 728);
             this.Controls.Add(this.panel1);
             this.Name = "FacultyRequest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -239,9 +320,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,15 +344,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private System.Windows.Forms.Label facultyrequest_lbl;
+        private System.Windows.Forms.BindingSource facultyReqBindingSource;
+        private System.Windows.Forms.Label Status_lbl;
+        private System.Windows.Forms.ComboBox status_combo;
+        private System.Windows.Forms.Label itemname_lbl;
+        private System.Windows.Forms.TextBox itemname_txtbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label Date_lbl;
+        private System.Windows.Forms.TextBox Quantity_txtbox;
         private Guna.UI2.WinForms.Guna2Button Save_btn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requestid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.BindingSource facultyReqBindingSource;
     }
 }

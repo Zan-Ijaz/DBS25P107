@@ -28,11 +28,12 @@ namespace MidProjectDb.UI
 
         private void Back_lbl_Click(object sender, EventArgs e)
         {
-            AdministrativeStaff admin = new AdministrativeStaff();
-            admin.Show();
-            admin.Size = this.Size;
-            admin.Location = this.Location;
+            WorkLoad work = new WorkLoad();
+            work.Show();
+            work.Size = this.Size;
+            work.Location = this.Location;
             this.Close();
+
         }
     }
 }

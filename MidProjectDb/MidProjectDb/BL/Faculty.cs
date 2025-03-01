@@ -16,8 +16,10 @@ namespace MidProjectDb.UI
         public string ResearchArea { get; set; }
         public int? TotalTeachingHours { get; set; }
         public int? UserId { get; set; }    
+        public int? DesignationId { get; set; }
         public User FacultyUser { get; set; }
-        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int? userId, User facultyUser)
+        public Lookup designation { get; set; }
+        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int? userId, int? designationId)
         {
             FacultyId = facultyId;
             Name = name;
@@ -26,7 +28,8 @@ namespace MidProjectDb.UI
             ResearchArea = researchArea;
             TotalTeachingHours = totalTeachingHours;
             UserId = userId;
-            FacultyUser = facultyUser;
+            DesignationId = designationId;
+            this.designation = designation;
         }
     }
 }

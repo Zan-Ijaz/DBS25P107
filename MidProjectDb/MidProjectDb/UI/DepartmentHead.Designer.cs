@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Allocation_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Approvereq_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Assignworkload_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Department_lbl = new System.Windows.Forms.Label();
-            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.logout_btn.BorderRadius = 20;
+            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(162, 405);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(496, 45);
+            this.logout_btn.TabIndex = 9;
+            this.logout_btn.Text = "Logout";
             // 
             // Allocation_btn
             // 
@@ -102,6 +119,7 @@
             this.Assignworkload_btn.Size = new System.Drawing.Size(496, 45);
             this.Assignworkload_btn.TabIndex = 6;
             this.Assignworkload_btn.Text = "Assign workload";
+            this.Assignworkload_btn.Click += new System.EventHandler(this.Assignworkload_btn_Click);
             // 
             // panel2
             // 
@@ -124,23 +142,6 @@
             this.Department_lbl.Size = new System.Drawing.Size(353, 49);
             this.Department_lbl.TabIndex = 1;
             this.Department_lbl.Text = "Department Head";
-            // 
-            // logout_btn
-            // 
-            this.logout_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.logout_btn.BorderRadius = 20;
-            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(162, 405);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(496, 45);
-            this.logout_btn.TabIndex = 9;
-            this.logout_btn.Text = "Logout";
             // 
             // DepartmentHead
             // 

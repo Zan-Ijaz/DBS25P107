@@ -114,3 +114,12 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.FacultyRe
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ManageCourse.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ManageProducts.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.UpdateSem.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Consumeables.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ResearchSuper.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Rooms.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Sechduling.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SechdulingCourse2.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.WorkLoad.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AssignProject.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdminDuties.resources
+D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Fulfulreqs.resources

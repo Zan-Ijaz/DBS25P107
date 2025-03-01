@@ -28,11 +28,12 @@ namespace MidProjectDb.UI
 
         private void Courseallocation_btn_Click(object sender, EventArgs e)
         {
-            CourseAllocationfirst course = new CourseAllocationfirst();
-            course.Show();
-            course.Size = this.Size;
-            course.Location = this.Location;
+            Sechduling sechduling = new Sechduling();
+            sechduling.Show();
+            sechduling.Size = this.Size;
+            sechduling.Location = this.Location;
             this.Close();
+
         }
 
         private void ManageCourse_btn_Click(object sender, EventArgs e)
@@ -41,6 +42,52 @@ namespace MidProjectDb.UI
             manageCourse.Show();
             manageCourse.Size = this.Size;
             manageCourse.Location = this.Location;
+            this.Close();
+        }
+
+        private void Processfaculty_btn_Click(object sender, EventArgs e)
+        {
+            FacultyRequest fac = new FacultyRequest();
+            fac.Show();
+            fac.Size = this.Size;
+            fac.Location = this.Location;
+            this.Close();
+        }
+
+        private void room_btn_Click(object sender, EventArgs e)
+        {
+            Rooms rooms=new Rooms();
+            rooms.Show();
+            rooms.Size = this.Size;
+            rooms.Location = this.Location;
+            this.Close();
+
+        }
+
+        private void Project_btn_Click(object sender, EventArgs e)
+        {
+            ManageProducts projects = new ManageProducts();
+            projects.Show();
+            projects.Size = this.Size;
+            projects.Location = this.Location;
+            this.Close();
+        }
+
+        private void Semester_btn_Click(object sender, EventArgs e)
+        {
+            UpdateSem sem = new UpdateSem();
+            sem.Show();
+            sem.Size = this.Size;
+            sem.Location = this.Location;
+            this.Close();
+        }
+
+        private void Consumeable_btn_Click(object sender, EventArgs e)
+        {
+            Consumeables Consum = new Consumeables();
+            Consum.Show();
+            Consum.Size = this.Size;
+            Consum.Location = this.Location;
             this.Close();
         }
     }

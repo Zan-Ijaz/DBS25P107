@@ -14,5 +14,14 @@ namespace MidProjectDb.UI
         public string password{ get; set; }
         public int roleId { get; set; }  
         public Lookup role { get; set; }
+        public User (int userid, string username, string email, string password, int roleId, Lookup role)
+        {
+            this.userid = userid;
+            this.username = username;
+            this.email = email;
+            this.password = password;
+            this.roleId = roleId;
+            this.role = role;
+        }
     }
 }

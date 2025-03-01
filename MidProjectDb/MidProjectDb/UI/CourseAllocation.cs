@@ -16,5 +16,14 @@ namespace MidProjectDb.UI
         {
             InitializeComponent();
         }
+
+        private void Back_lbl_Click(object sender, EventArgs e)
+        {
+            CourseAllocationfirst course = new CourseAllocationfirst();
+            course.Show();
+            course.Size = this.Size;
+            course.Location = this.Location;
+            this.Close();
+        }
     }
 }

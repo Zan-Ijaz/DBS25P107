@@ -53,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(1779, 492);
             this.panel1.TabIndex = 0;
             // 
             // forgot_btn
@@ -67,7 +67,7 @@
             this.forgot_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.forgot_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgot_btn.ForeColor = System.Drawing.Color.White;
-            this.forgot_btn.Location = new System.Drawing.Point(87, 383);
+            this.forgot_btn.Location = new System.Drawing.Point(576, 383);
             this.forgot_btn.Name = "forgot_btn";
             this.forgot_btn.Size = new System.Drawing.Size(174, 64);
             this.forgot_btn.TabIndex = 16;
@@ -85,7 +85,7 @@
             this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_btn.ForeColor = System.Drawing.Color.White;
-            this.Next_btn.Location = new System.Drawing.Point(557, 383);
+            this.Next_btn.Location = new System.Drawing.Point(1046, 383);
             this.Next_btn.Name = "Next_btn";
             this.Next_btn.Size = new System.Drawing.Size(174, 64);
             this.Next_btn.TabIndex = 15;
@@ -95,7 +95,7 @@
             // signinpassword_txtbox
             // 
             this.signinpassword_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.signinpassword_txtbox.Location = new System.Drawing.Point(64, 326);
+            this.signinpassword_txtbox.Location = new System.Drawing.Point(553, 326);
             this.signinpassword_txtbox.Name = "signinpassword_txtbox";
             this.signinpassword_txtbox.Size = new System.Drawing.Size(677, 22);
             this.signinpassword_txtbox.TabIndex = 4;
@@ -106,7 +106,7 @@
             this.Password_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Password_lbl.AutoSize = true;
             this.Password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_lbl.Location = new System.Drawing.Point(58, 276);
+            this.Password_lbl.Location = new System.Drawing.Point(547, 276);
             this.Password_lbl.Name = "Password_lbl";
             this.Password_lbl.Size = new System.Drawing.Size(221, 32);
             this.Password_lbl.TabIndex = 3;
@@ -115,7 +115,7 @@
             // signinusername_txtbox
             // 
             this.signinusername_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.signinusername_txtbox.Location = new System.Drawing.Point(64, 218);
+            this.signinusername_txtbox.Location = new System.Drawing.Point(553, 218);
             this.signinusername_txtbox.Name = "signinusername_txtbox";
             this.signinusername_txtbox.Size = new System.Drawing.Size(677, 22);
             this.signinusername_txtbox.TabIndex = 2;
@@ -125,7 +125,7 @@
             this.Username_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Username_lbl.AutoSize = true;
             this.Username_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_lbl.Location = new System.Drawing.Point(58, 174);
+            this.Username_lbl.Location = new System.Drawing.Point(547, 174);
             this.Username_lbl.Name = "Username_lbl";
             this.Username_lbl.Size = new System.Drawing.Size(227, 32);
             this.Username_lbl.TabIndex = 1;
@@ -139,7 +139,7 @@
             this.panel2.Controls.Add(this.Signin_lbl);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 142);
+            this.panel2.Size = new System.Drawing.Size(1779, 142);
             this.panel2.TabIndex = 0;
             // 
             // Signin_lbl
@@ -149,7 +149,7 @@
             this.Signin_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.Signin_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Signin_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Signin_lbl.Location = new System.Drawing.Point(305, 45);
+            this.Signin_lbl.Location = new System.Drawing.Point(794, 45);
             this.Signin_lbl.Name = "Signin_lbl";
             this.Signin_lbl.Size = new System.Drawing.Size(156, 49);
             this.Signin_lbl.TabIndex = 1;
@@ -159,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1779, 492);
             this.Controls.Add(this.panel1);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

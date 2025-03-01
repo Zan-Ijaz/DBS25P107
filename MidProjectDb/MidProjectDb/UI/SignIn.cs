@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MidProjectDb.BL;
 
 namespace MidProjectDb.UI
 {
@@ -32,11 +33,59 @@ namespace MidProjectDb.UI
 
         private void Next_btn_Click(object sender, EventArgs e)
         {
-            AdministrativeStaff admin = new AdministrativeStaff();
-            admin.Show();
-            admin.Size = this.Size;
-            admin.Location = this.Location;
-            this.Close();
+            string signinusername = signinusername_txtbox.Text;
+            string signinpassword = signinpassword_txtbox.Text;
+            string query = $"Select* From users where username='{signinusername}'";
+            try
+            {
+                DatabaseHelper.Instance.getConnection();
+                var reader = DatabaseHelper.Instance.getData(query);
+                if(reader.Read()){
+                    if (signinpassword == reader["password_hash"].ToString())
+                    {
+                        if (Convert.ToInt32(reader["role_id"]) == 1)
+                        {
+                            AdministrativeStaff admin = new AdministrativeStaff();
+                            admin.Show();
+                            admin.Size = this.Size;
+                            admin.Location = this.Location;
+                            this.Close();
+
+                        }
+
+                        else if (Convert.ToInt32(reader["role_id"]) == 2)
+                        {
+                            Faculty_Members faculty = new Faculty_Members();
+                            faculty.Show();
+                            faculty.Size = this.Size;
+                            faculty.Location = this.Location;
+                            this.Close();
+
+                        }
+                        else if (Convert.ToInt32(reader["role_id"]) == 3)
+                        {
+                            DepartmentHead depthead = new DepartmentHead();
+                            depthead.Show();
+                            depthead.Size = this.Size;
+                            depthead.Location = this.Location;
+                            this.Close();
+
+                        }
+                    }
+                    else throw new Exception("Wrong Password");
+                }
+                else
+                {
+                    throw new Exception("No user with such username exists.");
+                }
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
         }
     }
 }

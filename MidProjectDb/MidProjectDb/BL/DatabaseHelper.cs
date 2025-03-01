@@ -11,7 +11,7 @@ namespace MidProjectDb.BL
     {
         private String serverName = "127.0.0.1";
         private String port = "3306";
-        private String databaseName = "Lab2_Task";
+        private String databaseName = "midprojectdb";
         private String databaseUser = "root";
         private String databasePassword = "zain1234";
         private DatabaseHelper() { }

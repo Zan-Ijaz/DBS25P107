@@ -16,5 +16,14 @@ namespace MidProjectDb.UI
         {
             InitializeComponent();
         }
+
+        private void Assignworkload_btn_Click(object sender, EventArgs e)
+        {
+            WorkLoad work = new WorkLoad();
+            work.Show();
+            work.Size = this.Size;
+            work.Location = this.Location;
+            this.Close();
+        }
     }
 }
