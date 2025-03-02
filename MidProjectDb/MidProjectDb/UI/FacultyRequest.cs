@@ -19,7 +19,11 @@ namespace MidProjectDb.UI
 
         private void Back_lbl_Click(object sender, EventArgs e)
         {
-            
+            Faculty_Members faculty = new Faculty_Members();
+            faculty.Show();
+            faculty.Size = this.Size;
+            faculty.Location = this.Location;
+            this.Close();
         }
     }
 }

@@ -43,5 +43,14 @@ namespace MidProjectDb.UI
             signIn.Location = this.Location;
             this.Close();
         }
+
+        private void Trackreq_btn_Click(object sender, EventArgs e)
+        {
+            ViewReqs request = new ViewReqs();
+            request.Show();
+            request.Size = this.Size;
+            request.Location = this.Location;
+            this.Close();
+        }
     }
 }

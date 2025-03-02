@@ -31,26 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Semesters = new System.Windows.Forms.Label();
-            this.Assign_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.facprojects_lbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Projects_lbl = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.research_lbl = new System.Windows.Forms.Label();
             this.semesterIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.termDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facultyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.projectIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descreptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facultyprojectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Semesters = new System.Windows.Forms.Label();
+            this.Assign_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.facultyIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,15 +47,27 @@
             this.researchAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalTeachingHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facprojects_lbl = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.projectIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descreptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Projects_lbl = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.research_lbl = new System.Windows.Forms.Label();
+            this.facultyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.facultyprojectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facultyprojectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +106,37 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(455, 150);
             this.dataGridView3.TabIndex = 31;
+            // 
+            // semesterIdDataGridViewTextBoxColumn
+            // 
+            this.semesterIdDataGridViewTextBoxColumn.DataPropertyName = "SemesterId";
+            this.semesterIdDataGridViewTextBoxColumn.HeaderText = "SemesterId";
+            this.semesterIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.semesterIdDataGridViewTextBoxColumn.Name = "semesterIdDataGridViewTextBoxColumn";
+            this.semesterIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // termDataGridViewTextBoxColumn
+            // 
+            this.termDataGridViewTextBoxColumn.DataPropertyName = "Term";
+            this.termDataGridViewTextBoxColumn.HeaderText = "Term";
+            this.termDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.termDataGridViewTextBoxColumn.Name = "termDataGridViewTextBoxColumn";
+            this.termDataGridViewTextBoxColumn.ReadOnly = true;
+            this.termDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.yearDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // semesterBindingSource
+            // 
+            this.semesterBindingSource.DataSource = typeof(MidProjectDb.BL.Semester);
             // 
             // Semesters
             // 
@@ -179,144 +210,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(1086, 150);
             this.dataGridView2.TabIndex = 10;
             // 
-            // facprojects_lbl
-            // 
-            this.facprojects_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.facprojects_lbl.AutoSize = true;
-            this.facprojects_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facprojects_lbl.Location = new System.Drawing.Point(190, 388);
-            this.facprojects_lbl.Name = "facprojects_lbl";
-            this.facprojects_lbl.Size = new System.Drawing.Size(206, 32);
-            this.facprojects_lbl.TabIndex = 9;
-            this.facprojects_lbl.Text = "Current faculty:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.projectIdDataGridViewTextBoxColumn,
-            this.descreptionDataGridViewTextBoxColumn,
-            this.titlDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.projectBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(196, 221);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(455, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // Projects_lbl
-            // 
-            this.Projects_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Projects_lbl.AutoSize = true;
-            this.Projects_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Projects_lbl.Location = new System.Drawing.Point(190, 170);
-            this.Projects_lbl.Name = "Projects_lbl";
-            this.Projects_lbl.Size = new System.Drawing.Size(223, 32);
-            this.Projects_lbl.TabIndex = 7;
-            this.Projects_lbl.Text = "Current projects:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.research_lbl);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1428, 142);
-            this.panel2.TabIndex = 4;
-            // 
-            // research_lbl
-            // 
-            this.research_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.research_lbl.AutoSize = true;
-            this.research_lbl.BackColor = System.Drawing.Color.MidnightBlue;
-            this.research_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.research_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.research_lbl.Location = new System.Drawing.Point(505, 45);
-            this.research_lbl.Name = "research_lbl";
-            this.research_lbl.Size = new System.Drawing.Size(420, 49);
-            this.research_lbl.TabIndex = 1;
-            this.research_lbl.Text = "Research Supervision";
-            // 
-            // semesterIdDataGridViewTextBoxColumn
-            // 
-            this.semesterIdDataGridViewTextBoxColumn.DataPropertyName = "SemesterId";
-            this.semesterIdDataGridViewTextBoxColumn.HeaderText = "SemesterId";
-            this.semesterIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.semesterIdDataGridViewTextBoxColumn.Name = "semesterIdDataGridViewTextBoxColumn";
-            this.semesterIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // termDataGridViewTextBoxColumn
-            // 
-            this.termDataGridViewTextBoxColumn.DataPropertyName = "Term";
-            this.termDataGridViewTextBoxColumn.HeaderText = "Term";
-            this.termDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.termDataGridViewTextBoxColumn.Name = "termDataGridViewTextBoxColumn";
-            this.termDataGridViewTextBoxColumn.ReadOnly = true;
-            this.termDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // semesterBindingSource
-            // 
-            this.semesterBindingSource.DataSource = typeof(MidProjectDb.BL.Semester);
-            // 
-            // facultyBindingSource1
-            // 
-            this.facultyBindingSource1.DataSource = typeof(MidProjectDb.UI.Faculty);
-            // 
-            // projectIdDataGridViewTextBoxColumn
-            // 
-            this.projectIdDataGridViewTextBoxColumn.DataPropertyName = "projectId";
-            this.projectIdDataGridViewTextBoxColumn.HeaderText = "projectId";
-            this.projectIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.projectIdDataGridViewTextBoxColumn.Name = "projectIdDataGridViewTextBoxColumn";
-            this.projectIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.projectIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descreptionDataGridViewTextBoxColumn
-            // 
-            this.descreptionDataGridViewTextBoxColumn.DataPropertyName = "descreption";
-            this.descreptionDataGridViewTextBoxColumn.HeaderText = "descreption";
-            this.descreptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descreptionDataGridViewTextBoxColumn.Name = "descreptionDataGridViewTextBoxColumn";
-            this.descreptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descreptionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // titlDataGridViewTextBoxColumn
-            // 
-            this.titlDataGridViewTextBoxColumn.DataPropertyName = "titl";
-            this.titlDataGridViewTextBoxColumn.HeaderText = "titl";
-            this.titlDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titlDataGridViewTextBoxColumn.Name = "titlDataGridViewTextBoxColumn";
-            this.titlDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titlDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataSource = typeof(MidProjectDb.UI.Project);
-            // 
-            // facultyBindingSource
-            // 
-            this.facultyBindingSource.DataSource = typeof(MidProjectDb.UI.Faculty);
-            // 
-            // facultyprojectBindingSource
-            // 
-            this.facultyprojectBindingSource.DataSource = typeof(MidProjectDb.UI.Facultyproject);
-            // 
             // facultyIdDataGridViewTextBoxColumn
             // 
             this.facultyIdDataGridViewTextBoxColumn.DataPropertyName = "FacultyId";
@@ -389,6 +282,115 @@
             this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.userIdDataGridViewTextBoxColumn.Width = 125;
             // 
+            // facultyBindingSource
+            // 
+            this.facultyBindingSource.DataSource = typeof(MidProjectDb.UI.Faculty);
+            // 
+            // facprojects_lbl
+            // 
+            this.facprojects_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.facprojects_lbl.AutoSize = true;
+            this.facprojects_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facprojects_lbl.Location = new System.Drawing.Point(190, 388);
+            this.facprojects_lbl.Name = "facprojects_lbl";
+            this.facprojects_lbl.Size = new System.Drawing.Size(206, 32);
+            this.facprojects_lbl.TabIndex = 9;
+            this.facprojects_lbl.Text = "Current faculty:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.projectIdDataGridViewTextBoxColumn,
+            this.descreptionDataGridViewTextBoxColumn,
+            this.titlDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.projectBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(196, 221);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(455, 150);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // projectIdDataGridViewTextBoxColumn
+            // 
+            this.projectIdDataGridViewTextBoxColumn.DataPropertyName = "projectId";
+            this.projectIdDataGridViewTextBoxColumn.HeaderText = "projectId";
+            this.projectIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.projectIdDataGridViewTextBoxColumn.Name = "projectIdDataGridViewTextBoxColumn";
+            this.projectIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.projectIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descreptionDataGridViewTextBoxColumn
+            // 
+            this.descreptionDataGridViewTextBoxColumn.DataPropertyName = "descreption";
+            this.descreptionDataGridViewTextBoxColumn.HeaderText = "descreption";
+            this.descreptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descreptionDataGridViewTextBoxColumn.Name = "descreptionDataGridViewTextBoxColumn";
+            this.descreptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descreptionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // titlDataGridViewTextBoxColumn
+            // 
+            this.titlDataGridViewTextBoxColumn.DataPropertyName = "titl";
+            this.titlDataGridViewTextBoxColumn.HeaderText = "titl";
+            this.titlDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titlDataGridViewTextBoxColumn.Name = "titlDataGridViewTextBoxColumn";
+            this.titlDataGridViewTextBoxColumn.ReadOnly = true;
+            this.titlDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // projectBindingSource
+            // 
+            this.projectBindingSource.DataSource = typeof(MidProjectDb.UI.Project);
+            // 
+            // Projects_lbl
+            // 
+            this.Projects_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Projects_lbl.AutoSize = true;
+            this.Projects_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Projects_lbl.Location = new System.Drawing.Point(190, 170);
+            this.Projects_lbl.Name = "Projects_lbl";
+            this.Projects_lbl.Size = new System.Drawing.Size(223, 32);
+            this.Projects_lbl.TabIndex = 7;
+            this.Projects_lbl.Text = "Current projects:";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.research_lbl);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1428, 142);
+            this.panel2.TabIndex = 4;
+            // 
+            // research_lbl
+            // 
+            this.research_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.research_lbl.AutoSize = true;
+            this.research_lbl.BackColor = System.Drawing.Color.MidnightBlue;
+            this.research_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.research_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.research_lbl.Location = new System.Drawing.Point(505, 45);
+            this.research_lbl.Name = "research_lbl";
+            this.research_lbl.Size = new System.Drawing.Size(420, 49);
+            this.research_lbl.TabIndex = 1;
+            this.research_lbl.Text = "Research Supervision";
+            // 
+            // facultyBindingSource1
+            // 
+            this.facultyBindingSource1.DataSource = typeof(MidProjectDb.UI.Faculty);
+            // 
+            // facultyprojectBindingSource
+            // 
+            this.facultyprojectBindingSource.DataSource = typeof(MidProjectDb.UI.Facultyproject);
+            // 
             // ResearchSuper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -402,14 +404,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facultyprojectBindingSource)).EndInit();
             this.ResumeLayout(false);
 

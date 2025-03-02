@@ -43,5 +43,14 @@ namespace MidProjectDb.UI
             research.Location = this.Location;
             this.Close();
         }
+
+        private void Adminstratve_btn_Click(object sender, EventArgs e)
+        {
+            AdminDuties admin = new AdminDuties();
+            admin.Show();
+            admin.Size = this.Size;
+            admin.Location = this.Location;
+            this.Close();
+        }
     }
 }

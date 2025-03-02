@@ -40,13 +40,13 @@
             this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.facultycourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Sechduling_lbl = new System.Windows.Forms.Label();
             this.facultyCourseid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesteridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultycourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Sechduling_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
@@ -86,6 +86,7 @@
             this.Next_btn.Size = new System.Drawing.Size(174, 55);
             this.Next_btn.TabIndex = 23;
             this.Next_btn.Text = "Next";
+            this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
             // 
             // Back_lbl
             // 
@@ -199,34 +200,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(567, 150);
             this.dataGridView1.TabIndex = 3;
             // 
-            // facultycourseBindingSource
-            // 
-            this.facultycourseBindingSource.DataSource = typeof(MidProjectDb.BL.Facultycourse);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.Sechduling_lbl);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(964, 142);
-            this.panel2.TabIndex = 2;
-            // 
-            // Sechduling_lbl
-            // 
-            this.Sechduling_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Sechduling_lbl.AutoSize = true;
-            this.Sechduling_lbl.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Sechduling_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sechduling_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Sechduling_lbl.Location = new System.Drawing.Point(281, 55);
-            this.Sechduling_lbl.Name = "Sechduling_lbl";
-            this.Sechduling_lbl.Size = new System.Drawing.Size(346, 49);
-            this.Sechduling_lbl.TabIndex = 1;
-            this.Sechduling_lbl.Text = "Sechdule Courses";
-            // 
             // facultyCourseid
             // 
             this.facultyCourseid.DataPropertyName = "facultyCourseid";
@@ -262,6 +235,34 @@
             this.semesteridDataGridViewTextBoxColumn.Name = "semesteridDataGridViewTextBoxColumn";
             this.semesteridDataGridViewTextBoxColumn.ReadOnly = true;
             this.semesteridDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // facultycourseBindingSource
+            // 
+            this.facultycourseBindingSource.DataSource = typeof(MidProjectDb.BL.Facultycourse);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.Sechduling_lbl);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(964, 142);
+            this.panel2.TabIndex = 2;
+            // 
+            // Sechduling_lbl
+            // 
+            this.Sechduling_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Sechduling_lbl.AutoSize = true;
+            this.Sechduling_lbl.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Sechduling_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sechduling_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.Sechduling_lbl.Location = new System.Drawing.Point(281, 55);
+            this.Sechduling_lbl.Name = "Sechduling_lbl";
+            this.Sechduling_lbl.Size = new System.Drawing.Size(346, 49);
+            this.Sechduling_lbl.TabIndex = 1;
+            this.Sechduling_lbl.Text = "Sechdule Courses";
             // 
             // Sechduling
             // 

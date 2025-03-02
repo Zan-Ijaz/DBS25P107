@@ -32,10 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Back_btn = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Userinfo_lbl = new System.Windows.Forms.Label();
             this.facultyIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +40,10 @@
             this.researchAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalTeachingHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Userinfo_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).BeginInit();
@@ -73,7 +73,7 @@
             this.Back_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_btn.ForeColor = System.Drawing.Color.White;
-            this.Back_btn.Location = new System.Drawing.Point(145, 374);
+            this.Back_btn.Location = new System.Drawing.Point(74, 374);
             this.Back_btn.Name = "Back_btn";
             this.Back_btn.Size = new System.Drawing.Size(174, 64);
             this.Back_btn.TabIndex = 18;
@@ -95,59 +95,12 @@
             this.totalTeachingHoursDataGridViewTextBoxColumn,
             this.UserId});
             this.dataGridView1.DataSource = this.facultyBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 179);
+            this.dataGridView1.Location = new System.Drawing.Point(74, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1112, 150);
             this.dataGridView1.TabIndex = 17;
-            // 
-            // facultyBindingSource
-            // 
-            this.facultyBindingSource.DataSource = typeof(MidProjectDb.UI.Faculty);
-            // 
-            // Next_btn
-            // 
-            this.Next_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Next_btn.BorderRadius = 20;
-            this.Next_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Next_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Next_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Next_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next_btn.ForeColor = System.Drawing.Color.White;
-            this.Next_btn.Location = new System.Drawing.Point(883, 374);
-            this.Next_btn.Name = "Next_btn";
-            this.Next_btn.Size = new System.Drawing.Size(174, 64);
-            this.Next_btn.TabIndex = 16;
-            this.Next_btn.Text = "Next";
-            this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.Userinfo_lbl);
-            this.panel2.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1213, 125);
-            this.panel2.TabIndex = 5;
-            // 
-            // Userinfo_lbl
-            // 
-            this.Userinfo_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Userinfo_lbl.AutoSize = true;
-            this.Userinfo_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.Userinfo_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Userinfo_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Userinfo_lbl.Location = new System.Drawing.Point(445, 44);
-            this.Userinfo_lbl.Name = "Userinfo_lbl";
-            this.Userinfo_lbl.Size = new System.Drawing.Size(286, 49);
-            this.Userinfo_lbl.TabIndex = 0;
-            this.Userinfo_lbl.Text = "Delete Faculty";
             // 
             // facultyIdDataGridViewTextBoxColumn
             // 
@@ -213,6 +166,53 @@
             this.UserId.Name = "UserId";
             this.UserId.ReadOnly = true;
             this.UserId.Width = 125;
+            // 
+            // facultyBindingSource
+            // 
+            this.facultyBindingSource.DataSource = typeof(MidProjectDb.UI.Faculty);
+            // 
+            // Next_btn
+            // 
+            this.Next_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Next_btn.BorderRadius = 20;
+            this.Next_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Next_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Next_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Next_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Next_btn.ForeColor = System.Drawing.Color.White;
+            this.Next_btn.Location = new System.Drawing.Point(1012, 374);
+            this.Next_btn.Name = "Next_btn";
+            this.Next_btn.Size = new System.Drawing.Size(174, 64);
+            this.Next_btn.TabIndex = 16;
+            this.Next_btn.Text = "Next";
+            this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.Userinfo_lbl);
+            this.panel2.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1213, 125);
+            this.panel2.TabIndex = 5;
+            // 
+            // Userinfo_lbl
+            // 
+            this.Userinfo_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Userinfo_lbl.AutoSize = true;
+            this.Userinfo_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Userinfo_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Userinfo_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.Userinfo_lbl.Location = new System.Drawing.Point(445, 44);
+            this.Userinfo_lbl.Name = "Userinfo_lbl";
+            this.Userinfo_lbl.Size = new System.Drawing.Size(286, 49);
+            this.Userinfo_lbl.TabIndex = 0;
+            this.Userinfo_lbl.Text = "Delete Faculty";
             // 
             // UserInputs
             // 

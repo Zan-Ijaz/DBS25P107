@@ -47,7 +47,11 @@ namespace MidProjectDb.UI
 
         private void Processfaculty_btn_Click(object sender, EventArgs e)
         {
-            
+            ViewReqs reqs = new ViewReqs();
+            reqs.Show();
+            reqs.Size = this.Size;
+            reqs.Location = this.Location;
+            this.Close();
         }
 
         private void room_btn_Click(object sender, EventArgs e)

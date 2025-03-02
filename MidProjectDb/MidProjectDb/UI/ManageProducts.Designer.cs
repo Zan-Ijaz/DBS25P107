@@ -37,13 +37,13 @@
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.Save_btn = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.projectId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descreptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Projects_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ManageProjects_lbl = new System.Windows.Forms.Label();
-            this.projectId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descreptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
@@ -161,6 +161,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(432, 150);
             this.dataGridView1.TabIndex = 24;
             // 
+            // projectId
+            // 
+            this.projectId.DataPropertyName = "projectId";
+            this.projectId.HeaderText = "projectId";
+            this.projectId.MinimumWidth = 6;
+            this.projectId.Name = "projectId";
+            this.projectId.Width = 125;
+            // 
+            // titlDataGridViewTextBoxColumn
+            // 
+            this.titlDataGridViewTextBoxColumn.DataPropertyName = "titl";
+            this.titlDataGridViewTextBoxColumn.HeaderText = "title";
+            this.titlDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titlDataGridViewTextBoxColumn.Name = "titlDataGridViewTextBoxColumn";
+            this.titlDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descreptionDataGridViewTextBoxColumn
+            // 
+            this.descreptionDataGridViewTextBoxColumn.DataPropertyName = "descreption";
+            this.descreptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descreptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descreptionDataGridViewTextBoxColumn.Name = "descreptionDataGridViewTextBoxColumn";
+            this.descreptionDataGridViewTextBoxColumn.Width = 125;
+            // 
             // projectBindingSource
             // 
             this.projectBindingSource.DataSource = typeof(MidProjectDb.UI.Project);
@@ -199,30 +223,6 @@
             this.ManageProjects_lbl.Size = new System.Drawing.Size(331, 49);
             this.ManageProjects_lbl.TabIndex = 1;
             this.ManageProjects_lbl.Text = "Manage Projects";
-            // 
-            // projectId
-            // 
-            this.projectId.DataPropertyName = "projectId";
-            this.projectId.HeaderText = "projectId";
-            this.projectId.MinimumWidth = 6;
-            this.projectId.Name = "projectId";
-            this.projectId.Width = 125;
-            // 
-            // titlDataGridViewTextBoxColumn
-            // 
-            this.titlDataGridViewTextBoxColumn.DataPropertyName = "titl";
-            this.titlDataGridViewTextBoxColumn.HeaderText = "title";
-            this.titlDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titlDataGridViewTextBoxColumn.Name = "titlDataGridViewTextBoxColumn";
-            this.titlDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descreptionDataGridViewTextBoxColumn
-            // 
-            this.descreptionDataGridViewTextBoxColumn.DataPropertyName = "descreption";
-            this.descreptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descreptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descreptionDataGridViewTextBoxColumn.Name = "descreptionDataGridViewTextBoxColumn";
-            this.descreptionDataGridViewTextBoxColumn.Width = 125;
             // 
             // ManageProducts
             // 

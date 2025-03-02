@@ -25,5 +25,14 @@ namespace MidProjectDb.UI
             admin.Location = this.Location;
             this.Close();
         }
+
+        private void Next_btn_Click(object sender, EventArgs e)
+        {
+            SechdulingCourse2 sechduling = new SechdulingCourse2();
+            sechduling.Show();
+            sechduling.Size = this.Size;
+            sechduling.Location = this.Location;
+            this.Close();
+        }
     }
 }

@@ -86,6 +86,7 @@
             this.Adminstratve_btn.Size = new System.Drawing.Size(496, 45);
             this.Adminstratve_btn.TabIndex = 9;
             this.Adminstratve_btn.Text = "Administrative Duties";
+            this.Adminstratve_btn.Click += new System.EventHandler(this.Adminstratve_btn_Click);
             // 
             // ResearchSuper_btn
             // 
@@ -125,6 +126,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.Workoad_lbl);
             this.panel2.Location = new System.Drawing.Point(3, 0);

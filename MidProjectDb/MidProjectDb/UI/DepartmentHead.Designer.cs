@@ -49,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(1315, 450);
             this.panel1.TabIndex = 0;
             // 
             // logout_btn
@@ -63,7 +63,7 @@
             this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(162, 405);
+            this.logout_btn.Location = new System.Drawing.Point(419, 405);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 9;
@@ -81,7 +81,7 @@
             this.Allocation_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Allocation_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Allocation_btn.ForeColor = System.Drawing.Color.White;
-            this.Allocation_btn.Location = new System.Drawing.Point(162, 334);
+            this.Allocation_btn.Location = new System.Drawing.Point(419, 334);
             this.Allocation_btn.Name = "Allocation_btn";
             this.Allocation_btn.Size = new System.Drawing.Size(496, 45);
             this.Allocation_btn.TabIndex = 8;
@@ -99,7 +99,7 @@
             this.Approvereq_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Approvereq_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Approvereq_btn.ForeColor = System.Drawing.Color.White;
-            this.Approvereq_btn.Location = new System.Drawing.Point(162, 258);
+            this.Approvereq_btn.Location = new System.Drawing.Point(419, 258);
             this.Approvereq_btn.Name = "Approvereq_btn";
             this.Approvereq_btn.Size = new System.Drawing.Size(496, 45);
             this.Approvereq_btn.TabIndex = 7;
@@ -117,7 +117,7 @@
             this.Assignworkload_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Assignworkload_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Assignworkload_btn.ForeColor = System.Drawing.Color.White;
-            this.Assignworkload_btn.Location = new System.Drawing.Point(162, 188);
+            this.Assignworkload_btn.Location = new System.Drawing.Point(419, 188);
             this.Assignworkload_btn.Name = "Assignworkload_btn";
             this.Assignworkload_btn.Size = new System.Drawing.Size(496, 45);
             this.Assignworkload_btn.TabIndex = 6;
@@ -126,11 +126,13 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.Department_lbl);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Location = new System.Drawing.Point(2, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 142);
+            this.panel2.Size = new System.Drawing.Size(1314, 142);
             this.panel2.TabIndex = 2;
             // 
             // Department_lbl
@@ -140,7 +142,7 @@
             this.Department_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.Department_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Department_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Department_lbl.Location = new System.Drawing.Point(226, 42);
+            this.Department_lbl.Location = new System.Drawing.Point(483, 42);
             this.Department_lbl.Name = "Department_lbl";
             this.Department_lbl.Size = new System.Drawing.Size(353, 49);
             this.Department_lbl.TabIndex = 1;
@@ -150,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1315, 450);
             this.Controls.Add(this.panel1);
             this.Name = "DepartmentHead";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

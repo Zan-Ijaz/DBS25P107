@@ -216,11 +216,13 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.Department_lbl);
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1277, 142);
+            this.panel2.Size = new System.Drawing.Size(1093, 142);
             this.panel2.TabIndex = 3;
             // 
             // Department_lbl
@@ -230,7 +232,7 @@
             this.Department_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.Department_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Department_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Department_lbl.Location = new System.Drawing.Point(339, 48);
+            this.Department_lbl.Location = new System.Drawing.Point(338, 53);
             this.Department_lbl.Name = "Department_lbl";
             this.Department_lbl.Size = new System.Drawing.Size(357, 49);
             this.Department_lbl.TabIndex = 1;

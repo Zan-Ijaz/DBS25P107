@@ -86,6 +86,7 @@
             this.Trackreq_btn.Size = new System.Drawing.Size(496, 45);
             this.Trackreq_btn.TabIndex = 10;
             this.Trackreq_btn.Text = "Track Request Status";
+            this.Trackreq_btn.Click += new System.EventHandler(this.Trackreq_btn_Click);
             // 
             // Resreq_btn
             // 
