@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using MidProjectDb.DL;
 
 namespace MidProjectDb.UI
 {
@@ -23,5 +25,90 @@ namespace MidProjectDb.UI
             this.roleId = roleId;
             this.role = role;
         }
+        public User( string username, string email, string password, int roleId, Lookup role)//Using this one for adding user
+        {
+            this.username = username;
+            this.email = email;
+            this.password = password;
+            this.roleId = roleId;
+            this.role = role;
+        }
+        public static int findid(string username)
+        {
+            List<User> users = UserDL.getData();
+            int id = -1;
+            foreach(var user in users)
+            {
+                if (username == user.username)
+                {
+                    id = user.userid;
+                }
+            }
+            return id;
+        }
+        public static User finduser(int id)
+        {
+            List<User> users = UserDL.getData();
+            foreach (var user in users)
+            {
+                if (id == user.userid)
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
+        public static bool emailduplication(string email)
+        {
+            List<User> users = UserDL.getData();
+            foreach (var user in users)
+            {
+                if (email == user.email)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool nameduplication(string name)
+        {
+            List<User> users = UserDL.getData();
+            foreach (var user in users)
+            {
+                if (name == user.username)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool emailvalidation(string email)
+        {
+            bool attherate = false;
+            bool dot = false;
+            foreach (char character in email)
+            {
+                if (character == '@')
+                {
+                    attherate =true;
+                }
+            }
+            foreach (char character in email)
+            {
+                if (character == '.')
+                {
+                    dot = true;
+                }
+            }
+            if (dot && attherate)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

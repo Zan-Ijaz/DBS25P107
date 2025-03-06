@@ -141,7 +141,9 @@
     <Compile Include="BL\Facultyroom.cs" />
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
+    <Compile Include="DL\FacultyDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
+    <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AdminDuties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,12 +203,6 @@
     </Compile>
     <Compile Include="UI\Faculty_Members.Designer.cs">
       <DependentUpon>Faculty_Members.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FacultyManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FacultyManagement.Designer.cs">
-      <DependentUpon>FacultyManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,12 +289,6 @@
     <Compile Include="UI\UpdateSem.Designer.cs">
       <DependentUpon>UpdateSem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UserInputs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\UserInputs.Designer.cs">
-      <DependentUpon>UserInputs.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\ViewReqs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,9 +341,6 @@
     <EmbeddedResource Include="UI\Faculty_Members.resx">
       <DependentUpon>Faculty_Members.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FacultyManagement.resx">
-      <DependentUpon>FacultyManagement.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forgotpassword.resx">
       <DependentUpon>Forgotpassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,9 +379,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UpdateSem.resx">
       <DependentUpon>UpdateSem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\UserInputs.resx">
-      <DependentUpon>UserInputs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ViewReqs.resx">
       <DependentUpon>ViewReqs.cs</DependentUpon>
@@ -447,6 +431,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Utility\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

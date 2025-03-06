@@ -18,7 +18,7 @@ namespace MidProjectDb.DL
             string query = $"Select * from lookup";
             try
             {
-                DatabaseHelper.Instance.getConnection();
+                 
                 var reader = DatabaseHelper.Instance.getData(query);
                 while (reader.Read())
                 {

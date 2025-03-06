@@ -68,8 +68,6 @@ D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SetPasswo
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\Guna.UI2.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdministrativeStaff.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Faculty_Members.resources
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.FacultyManagement.resources
-D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.UserInputs.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.CourseAllocation.resources
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\BouncyCastle.Cryptography.dll
 D:\Codes\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\Google.Protobuf.dll

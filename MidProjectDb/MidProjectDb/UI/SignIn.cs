@@ -38,7 +38,7 @@ namespace MidProjectDb.UI
             string query = $"Select* From users where username='{signinusername}'";
             try
             {
-                DatabaseHelper.Instance.getConnection();
+                 
                 var reader = DatabaseHelper.Instance.getData(query);
                 if(reader.Read()){
                     if (signinpassword == reader["password_hash"].ToString())
@@ -84,6 +84,7 @@ namespace MidProjectDb.UI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
 
 
         }

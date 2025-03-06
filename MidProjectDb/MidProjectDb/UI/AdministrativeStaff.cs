@@ -19,10 +19,10 @@ namespace MidProjectDb.UI
 
         private void Update_btn_Click(object sender, EventArgs e)
         {
-            FacultyManagement management = new FacultyManagement();
-            management.Show();
-            management.Size = this.Size;
-            management.Location = this.Location;
+            Signup signup = new Signup();
+            signup.Show();
+            signup.Size = this.Size;
+            signup.Location = this.Location;
             this.Close();
         }
 

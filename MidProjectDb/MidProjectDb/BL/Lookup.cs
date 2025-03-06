@@ -31,10 +31,24 @@ namespace MidProjectDb.UI
                 }
                 
             }
+            return null;   
+            
+            
+        }
+        public static Lookup findlookup(string value)
+        {
+            List<Lookup> lookups = LookupDL.getData();
+            Lookup newlook;
+            foreach (var looks in lookups)
+            {
+                if (value == looks.value)
+                {
+                    newlook = new Lookup(looks.lookupid, looks.categoryid, looks.value);
+                    return newlook;
+                }
+
+            }
             return null;
-            
-            
-            
         }
     }
 }
