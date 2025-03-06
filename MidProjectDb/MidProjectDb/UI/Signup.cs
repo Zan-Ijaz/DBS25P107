@@ -22,24 +22,31 @@ namespace MidProjectDb.UI
         {
             try
             {
-                if (User.nameduplication(signupusername_txtbox.Text))
+                if (User.nameduplication(signupusername_txtbox.Text)&& Utility.Utility.stringvalidation(signupusername_txtbox.Text))
                 {
                     string name = signupusername_txtbox.Text;
                 }
                 else
                 {
                     signupusername_txtbox.Text = "";
-                    MessageBox.Show("Username already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (!User.nameduplication(signupusername_txtbox.Text))
+                    {
+                        MessageBox.Show("Username already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!Utility.Utility.stringvalidation(signupusername_txtbox.Text))
+                    {
+                        MessageBox.Show("Invalid String", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                    }
                 }
-                if (signuppass_txtbox.Text.Length >= 8)
+                if (signuppass_txtbox.Text.Length >= 8&& Utility.Utility.stringvalidation(signuppass_txtbox.Text))
                 {
                     string password =/*SHA256*/(signuppass_txtbox.Text);
                 }
                 else
                 {
                     signupusername_txtbox.Text = "";
-                    MessageBox.Show("Password shold be atleast 8 characters", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Password shold be atleast 8 characters and valid string", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if(User.emailvalidation(email_txtbox.Text)&&User.emailduplication(email_txtbox.Text))
                 {
@@ -57,7 +64,7 @@ namespace MidProjectDb.UI
                         MessageBox.Show("Email already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                if (contact_txtbox.Text.Length == 11&&Faculty.contactValidatioin(contact_txtbox.Text))
+                if (contact_txtbox.Text.Length == 11&&Faculty.intValidatioin(contact_txtbox.Text))
                 {
                     string contactnumber = contact_txtbox.Text;
                     
@@ -69,7 +76,7 @@ namespace MidProjectDb.UI
                     {
                         MessageBox.Show("Contact number must be 11 digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    if (!Faculty.contactValidatioin(contact_txtbox.Text))
+                    if (!Faculty.intValidatioin(contact_txtbox.Text))
                     {
                         MessageBox.Show("Contact number must Contain only digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

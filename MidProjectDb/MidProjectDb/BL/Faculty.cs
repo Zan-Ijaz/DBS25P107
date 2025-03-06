@@ -43,7 +43,7 @@ namespace MidProjectDb.UI
             DesignationId = designationId;
             this.designation = designation;
         }
-        public static bool contactValidatioin(string number)
+        public static bool intValidatioin(string number)
         {
             foreach(char c in number)
             {
