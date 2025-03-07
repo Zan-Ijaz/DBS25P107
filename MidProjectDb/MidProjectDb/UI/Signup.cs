@@ -163,13 +163,7 @@ namespace MidProjectDb.UI
             try
             {
                 string query = $"SELECT f.name as Name,f.email as Email ,f.contact as Contact ,d.value as Designation,f.research_area as ResearchArea,f.total_teaching_hours as TotalTeachingHours,r.value as Role,f.user_id as UserID from faculty f inner join lookup d on f.designation_id=d.lookup_id inner join users as u on f.user_id=u.user_id inner join lookup r on u.role_id=r.lookup_id order by role";
-                DataTable dt = new DataTable();
-                var reader=DatabaseHelper.Instance.getData(query);
-                if (reader != null)
-                {
-                    dt.Load(reader); 
-                    reader.Close(); 
-                }
+                DataTable dt = DatabaseHelper.Instance.GetData(query);
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns["UserID"].ReadOnly = true;

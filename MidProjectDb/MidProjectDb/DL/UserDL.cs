@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,9 @@ namespace MidProjectDb.DL
                    List<User> newusers = new List<User>();
 
         string query = $"Select * From users";
-             
-            var reader = DatabaseHelper.Instance.getData(query);
-            while (reader.Read())
+
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            foreach (DataRow reader in dt.Rows)
             {
                 int userid = Convert.ToInt32(reader["user_id"]);
                 int roleid = Convert.ToInt32(reader["role_id"]);
@@ -43,12 +44,11 @@ namespace MidProjectDb.DL
         {
             int count = 0;
             string query = $"Select count(*) as counter from users where role_id=3 and user_id <> '{userid}';";
-            var reader = DatabaseHelper.Instance.getData(query);
-            if(reader.Read())
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            foreach (DataRow reader in dt.Rows)
             {
                 count = Convert.ToInt32(reader["Counter"]);
             }
-            reader.Close();
             return count;
         }
     }

@@ -40,10 +40,9 @@ namespace MidProjectDb.UI
                 string query = $"Select* From users where username='{signinusername}' And password_hash=SHA2('{signinpassword}',256)";
             try
             {
-                 
-                var reader = DatabaseHelper.Instance.getData(query);
-                if(reader.Read()){
-                    
+                DataTable dt = DatabaseHelper.Instance.GetData(query);
+                foreach(DataRow reader in dt.Rows)
+                {
                         if (Convert.ToInt32(reader["role_id"]) == 1)
                         {
                             AdministrativeStaff admin = new AdministrativeStaff();
@@ -53,7 +52,6 @@ namespace MidProjectDb.UI
                             this.Close();
 
                         }
-
                         else if (Convert.ToInt32(reader["role_id"]) == 2)
                         {
                             Faculty_Members faculty = new Faculty_Members();
@@ -72,10 +70,11 @@ namespace MidProjectDb.UI
                             this.Close();
 
                         }
-                }
-                else
-                {
-                    throw new Exception("Wrong Credentials.");
+                        else
+                        {
+                        throw new Exception("Wrong Credentials.");
+                        }
+                    
                 }
             }
             catch (Exception ex )

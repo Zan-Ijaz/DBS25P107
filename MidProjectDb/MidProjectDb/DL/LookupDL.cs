@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +20,8 @@ namespace MidProjectDb.DL
             try
             {
                  
-                var reader = DatabaseHelper.Instance.getData(query);
-                while (reader.Read())
+                DataTable dt = DatabaseHelper.Instance.GetData(query);
+                foreach (DataRow reader in dt.Rows)
                 {
                     int id = Convert.ToInt32(reader["lookup_id"]);
                     string categoryid = reader["category"].ToString();

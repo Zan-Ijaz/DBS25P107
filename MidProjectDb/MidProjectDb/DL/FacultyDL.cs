@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,8 @@ namespace MidProjectDb.DL
         {
             List<Faculty> newfac = new List<Faculty>();
             string query = $"Select * from faculty";
-            var reader = DatabaseHelper.Instance.getData(query);
-            while (reader.Read())
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            foreach(DataRow reader in dt.Rows)
             {
                 int facultyid = Convert.ToInt32(reader["faculty_id"]);
                 string name = reader["name"].ToString();

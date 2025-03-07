@@ -1,21 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using MySqlConnector;
 
 namespace MidProjectDb.BL
 {
     public class DatabaseHelper
     {
-        private String serverName = "127.0.0.1";
-        private String port = "3306";
-        private String databaseName = "midprojectdb";
-        private String databaseUser = "root";
-        private String databasePassword = "zain1234";
-        private DatabaseHelper() { }
+        private string serverName = "127.0.0.1";
+        private string port = "3306";
+        private string databaseName = "midprojectdb";
+        private string databaseUser = "root";
+        private string databasePassword = "zain1234";
+
         private static DatabaseHelper _instance;
+        private DatabaseHelper() { }
+
         public static DatabaseHelper Instance
         {
             get
@@ -25,36 +24,38 @@ namespace MidProjectDb.BL
                 return _instance;
             }
         }
-        public MySqlConnection getConnection()
+        private MySqlConnection CreateConnection()
         {
             string connectionString =
-           $"server={serverName};port={port};user={databaseUser};database ={databaseName}; password ={databasePassword}; SslMode = Required; ";
-            var connection = new
-            MySqlConnection(connectionString);
-            connection.Open();
-            return connection;
+                $"server={serverName};port={port};user={databaseUser};database={databaseName};password={databasePassword};SslMode=None;";
+            return new MySqlConnection(connectionString);
         }
-        public MySqlDataReader getData(string query)
+        public DataTable GetData(string query)
         {
-            using (var connection = getConnection())
+            DataTable dataTable = new DataTable();
+            using (var connection = CreateConnection())
             {
-                using (var command = new MySqlCommand(query, getConnection()))
+                connection.Open();
+                using (var command = new MySqlCommand(query, connection))
+                using (var adapter = new MySqlDataAdapter(command))
                 {
-                    return command.ExecuteReader();
+                    adapter.Fill(dataTable);
                 }
             }
+            return dataTable;
         }
         public int Update(string query)
         {
-            using (var connection = getConnection())
+            int rowsAffected;
+            using (var connection = CreateConnection())
             {
-                using (var command = new MySqlCommand(query,getConnection()))
+                connection.Open();
+                using (var command = new MySqlCommand(query, connection))
                 {
-                    return command.ExecuteNonQuery();
-
+                    rowsAffected = command.ExecuteNonQuery();
                 }
             }
+            return rowsAffected;
         }
-
     }
 }

@@ -40,13 +40,7 @@ namespace MidProjectDb.UI
             {
                 dataGridView1.DataSource = null;
                 string query = $"Select * from courses";
-                var reader = DatabaseHelper.Instance.getData(query);
-                DataTable dt =new DataTable(); 
-                if (reader != null)
-                {
-                    dt.Load(reader);
-                    reader.Close();
-                }
+                DataTable dt = DatabaseHelper.Instance.GetData(query); 
                 if (dt != null)
                 {
                     dataGridView1.DataSource = dt;
