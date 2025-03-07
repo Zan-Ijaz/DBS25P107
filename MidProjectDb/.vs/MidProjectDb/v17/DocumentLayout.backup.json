@@ -3,52 +3,28 @@
   "WorkspaceRootPath": "D:\\Git\\DBS25P107\\MidProjectDb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\managecourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\managecourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\lookupdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\dl\\facultydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\bl\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\dl\\facultydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\facultydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\dl\\coursesdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\coursesdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\bl\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\managecourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\managecourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\bl\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\bl\\facultycourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\facultycourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\utility\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\utility\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,147 +46,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\BL\\DatabaseHelper.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\DatabaseHelper.cs",
-              "RelativeToolTip": "MidProjectDb\\BL\\DatabaseHelper.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCAAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Utility.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\Utility\\Utility.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\Utility\\Utility.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\Utility\\Utility.cs",
+              "RelativeToolTip": "MidProjectDb\\Utility\\Utility.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:11:44.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManageCourse.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageCourse.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\ManageCourse.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageCourse.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\ManageCourse.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswCsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:07:56.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ManageCourse.cs [Design]",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageCourse.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\ManageCourse.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\ManageCourse.cs [Design]",
-              "RelativeToolTip": "MidProjectDb\\UI\\ManageCourse.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:07:53.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Signup.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Signup.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\Signup.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAswKYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T17:54:17.906Z",
+              "WhenOpened": "2025-03-07T21:28:27.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SignIn.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\SignIn.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\SignIn.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\SignIn.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\SignIn.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAewEwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:22:51.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Course.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Course.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\BL\\Course.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Course.cs",
-              "RelativeToolTip": "MidProjectDb\\BL\\Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T17:53:49.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Facultycourse.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Facultycourse.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\BL\\Facultycourse.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Facultycourse.cs",
-              "RelativeToolTip": "MidProjectDb\\BL\\Facultycourse.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T17:53:16.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Signup.cs [Design]",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Signup.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs [Design]",
-              "RelativeToolTip": "MidProjectDb\\UI\\Signup.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T16:18:26.319Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CoursesDL.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\CoursesDL.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\DL\\CoursesDL.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\CoursesDL.cs",
-              "RelativeToolTip": "MidProjectDb\\DL\\CoursesDL.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvx0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:18:08.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FacultyDL.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\FacultyDL.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\DL\\FacultyDL.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\FacultyDL.cs",
-              "RelativeToolTip": "MidProjectDb\\DL\\FacultyDL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:19:58.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LookupDL.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\LookupDL.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\DL\\LookupDL.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\LookupDL.cs",
-              "RelativeToolTip": "MidProjectDb\\DL\\LookupDL.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:21:18.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "UserDL.cs",
               "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\UserDL.cs",
               "RelativeDocumentMoniker": "MidProjectDb\\DL\\UserDL.cs",
               "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\UserDL.cs",
               "RelativeToolTip": "MidProjectDb\\DL\\UserDL.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAswDMAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAEwEQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T18:22:01.916Z"
+              "WhenOpened": "2025-03-07T21:01:10.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\User.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\BL\\User.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\User.cs",
+              "RelativeToolTip": "MidProjectDb\\BL\\User.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAiwLIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:01:08.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Faculty.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Faculty.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\BL\\Faculty.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Faculty.cs",
+              "RelativeToolTip": "MidProjectDb\\BL\\Faculty.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAqwFUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:00:35.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FacultyDL.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\FacultyDL.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\DL\\FacultyDL.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\FacultyDL.cs",
+              "RelativeToolTip": "MidProjectDb\\DL\\FacultyDL.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAvwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:00:08.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Signup.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Signup.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Signup.cs*",
+              "RelativeToolTip": "MidProjectDb\\UI\\Signup.cs*",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAwLwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T17:54:17.906Z",
+              "EditorCaption": ""
             }
           ]
         }

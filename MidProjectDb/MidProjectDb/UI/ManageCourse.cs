@@ -39,8 +39,7 @@ namespace MidProjectDb.UI
             try
             {
                 dataGridView1.DataSource = null;
-                string query = $"Select * from courses";
-                DataTable dt = DatabaseHelper.Instance.GetData(query); 
+                DataTable dt = Course.getTable(); 
                 if (dt != null)
                 {
                     dataGridView1.DataSource = dt;
@@ -105,7 +104,7 @@ namespace MidProjectDb.UI
             if (name_txtbox.Text != "" && coursetype_combo.SelectedIndex != -1 && Contact_txtbox.Text != "" && Credithour_txtbox.Text != "")
             {
                 Course course = new Course(coursename, coursetype, creditHour, contacthour);
-                CoursesDL.insertCourse(course);
+                Course.insert(course);
                 MessageBox.Show("Course added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 name_txtbox.Text = "";
                 Contact_txtbox.Text = "";
@@ -168,8 +167,7 @@ namespace MidProjectDb.UI
                         }
                         if(title!=""&&type!=""&&credit!=-1&&contact!=-1)
                         {
-                            string query = $"Update courses set course_name='{title}',course_type='{type}',credit_hours='{credit}',contact_hours='{contact}' where course_id='{courseid}'";
-                            DatabaseHelper.Instance.Update(query);
+                            Course.update(course);
                         }
                         loadDatagrid();
                     }
@@ -197,9 +195,7 @@ namespace MidProjectDb.UI
                     DialogResult confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
-                        string query = $"DELETE FROM courses WHERE course_id = {course}";
-                        DatabaseHelper.Instance.Update(query);
-                       
+                        Course.deleteCourse(course);
                     }
                 }
                 else

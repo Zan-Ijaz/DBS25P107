@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using MidProjectDb.DL;
 
 namespace MidProjectDb.BL
 {
+
     public class Course
     {
        
@@ -32,8 +34,8 @@ namespace MidProjectDb.BL
         }
         public static bool courseduplication(string title)
         {
-            List<Course> courses = CoursesDL.getData();
-            foreach(var c in courses)
+            List<Course> courses = getData();
+            foreach (var c in courses)
             {
                 if (c.CourseName.Equals(title, StringComparison.OrdinalIgnoreCase))
                 {
@@ -44,7 +46,7 @@ namespace MidProjectDb.BL
         }
         public static bool courseduplication(string title,int id)
         {
-            List<Course> courses = CoursesDL.getData();
+            List<Course> courses=getData();
             foreach (var c in courses)
             {
                 if (c.CourseName.Equals(title, StringComparison.OrdinalIgnoreCase) && c.CourseId!=id)
@@ -53,6 +55,34 @@ namespace MidProjectDb.BL
                 }
             }
             return true;
+        }
+        public static void insert(Course c)
+        {
+            CoursesDL courseDLobj = new CoursesDL();
+            courseDLobj.insertCourse(c);
+
+        }
+        public static List<Course> getData()
+        {
+            CoursesDL courseDLobj = new CoursesDL();
+            List<Course> courses = courseDLobj.getData();
+            return courses;
+        }
+        public static DataTable getTable()
+        {
+            CoursesDL courseDLobj = new CoursesDL();
+            DataTable dt = courseDLobj.GetDataTable();
+            return dt;
+        }
+        public static void deleteCourse(int id)
+        {
+            CoursesDL courseDLobj = new CoursesDL();
+            courseDLobj.deleteCourse(id);
+        }
+        public static void update(Course c)
+        {
+            CoursesDL courseDLobj = new CoursesDL();
+            courseDLobj.update(c);
         }
     }
 }

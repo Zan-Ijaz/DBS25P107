@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using MidProjectDb.BL;
 using MidProjectDb.DL;
 
@@ -16,11 +18,11 @@ namespace MidProjectDb.UI
         public string Contact { get; set; }
         public string ResearchArea { get; set; }
         public int? TotalTeachingHours { get; set; }
-        public int? UserId { get; set; }    
+        public int UserId { get; set; }    
         public int? DesignationId { get; set; }
         public User FacultyUser { get; set; }
         public Lookup designation { get; set; }
-        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int? userId, int? designationId,User user,Lookup Designation)
+        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int userId, int? designationId,User user,Lookup Designation)
         {
             FacultyId = facultyId;
             Name = name;
@@ -33,7 +35,7 @@ namespace MidProjectDb.UI
             FacultyUser = user;
             this.designation = Designation;
         }
-        public Faculty( string name, string email, string contact, string researchArea, int? totalTeachingHours, int? userId, int? designationId)
+        public Faculty( string name, string email, string contact, string researchArea, int? totalTeachingHours, int userId, int? designationId)
         {
             Name = name;
             Email = email;
@@ -46,7 +48,8 @@ namespace MidProjectDb.UI
         }
         public static bool numberdup(string number)
         {
-            List<Faculty> faculty = FacultyDL.getData();
+            FacultyDL facultyDLobject = new FacultyDL();
+            List<Faculty> faculty = facultyDLobject.getData();
             foreach(var member in faculty)
             {
                 if (number == member.Contact)
@@ -58,7 +61,8 @@ namespace MidProjectDb.UI
         }
         public static bool numberdup(string number,int id)
         {
-            List<Faculty> faculty = FacultyDL.getData();
+            FacultyDL facultyDLobject = new FacultyDL();
+            List<Faculty> faculty = facultyDLobject.getData();
             foreach (var member in faculty)
             {
                 if (number == member.Contact && member.UserId!=id)
@@ -68,6 +72,46 @@ namespace MidProjectDb.UI
             }
             return true;
         }
+        
+        public static void delete(int id)
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            facultyDLobject.Delete(id);
+        }
+        public static void insert(Faculty u)
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            facultyDLobject.insertfaculty(u);
+        }
+        public static void update(Faculty u)
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            facultyDLobject.update(u);
+        }
+        public static bool validationsCheck(Faculty u, out string errorMessage)
+        {
+
+            if (!Utility.Utility.intValidatioin(u.Contact))
+            {
+                errorMessage = "Invalid phone number format.\n";
+                return   false;
+            }
+            else if (!Faculty.numberdup(u.Contact, u.UserId))
+            {
+                errorMessage = "Phone number already exists.\n";
+                return false;
+            }
+            if (!Utility.Utility.stringvalidation(u.ResearchArea))
+            {
+                errorMessage = "Invalid research area format.\n";
+                return false;
+            }
+            errorMessage = "User added";
+            return true;
+
+        }
+       
+
 
     }
 }

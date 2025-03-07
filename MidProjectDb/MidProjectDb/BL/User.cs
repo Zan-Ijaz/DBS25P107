@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,14 @@ namespace MidProjectDb.UI
             this.roleId = roleId;
             this.role = role;
         }
+        public User(int userid, string username, string email, int roleId, Lookup role)//For updating
+        {
+            this.userid = userid;
+            this.username = username;
+            this.email = email;
+            this.roleId = roleId;
+            this.role = role;
+        }
         public User( string username, string email, string password, int roleId, Lookup role)//Using this one for adding user
         {
             this.username = username;
@@ -35,7 +44,8 @@ namespace MidProjectDb.UI
         }
         public static int findid(string username)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject=new UserDL();
+            List<User> users = userdlobject.getData();
             int id = -1;
             foreach(var user in users)
             {
@@ -48,7 +58,8 @@ namespace MidProjectDb.UI
         }
         public static User finduser(int id)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject = new UserDL();
+            List<User> users = userdlobject.getData();
             foreach (var user in users)
             {
                 if (id == user.userid)
@@ -60,7 +71,8 @@ namespace MidProjectDb.UI
         }
         public static User finduser(string name)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject = new UserDL();
+            List<User> users = userdlobject.getData();
             foreach (var user in users)
             {
                 if (name == user.username)
@@ -72,7 +84,8 @@ namespace MidProjectDb.UI
         }
         public static bool emailduplication(string email)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject = new UserDL();
+            List<User> users = userdlobject.getData();
             foreach (var user in users)
             {
                 if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase))
@@ -84,7 +97,8 @@ namespace MidProjectDb.UI
         }
         public static bool nameduplication(string name)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject = new UserDL();
+            List<User> users = userdlobject.getData();
             foreach (var user in users)
             {
                 if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase))
@@ -96,7 +110,8 @@ namespace MidProjectDb.UI
         }
         public static bool emailduplication(string email,int id)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject = new UserDL();
+            List<User> users = userdlobject.getData();
             foreach (var user in users)
             {
                 if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase)&&id!=user.userid)
@@ -108,7 +123,8 @@ namespace MidProjectDb.UI
         }
         public static bool nameduplication(string name,int id)
         {
-            List<User> users = UserDL.getData();
+            UserDL userdlobject = new UserDL();
+            List<User> users = userdlobject.getData();
             foreach (var user in users)
             {
                 if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase)&&id!=user.userid)
@@ -137,6 +153,44 @@ namespace MidProjectDb.UI
                 return false;
             }
         }
+        public static void update(User u)
+        {
+            UserDL userdlobject = new UserDL();
+            userdlobject.update(u);
+        }
+        public static void delete(int id)
+        {   
+            UserDL userdlobject = new UserDL();
+            userdlobject.Delete(id);
+        }
+        public static DataTable loadSignupGRID()
+        {   
+            UserDL userdlobject = new UserDL();
+            DataTable dt = userdlobject.loadSignupgrid();
+            return dt;
+        }
+        public static void insert(User u)
+        {   
+            UserDL userdlobject = new UserDL();
+            userdlobject.insertUser(u);
+        }
+        public static bool ValidateUser(User u, out string errorMessage)
+        {
+            if (!Utility.Utility.stringvalidation(u.username) || !User.nameduplication(u.username, u.userid))
+            {
+                errorMessage = "Invalid string added as username or username already exists.";
+                return false;
+            }
+            if (!Utility.Utility.stringvalidation(u.email) || !User.emailvalidation(u.email) || !User.nameduplication(u.email, u.userid))
+            {
+                errorMessage = "Invalid email added or email already exists.";
+                return false;
+            }
+
+            errorMessage = "";
+            return true;
+        }
+
 
     }
 }

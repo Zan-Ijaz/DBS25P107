@@ -11,7 +11,7 @@ namespace MidProjectDb.DL
     public class CoursesDL
     {
         public static List<Course> courses = new List<Course>();
-        public static List<Course> getData()
+        public List<Course> getData()
         {
             List<Course> newcourses = new List<Course>();
             string query = $"Select * from courses";
@@ -28,9 +28,25 @@ namespace MidProjectDb.DL
             }
             return newcourses;
         }
-        public static void insertCourse(Course c)
+        public DataTable GetDataTable()
+        {
+            string query = $"Select * from courses";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
+        public void insertCourse(Course c)
         {
             string query = $"Insert into courses(course_name,course_type,credit_hours,contact_hours) Values ('{c.CourseName}','{c.CourseType}','{c.CreditHours}','{c.ContactHours}')";
+            DatabaseHelper.Instance.Update(query);
+        }
+        public void deleteCourse(int id)
+        {
+            string query = $"DELETE FROM courses WHERE course_id = {id}";
+            DatabaseHelper.Instance.Update(query);
+        }
+        public void update(Course c)
+        {
+            string query = $"Update courses set course_name='{c.CourseName}',course_type='{c.CourseType}',credit_hours='{c.CreditHours}',contact_hours='{c.ContactHours}' where course_id='{c.CourseId}'";
             DatabaseHelper.Instance.Update(query);
         }
     }
