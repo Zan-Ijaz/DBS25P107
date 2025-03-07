@@ -12,6 +12,7 @@ namespace MidProjectDb.DL
         public static List<Faculty> facultymembers = new List<Faculty>();
         public static List<Faculty> getData()
         {
+            List<Faculty> newfac = new List<Faculty>();
             string query = $"Select * from faculty";
             var reader = DatabaseHelper.Instance.getData(query);
             while (reader.Read())
@@ -27,9 +28,9 @@ namespace MidProjectDb.DL
                 User user = User.finduser(user_id);
                 Lookup lookup = Lookup.findlookup(designation_id);
                 Faculty faculty = new Faculty(facultyid, name, email, contact, research_area, total_teaching_hours,user_id,designation_id,user,lookup);
-                facultymembers.Add(faculty);
+               newfac.Add(faculty);
             }
-            return facultymembers;
+            return newfac;
 
         }
         public static void insertfaculty(Faculty f)

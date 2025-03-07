@@ -12,7 +12,7 @@ namespace MidProjectDb.Utility
         {
             foreach(char c in str)
             {
-                if(c=='\t' || c=='\n'|| str == "")
+                if (c == '\t' || c == '\n' || c == '"' || c == '\'' || str == "")
                 {
                     return false;
                 }

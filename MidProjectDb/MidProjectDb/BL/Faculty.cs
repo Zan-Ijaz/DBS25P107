@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MidProjectDb.BL;
+using MidProjectDb.DL;
 
 namespace MidProjectDb.UI
 {
@@ -48,6 +49,18 @@ namespace MidProjectDb.UI
             foreach(char c in number)
             {
                 if (c < '0' || c > '9')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool numberdup(string number)
+        {
+            List<Faculty> faculty = FacultyDL.getData();
+            foreach(var member in faculty)
+            {
+                if (number == member.Contact)
                 {
                     return false;
                 }

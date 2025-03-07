@@ -46,9 +46,8 @@
             this.Designation_lbl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DesignationId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Back_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +61,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1717, 125);
+            this.panel2.Size = new System.Drawing.Size(1788, 125);
             this.panel2.TabIndex = 2;
             // 
             // Addfaculty_lbl
@@ -72,7 +71,7 @@
             this.Addfaculty_lbl.BackColor = System.Drawing.Color.Transparent;
             this.Addfaculty_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addfaculty_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Addfaculty_lbl.Location = new System.Drawing.Point(701, 47);
+            this.Addfaculty_lbl.Location = new System.Drawing.Point(737, 47);
             this.Addfaculty_lbl.Name = "Addfaculty_lbl";
             this.Addfaculty_lbl.Size = new System.Drawing.Size(322, 49);
             this.Addfaculty_lbl.TabIndex = 0;
@@ -83,7 +82,7 @@
             this.Username_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Username_lbl.AutoSize = true;
             this.Username_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_lbl.Location = new System.Drawing.Point(24, 152);
+            this.Username_lbl.Location = new System.Drawing.Point(59, 157);
             this.Username_lbl.Name = "Username_lbl";
             this.Username_lbl.Size = new System.Drawing.Size(227, 32);
             this.Username_lbl.TabIndex = 3;
@@ -93,7 +92,7 @@
             // 
             this.signupusername_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.signupusername_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupusername_txtbox.Location = new System.Drawing.Point(368, 164);
+            this.signupusername_txtbox.Location = new System.Drawing.Point(403, 164);
             this.signupusername_txtbox.Name = "signupusername_txtbox";
             this.signupusername_txtbox.Size = new System.Drawing.Size(301, 27);
             this.signupusername_txtbox.TabIndex = 4;
@@ -103,7 +102,7 @@
             this.password_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.password_lbl.AutoSize = true;
             this.password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_lbl.Location = new System.Drawing.Point(887, 164);
+            this.password_lbl.Location = new System.Drawing.Point(922, 164);
             this.password_lbl.Name = "password_lbl";
             this.password_lbl.Size = new System.Drawing.Size(221, 32);
             this.password_lbl.TabIndex = 5;
@@ -113,7 +112,7 @@
             // 
             this.signuppass_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.signuppass_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signuppass_txtbox.Location = new System.Drawing.Point(1374, 164);
+            this.signuppass_txtbox.Location = new System.Drawing.Point(1409, 164);
             this.signuppass_txtbox.Name = "signuppass_txtbox";
             this.signuppass_txtbox.Size = new System.Drawing.Size(301, 27);
             this.signuppass_txtbox.TabIndex = 6;
@@ -123,7 +122,7 @@
             this.email_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.email_lbl.AutoSize = true;
             this.email_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email_lbl.Location = new System.Drawing.Point(24, 217);
+            this.email_lbl.Location = new System.Drawing.Point(59, 217);
             this.email_lbl.Name = "email_lbl";
             this.email_lbl.Size = new System.Drawing.Size(169, 32);
             this.email_lbl.TabIndex = 7;
@@ -133,7 +132,7 @@
             // 
             this.email_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.email_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email_txtbox.Location = new System.Drawing.Point(368, 224);
+            this.email_txtbox.Location = new System.Drawing.Point(403, 224);
             this.email_txtbox.Name = "email_txtbox";
             this.email_txtbox.Size = new System.Drawing.Size(301, 27);
             this.email_txtbox.TabIndex = 8;
@@ -143,7 +142,7 @@
             this.contactnmbr_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.contactnmbr_lbl.AutoSize = true;
             this.contactnmbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactnmbr_lbl.Location = new System.Drawing.Point(887, 224);
+            this.contactnmbr_lbl.Location = new System.Drawing.Point(922, 224);
             this.contactnmbr_lbl.Name = "contactnmbr_lbl";
             this.contactnmbr_lbl.Size = new System.Drawing.Size(302, 32);
             this.contactnmbr_lbl.TabIndex = 9;
@@ -153,7 +152,7 @@
             // 
             this.contact_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.contact_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact_txtbox.Location = new System.Drawing.Point(1374, 231);
+            this.contact_txtbox.Location = new System.Drawing.Point(1409, 231);
             this.contact_txtbox.Name = "contact_txtbox";
             this.contact_txtbox.Size = new System.Drawing.Size(301, 27);
             this.contact_txtbox.TabIndex = 10;
@@ -169,11 +168,11 @@
             this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_btn.ForeColor = System.Drawing.Color.White;
-            this.Next_btn.Location = new System.Drawing.Point(730, 664);
+            this.Next_btn.Location = new System.Drawing.Point(804, 664);
             this.Next_btn.Name = "Next_btn";
             this.Next_btn.Size = new System.Drawing.Size(174, 55);
             this.Next_btn.TabIndex = 17;
-            this.Next_btn.Text = "Next";
+            this.Next_btn.Text = "Add";
             this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
             // 
             // reserch_interest_lbl
@@ -181,7 +180,7 @@
             this.reserch_interest_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.reserch_interest_lbl.AutoSize = true;
             this.reserch_interest_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserch_interest_lbl.Location = new System.Drawing.Point(24, 281);
+            this.reserch_interest_lbl.Location = new System.Drawing.Point(59, 281);
             this.reserch_interest_lbl.Name = "reserch_interest_lbl";
             this.reserch_interest_lbl.Size = new System.Drawing.Size(319, 32);
             this.reserch_interest_lbl.TabIndex = 18;
@@ -191,7 +190,7 @@
             // 
             this.reserch_interest_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.reserch_interest_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserch_interest_txtbox.Location = new System.Drawing.Point(368, 288);
+            this.reserch_interest_txtbox.Location = new System.Drawing.Point(403, 288);
             this.reserch_interest_txtbox.Name = "reserch_interest_txtbox";
             this.reserch_interest_txtbox.Size = new System.Drawing.Size(301, 27);
             this.reserch_interest_txtbox.TabIndex = 19;
@@ -201,7 +200,7 @@
             this.teachinghours_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.teachinghours_lbl.AutoSize = true;
             this.teachinghours_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teachinghours_lbl.Location = new System.Drawing.Point(887, 281);
+            this.teachinghours_lbl.Location = new System.Drawing.Point(922, 281);
             this.teachinghours_lbl.Name = "teachinghours_lbl";
             this.teachinghours_lbl.Size = new System.Drawing.Size(422, 32);
             this.teachinghours_lbl.TabIndex = 20;
@@ -211,7 +210,7 @@
             // 
             this.teaching_hours_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.teaching_hours_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teaching_hours_txtbox.Location = new System.Drawing.Point(1374, 288);
+            this.teaching_hours_txtbox.Location = new System.Drawing.Point(1409, 288);
             this.teaching_hours_txtbox.Name = "teaching_hours_txtbox";
             this.teaching_hours_txtbox.Size = new System.Drawing.Size(301, 27);
             this.teaching_hours_txtbox.TabIndex = 21;
@@ -221,7 +220,7 @@
             this.Designation_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Designation_lbl.AutoSize = true;
             this.Designation_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Designation_lbl.Location = new System.Drawing.Point(24, 355);
+            this.Designation_lbl.Location = new System.Drawing.Point(59, 355);
             this.Designation_lbl.Name = "Designation_lbl";
             this.Designation_lbl.Size = new System.Drawing.Size(261, 32);
             this.Designation_lbl.TabIndex = 22;
@@ -237,7 +236,7 @@
             "Assistant Professor",
             "Associate Professor",
             "Professor"});
-            this.comboBox1.Location = new System.Drawing.Point(368, 363);
+            this.comboBox1.Location = new System.Drawing.Point(403, 363);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(297, 24);
             this.comboBox1.TabIndex = 23;
@@ -247,32 +246,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DesignationId,
-            this.UserId});
-            this.dataGridView1.Location = new System.Drawing.Point(258, 454);
+            this.dataGridView1.Location = new System.Drawing.Point(293, 454);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1112, 150);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // DesignationId
-            // 
-            this.DesignationId.DataPropertyName = "DesignationId";
-            this.DesignationId.HeaderText = "DesignationId";
-            this.DesignationId.MinimumWidth = 6;
-            this.DesignationId.Name = "DesignationId";
-            this.DesignationId.Width = 125;
-            // 
-            // UserId
-            // 
-            this.UserId.DataPropertyName = "UserId";
-            this.UserId.HeaderText = "UserId";
-            this.UserId.MinimumWidth = 6;
-            this.UserId.Name = "UserId";
-            this.UserId.ReadOnly = true;
-            this.UserId.Width = 125;
             // 
             // Back_btn
             // 
@@ -285,19 +264,39 @@
             this.Back_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_btn.ForeColor = System.Drawing.Color.White;
-            this.Back_btn.Location = new System.Drawing.Point(169, 664);
+            this.Back_btn.Location = new System.Drawing.Point(204, 664);
             this.Back_btn.Name = "Back_btn";
             this.Back_btn.Size = new System.Drawing.Size(174, 55);
             this.Back_btn.TabIndex = 25;
             this.Back_btn.Text = "Back";
             this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
+            // Update_btn
+            // 
+            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Update_btn.BorderRadius = 20;
+            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_btn.ForeColor = System.Drawing.Color.White;
+            this.Update_btn.Location = new System.Drawing.Point(1409, 664);
+            this.Update_btn.Name = "Update_btn";
+            this.Update_btn.Size = new System.Drawing.Size(174, 55);
+            this.Update_btn.TabIndex = 26;
+            this.Update_btn.Text = "Update";
+            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1720, 760);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1791, 760);
+            this.Controls.Add(this.Update_btn);
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
@@ -319,6 +318,7 @@
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.Signup_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -347,8 +347,7 @@
         private System.Windows.Forms.Label Designation_lbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesignationId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
         private Guna.UI2.WinForms.Guna2Button Back_btn;
+        private Guna.UI2.WinForms.Guna2Button Update_btn;
     }
 }

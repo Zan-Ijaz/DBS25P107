@@ -35,14 +35,15 @@ namespace MidProjectDb.UI
         {
             string signinusername = signinusername_txtbox.Text;
             string signinpassword = signinpassword_txtbox.Text;
-            string query = $"Select* From users where username='{signinusername}'";
+            if(Utility.Utility.stringvalidation(signinusername_txtbox.Text)&& Utility.Utility.stringvalidation(signinpassword_txtbox.Text))
+            {
+                string query = $"Select* From users where username='{signinusername}' And password_hash=SHA2('{signinpassword}',256)";
             try
             {
                  
                 var reader = DatabaseHelper.Instance.getData(query);
                 if(reader.Read()){
-                    if (signinpassword == reader["password_hash"].ToString())
-                    {
+                    
                         if (Convert.ToInt32(reader["role_id"]) == 1)
                         {
                             AdministrativeStaff admin = new AdministrativeStaff();
@@ -71,18 +72,23 @@ namespace MidProjectDb.UI
                             this.Close();
 
                         }
-                    }
-                    else throw new Exception("Wrong Password");
                 }
                 else
                 {
-                    throw new Exception("No user with such username exists.");
+                    throw new Exception("Wrong Credentials.");
                 }
             }
             catch (Exception ex )
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+            }
+            else
+            {
+                MessageBox.Show("Invaid String added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                signinusername_txtbox.Text = "";
+                signinpassword_txtbox.Text = "";
             }
 
 

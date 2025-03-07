@@ -58,12 +58,24 @@ namespace MidProjectDb.UI
             }
             return null;
         }
+        public static User finduser(string name)
+        {
+            List<User> users = UserDL.getData();
+            foreach (var user in users)
+            {
+                if (name == user.username)
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
         public static bool emailduplication(string email)
         {
             List<User> users = UserDL.getData();
             foreach (var user in users)
             {
-                if (email == user.email)
+                if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase))
                 {
                     return false;
                 }
@@ -75,7 +87,7 @@ namespace MidProjectDb.UI
             List<User> users = UserDL.getData();
             foreach (var user in users)
             {
-                if (name == user.username)
+                if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase))
                 {
                     return false;
                 }
@@ -86,19 +98,11 @@ namespace MidProjectDb.UI
         {
             bool attherate = false;
             bool dot = false;
-            foreach (char character in email)
+            foreach (char c in email)
             {
-                if (character == '@')
-                {
-                    attherate =true;
-                }
-            }
-            foreach (char character in email)
-            {
-                if (character == '.')
-                {
-                    dot = true;
-                }
+                if (c == '@') attherate = true;
+                if (c == '.') dot = true;
+
             }
             if (dot && attherate)
             {
