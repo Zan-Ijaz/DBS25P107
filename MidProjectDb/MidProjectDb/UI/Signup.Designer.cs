@@ -48,6 +48,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Back_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -168,7 +169,7 @@
             this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_btn.ForeColor = System.Drawing.Color.White;
-            this.Next_btn.Location = new System.Drawing.Point(804, 664);
+            this.Next_btn.Location = new System.Drawing.Point(598, 664);
             this.Next_btn.Name = "Next_btn";
             this.Next_btn.Size = new System.Drawing.Size(174, 55);
             this.Next_btn.TabIndex = 17;
@@ -244,6 +245,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(293, 454);
@@ -264,7 +266,7 @@
             this.Back_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_btn.ForeColor = System.Drawing.Color.White;
-            this.Back_btn.Location = new System.Drawing.Point(204, 664);
+            this.Back_btn.Location = new System.Drawing.Point(293, 664);
             this.Back_btn.Name = "Back_btn";
             this.Back_btn.Size = new System.Drawing.Size(174, 55);
             this.Back_btn.TabIndex = 25;
@@ -282,12 +284,30 @@
             this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update_btn.ForeColor = System.Drawing.Color.White;
-            this.Update_btn.Location = new System.Drawing.Point(1409, 664);
+            this.Update_btn.Location = new System.Drawing.Point(909, 664);
             this.Update_btn.Name = "Update_btn";
             this.Update_btn.Size = new System.Drawing.Size(174, 55);
             this.Update_btn.TabIndex = 26;
             this.Update_btn.Text = "Update";
             this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(1231, 664);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 27;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
             // 
             // Signup
             // 
@@ -296,6 +316,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1791, 760);
+            this.Controls.Add(this.Delete_btn);
             this.Controls.Add(this.Update_btn);
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.dataGridView1);
@@ -349,5 +370,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Button Back_btn;
         private Guna.UI2.WinForms.Guna2Button Update_btn;
+        private Guna.UI2.WinForms.Guna2Button Delete_btn;
     }
 }

@@ -11,6 +11,7 @@ using System.Security.Cryptography;
 using MidProjectDb.DL;
 using MidProjectDb.BL;
 using System.Linq.Expressions;
+using System.Web.Security;
 namespace MidProjectDb.UI
 {
     public partial class Signup: Form
@@ -41,7 +42,7 @@ namespace MidProjectDb.UI
                     }
                     signupusername_txtbox.Text = "";
                 }
-                if (signuppass_txtbox.Text.Length >= 8 &&Faculty.intValidatioin(signuppass_txtbox.Text))
+                if (signuppass_txtbox.Text.Length >= 8 &&Utility.Utility.intValidatioin(signuppass_txtbox.Text))
                 {
                     password =(signuppass_txtbox.Text);
                 }
@@ -66,7 +67,7 @@ namespace MidProjectDb.UI
                     }
                     email_txtbox.Text = "";
                 }
-                if (contact_txtbox.Text.Length == 11 && Faculty.intValidatioin(contact_txtbox.Text) && Faculty.numberdup(contact_txtbox.Text))
+                if (contact_txtbox.Text.Length == 11 && Utility.Utility.intValidatioin(contact_txtbox.Text) && Faculty.numberdup(contact_txtbox.Text))
                 {
                     contactnumber = contact_txtbox.Text;
 
@@ -77,7 +78,7 @@ namespace MidProjectDb.UI
                     {
                         MessageBox.Show("Contact number must be 11 digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    if (!Faculty.intValidatioin(contact_txtbox.Text))
+                    if (!Utility.Utility.intValidatioin(contact_txtbox.Text))
                     {
                         MessageBox.Show("Contact number must Contain only digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -97,7 +98,7 @@ namespace MidProjectDb.UI
                     MessageBox.Show("Invalid String as research interest", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                if (Faculty.intValidatioin(teaching_hours_txtbox.Text))
+                if (Utility.Utility.intValidatioin(teaching_hours_txtbox.Text))
                 {
                     availablehours = Convert.ToInt32(teaching_hours_txtbox.Text);
                 }
@@ -107,30 +108,34 @@ namespace MidProjectDb.UI
                     MessageBox.Show("Invalid hours selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
-                    if (comboBox1.SelectedIndex != -1)
-                    {
-                        designation = comboBox1.SelectedItem?.ToString() ?? "";
-                    }
-                    else
-                    {
-                        MessageBox.Show("No designation selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (comboBox1.SelectedIndex != -1)
+                {
+                    designation = comboBox1.SelectedItem?.ToString() ?? "";
+                }
+                else
+                {
+                    MessageBox.Show("No designation selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }
-                    if (name != "" && password != "" && email != "" && contactnumber != "" && research != "" && designation != "" && availablehours > -01)
-                    {
-                        Lookup look = Lookup.findlookup(designation);
-                        User user = new User(name, email, password, look.lookupid, look);
-                        UserDL.insertUser(user);
-                        int userid = User.findid(name);
-                        Faculty faculty = new Faculty(name, email, contactnumber, research, availablehours, userid, look.lookupid);
-                        FacultyDL.insertfaculty(faculty);
+                }
+                if (name != "" && password != "" && email != "" && contactnumber != "" && research != "" && designation != "" && availablehours > -01)
+                {
+                    Lookup look = Lookup.findlookup(designation);
+                    User user = new User(name, email, password, look.lookupid, look);
+                    UserDL.insertUser(user);
+                    int userid = User.findid(name);
+                    Faculty faculty = new Faculty(name, email, contactnumber, research, availablehours, userid, look.lookupid);
+                    FacultyDL.insertfaculty(faculty);
+                    MessageBox.Show("User added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    signupusername_txtbox.Text = "";
+                    signuppass_txtbox.Text = "";
+                    email_txtbox.Text = "";
+                    contact_txtbox.Text = "";
+                    reserch_interest_txtbox.Text = "";
+                    teaching_hours_txtbox.Text = "";
+                    comboBox1.Text = "";
 
-                        AdministrativeStaff admin = new AdministrativeStaff();
-                        admin.Show();
-                        admin.Size = this.Size;
-                        admin.Location = this.Location;
-                        this.Close();
-                    }
+                }
+                LoadDataGrid();
                
                 }
             
@@ -140,7 +145,6 @@ namespace MidProjectDb.UI
 
             }
         }
-
         private void Back_btn_Click(object sender, EventArgs e)
         {
             AdministrativeStaff admin = new AdministrativeStaff();
@@ -158,7 +162,7 @@ namespace MidProjectDb.UI
         {
             try
             {
-                string query = $"SELECT f.name as Name,f.email as Email ,f.contact as Contact ,d.value as Designation,f.research_area as ResearchArea,f.total_teaching_hours as TotalTeachingHours,r.value as Role,f.user_id as UserID from faculty f inner join lookup d on  f.designation_id=d.lookup_id inner join users as u on f.user_id=u.user_id inner join lookup r on u.role_id=r.lookup_id";
+                string query = $"SELECT f.name as Name,f.email as Email ,f.contact as Contact ,d.value as Designation,f.research_area as ResearchArea,f.total_teaching_hours as TotalTeachingHours,r.value as Role,f.user_id as UserID from faculty f inner join lookup d on f.designation_id=d.lookup_id inner join users as u on f.user_id=u.user_id inner join lookup r on u.role_id=r.lookup_id order by role";
                 DataTable dt = new DataTable();
                 var reader=DatabaseHelper.Instance.getData(query);
                 if (reader != null)
@@ -178,7 +182,6 @@ namespace MidProjectDb.UI
                 MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void Update_btn_Click(object sender, EventArgs e)
         {
             try{
@@ -190,25 +193,26 @@ namespace MidProjectDb.UI
                     {
                         string name = "", email="", contact="", researchArea="";
                         int totalHours = -01;
-                        if (Utility.Utility.stringvalidation(row["Name"].ToString()))
+                        int userid = Convert.ToInt32(row["UserID"]);
+                        if (Utility.Utility.stringvalidation(row["Name"].ToString())&&User.nameduplication(row["Name"].ToString(),userid))
                         {
                             name = row["Name"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Invalid string added as username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid string added as username or username already exists,", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
-                        if (Utility.Utility.stringvalidation(row["Email"].ToString()) && User.emailvalidation(row["Email"].ToString()))
+                        if (Utility.Utility.stringvalidation(row["Email"].ToString()) && User.emailvalidation(row["Email"].ToString()) && User.nameduplication(row["Email"].ToString(), userid))
                         {
                             email = row["Email"].ToString();
                         }
                         else
                         {
-                            MessageBox.Show("Invalid email added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid email added or email already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
-                        if(Faculty.intValidatioin(row["Contact"].ToString())){
+                        if(Utility.Utility.intValidatioin(row["Contact"].ToString())&&Faculty.numberdup(row["Contact"].ToString(),userid)){
                             contact = row["Contact"].ToString();
                         }
                         else
@@ -227,7 +231,7 @@ namespace MidProjectDb.UI
                             MessageBox.Show("Invalid string added as research", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
-                        if(Faculty.intValidatioin(row["TotalTeachingHours"].ToString()))
+                        if(Utility.Utility.intValidatioin(row["TotalTeachingHours"].ToString()))
                         {
                             totalHours = Convert.ToInt32(row["TotalTeachingHours"]);
                         }
@@ -235,8 +239,13 @@ namespace MidProjectDb.UI
                         {
                             MessageBox.Show("Invalid total hours added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        int userid = Convert.ToInt32(row["UserID"]);
                         string role = row["Role"].ToString();
+                        int hodcount = UserDL.hodCount(userid);
+                        if (role == "Department Head" && hodcount > 0)
+                        {
+                            MessageBox.Show("A HoD is already available. User will remain faculty member", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            role = "Faculty";
+                        }
                         Lookup rolellokup = Lookup.findlookup(role);
                         if(name!=""&&email!=""&&contact!=""&&researchArea!=""&&totalHours>=0){
                         string userquery = $"Update users set username='{name}', email='{email}', role_id='{rolellokup.lookupid}' where user_id='{userid}' ";
@@ -284,6 +293,39 @@ namespace MidProjectDb.UI
             dataGridView1.Columns.Add(comboBoxColumn);
         }
 
+        private void Delete_btn_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedRow();
+        }
+        private void DeleteSelectedRow()
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    int userId = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        string deleteFacultyQuery = $"DELETE FROM faculty WHERE user_id = {userId}";
+                        DatabaseHelper.Instance.Update(deleteFacultyQuery);
+                        string deleteUserQuery = $"DELETE FROM users WHERE user_id = {userId}";
+                        DatabaseHelper.Instance.Update(deleteUserQuery);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadDataGrid();
+
+        }
 
     }
 

@@ -44,17 +44,6 @@ namespace MidProjectDb.UI
             DesignationId = designationId;
             this.designation = designation;
         }
-        public static bool intValidatioin(string number)
-        {
-            foreach(char c in number)
-            {
-                if (c < '0' || c > '9')
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
         public static bool numberdup(string number)
         {
             List<Faculty> faculty = FacultyDL.getData();
@@ -67,5 +56,18 @@ namespace MidProjectDb.UI
             }
             return true;
         }
+        public static bool numberdup(string number,int id)
+        {
+            List<Faculty> faculty = FacultyDL.getData();
+            foreach (var member in faculty)
+            {
+                if (number == member.Contact && member.UserId!=id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
     }
 }

@@ -19,5 +19,16 @@ namespace MidProjectDb.Utility
             }
             return true;
         }
+        public static bool intValidatioin(string number)
+        {
+            foreach (char c in number)
+            {
+                if (c < '0' || c > '9')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

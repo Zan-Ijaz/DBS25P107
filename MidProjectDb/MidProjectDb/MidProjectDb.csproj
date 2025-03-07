@@ -141,6 +141,7 @@
     <Compile Include="BL\Facultyroom.cs" />
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
+    <Compile Include="DL\CoursesDL.cs" />
     <Compile Include="DL\FacultyDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\UserDL.cs" />

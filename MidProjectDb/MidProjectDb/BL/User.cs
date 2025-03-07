@@ -94,6 +94,30 @@ namespace MidProjectDb.UI
             }
             return true;
         }
+        public static bool emailduplication(string email,int id)
+        {
+            List<User> users = UserDL.getData();
+            foreach (var user in users)
+            {
+                if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase)&&id!=user.userid)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool nameduplication(string name,int id)
+        {
+            List<User> users = UserDL.getData();
+            foreach (var user in users)
+            {
+                if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase)&&id!=user.userid)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         public static bool emailvalidation(string email)
         {
             bool attherate = false;

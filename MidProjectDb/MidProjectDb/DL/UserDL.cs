@@ -38,6 +38,18 @@ namespace MidProjectDb.DL
             //Assigning 2 bcz newly added member is faculty member
             DatabaseHelper.Instance.Update(userquery);
 
-        } 
+        }
+        public static int hodCount(int userid)
+        {
+            int count = 0;
+            string query = $"Select count(*) as counter from users where role_id=3 and user_id <> '{userid}';";
+            var reader = DatabaseHelper.Instance.getData(query);
+            if(reader.Read())
+            {
+                count = Convert.ToInt32(reader["Counter"]);
+            }
+            reader.Close();
+            return count;
+        }
     }
 }
