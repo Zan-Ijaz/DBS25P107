@@ -52,6 +52,7 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2Button1.BorderRadius = 20;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -65,6 +66,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(174, 55);
             this.guna2Button1.TabIndex = 17;
             this.guna2Button1.Text = "Next";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // setpassword_txtbox
             // 

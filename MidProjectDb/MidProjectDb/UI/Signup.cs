@@ -156,7 +156,7 @@ namespace MidProjectDb.UI
                             MessageBox.Show("Invaild teaching hours added", "User Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         //Role validation
-                        int hodcount = UserDL.hodCount(userid);
+                        int hodcount = User.hod(userid);
                         if (role == "Department Head" && hodcount > 0)
                         {
                             MessageBox.Show("A HoD is already available. User will remain faculty member", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);

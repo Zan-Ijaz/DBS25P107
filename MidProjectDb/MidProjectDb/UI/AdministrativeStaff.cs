@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MidProjectDb.BL;
 
 namespace MidProjectDb.UI
 {
@@ -93,6 +94,7 @@ namespace MidProjectDb.UI
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
+            LoggedInUser.ClearSession();
             SignIn signIn = new SignIn();
             signIn.Show();
             signIn.Size = this.Size;

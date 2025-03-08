@@ -139,6 +139,7 @@
     <Compile Include="BL\Facultycourse.cs" />
     <Compile Include="BL\FacultyReq.cs" />
     <Compile Include="BL\Facultyroom.cs" />
+    <Compile Include="BL\LoggedInUser.cs" />
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
     <Compile Include="DL\CoursesDL.cs" />

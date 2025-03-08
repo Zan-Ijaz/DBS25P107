@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -190,7 +191,51 @@ namespace MidProjectDb.UI
             errorMessage = "";
             return true;
         }
-
-
+        public static DataRow signin(string username, string password)
+        {
+            if (Utility.Utility.stringvalidation(username) && Utility.Utility.stringvalidation(password))
+            {
+                UserDL userDLobj = new UserDL();
+                DataRow dr = userDLobj.signin(username, password);
+                return dr;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public static int hod(int id)
+        {
+            UserDL userDLobj = new UserDL();
+            int count = userDLobj.hodCount(id);
+            return count;
+        }
+        public static DataRow forgotpassword(string username,string email)
+        {
+            if (Utility.Utility.stringvalidation(username) && Utility.Utility.stringvalidation(email))
+            {
+                UserDL userDLobj = new UserDL();
+                DataRow dr=userDLobj.forgot(username, email);
+                return dr;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public static bool changepassword(DataRow dr ,string password)
+        {
+            if(password.Length>=8&&Utility.Utility.stringvalidation(password))
+            {
+                int id = Convert.ToInt32(dr["user_id"]);
+                UserDL userDLobj = new UserDL();
+                userDLobj.setPassword(id, password);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

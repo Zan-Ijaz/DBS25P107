@@ -62,10 +62,26 @@ namespace MidProjectDb.DL
         }
         public DataTable loadSignupgrid()
         {
-            string query = $"SELECT f.name as Name,f.email as Email ,f.contact as Contact ,d.value as Designation,f.research_area as ResearchArea,f.total_teaching_hours as TotalTeachingHours,r.value as Role,f.user_id as UserID from faculty f inner join lookup d on f.designation_id=d.lookup_id inner join users as u on f.user_id=u.user_id inner join lookup r on u.role_id=r.lookup_id order by role";
+            string query = $"SELECT f.name as Name,f.email as Email ,f.contact as Contact ,d.value as Designation,f.research_area as ResearchArea,f.total_teaching_hours as TotalTeachingHours,r.value as Role,f.user_id as UserID from faculty f inner join lookup d on f.designation_id=d.lookup_id inner join users as u on f.user_id=u.user_id inner join lookup r on u.role_id=r.lookup_id order by role,Name";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
-
+        public DataRow signin(string username,string password)
+        {
+            string query = $"Select* From users where username='{username}' And password_hash=SHA2('{password}',256)";
+            DataTable dt=DatabaseHelper.Instance.GetData(query);
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null;
+        }
+        public DataRow forgot(string username, string email)
+        {
+            string query = $"Select* From users where username='{username}' And email='{email}'";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null;
+        }
+        public void setPassword(int id,string password)
+        {
+            string query = $"Update users set password_hash=SHA2('{password}',256) where user_id='{id}'";
+            DatabaseHelper.Instance.Update(query);
+        }
     }
 }

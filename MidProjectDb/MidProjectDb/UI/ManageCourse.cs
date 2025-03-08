@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MidProjectDb.BL;
-using MidProjectDb.DL;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MidProjectDb.UI
@@ -167,6 +166,7 @@ namespace MidProjectDb.UI
                         }
                         if(title!=""&&type!=""&&credit!=-1&&contact!=-1)
                         {
+                            Course course = new Course(title, type, credit, contact);
                             Course.update(course);
                         }
                         loadDatagrid();

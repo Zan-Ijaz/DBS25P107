@@ -30,29 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.EndDate = new System.Windows.Forms.DateTimePicker();
+            this.Startdate = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.roomname_txtbox = new System.Windows.Forms.TextBox();
+            this.facultyname_txtbox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Supervision_lbl = new System.Windows.Forms.Label();
             this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.Course_lbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.courseSechduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Sechduling_lbl = new System.Windows.Forms.Label();
-            this.Supervision_lbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Sechduleid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultycourseidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.starttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.facultyname_txtbox = new System.Windows.Forms.TextBox();
-            this.roomname_txtbox = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Startdate = new System.Windows.Forms.DateTimePicker();
-            this.EndDate = new System.Windows.Forms.DateTimePicker();
+            this.courseSechduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Sechduling_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseSechduleBindingSource)).BeginInit();
@@ -81,6 +81,113 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1111, 706);
             this.panel1.TabIndex = 0;
+            // 
+            // EndDate
+            // 
+            this.EndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.EndDate.Location = new System.Drawing.Point(695, 575);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(301, 22);
+            this.EndDate.TabIndex = 34;
+            // 
+            // Startdate
+            // 
+            this.Startdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Startdate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.Startdate.Location = new System.Drawing.Point(695, 526);
+            this.Startdate.Name = "Startdate";
+            this.Startdate.Size = new System.Drawing.Size(301, 22);
+            this.Startdate.TabIndex = 33;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.comboBox1.Location = new System.Drawing.Point(695, 481);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(301, 24);
+            this.comboBox1.TabIndex = 32;
+            // 
+            // roomname_txtbox
+            // 
+            this.roomname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roomname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomname_txtbox.Location = new System.Drawing.Point(695, 430);
+            this.roomname_txtbox.Name = "roomname_txtbox";
+            this.roomname_txtbox.Size = new System.Drawing.Size(301, 27);
+            this.roomname_txtbox.TabIndex = 31;
+            // 
+            // facultyname_txtbox
+            // 
+            this.facultyname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.facultyname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facultyname_txtbox.Location = new System.Drawing.Point(695, 387);
+            this.facultyname_txtbox.Name = "facultyname_txtbox";
+            this.facultyname_txtbox.Size = new System.Drawing.Size(301, 27);
+            this.facultyname_txtbox.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(153, 565);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(218, 32);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Enter End Time:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(153, 516);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(218, 32);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Enter Start time:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(153, 471);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 32);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Select day:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(153, 425);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(254, 32);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Enter Room Name:";
+            // 
+            // Supervision_lbl
+            // 
+            this.Supervision_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Supervision_lbl.AutoSize = true;
+            this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Supervision_lbl.Location = new System.Drawing.Point(153, 380);
+            this.Supervision_lbl.Name = "Supervision_lbl";
+            this.Supervision_lbl.Size = new System.Drawing.Size(267, 32);
+            this.Supervision_lbl.TabIndex = 25;
+            this.Supervision_lbl.Text = "Enter Faculty name:";
             // 
             // Next_btn
             // 
@@ -149,56 +256,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(837, 150);
             this.dataGridView1.TabIndex = 4;
             // 
-            // courseSechduleBindingSource
-            // 
-            this.courseSechduleBindingSource.DataSource = typeof(MidProjectDb.BL.CourseSechdule);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.Sechduling_lbl);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 142);
-            this.panel2.TabIndex = 3;
-            // 
-            // Sechduling_lbl
-            // 
-            this.Sechduling_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Sechduling_lbl.AutoSize = true;
-            this.Sechduling_lbl.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Sechduling_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sechduling_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Sechduling_lbl.Location = new System.Drawing.Point(354, 55);
-            this.Sechduling_lbl.Name = "Sechduling_lbl";
-            this.Sechduling_lbl.Size = new System.Drawing.Size(346, 49);
-            this.Sechduling_lbl.TabIndex = 1;
-            this.Sechduling_lbl.Text = "Sechdule Courses";
-            // 
-            // Supervision_lbl
-            // 
-            this.Supervision_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Supervision_lbl.AutoSize = true;
-            this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervision_lbl.Location = new System.Drawing.Point(153, 380);
-            this.Supervision_lbl.Name = "Supervision_lbl";
-            this.Supervision_lbl.Size = new System.Drawing.Size(267, 32);
-            this.Supervision_lbl.TabIndex = 25;
-            this.Supervision_lbl.Text = "Enter Faculty name:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 425);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 32);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Enter Room Name:";
-            // 
             // Sechduleid
             // 
             this.Sechduleid.DataPropertyName = "Sechduleid";
@@ -253,88 +310,33 @@
             this.endtimeDataGridViewTextBoxColumn.ReadOnly = true;
             this.endtimeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // label2
+            // courseSechduleBindingSource
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 471);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 32);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Select day:";
+            this.courseSechduleBindingSource.DataSource = typeof(MidProjectDb.BL.CourseSechdule);
             // 
-            // label3
+            // panel2
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(153, 516);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 32);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Enter Start time:";
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.Sechduling_lbl);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1111, 142);
+            this.panel2.TabIndex = 3;
             // 
-            // label4
+            // Sechduling_lbl
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(153, 565);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 32);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Enter End Time:";
-            // 
-            // facultyname_txtbox
-            // 
-            this.facultyname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.facultyname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facultyname_txtbox.Location = new System.Drawing.Point(695, 387);
-            this.facultyname_txtbox.Name = "facultyname_txtbox";
-            this.facultyname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.facultyname_txtbox.TabIndex = 30;
-            // 
-            // roomname_txtbox
-            // 
-            this.roomname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roomname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomname_txtbox.Location = new System.Drawing.Point(695, 430);
-            this.roomname_txtbox.Name = "roomname_txtbox";
-            this.roomname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.roomname_txtbox.TabIndex = 31;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"});
-            this.comboBox1.Location = new System.Drawing.Point(695, 481);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(301, 24);
-            this.comboBox1.TabIndex = 32;
-            // 
-            // Startdate
-            // 
-            this.Startdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Startdate.Location = new System.Drawing.Point(695, 526);
-            this.Startdate.Name = "Startdate";
-            this.Startdate.Size = new System.Drawing.Size(301, 22);
-            this.Startdate.TabIndex = 33;
-            // 
-            // EndDate
-            // 
-            this.EndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.EndDate.Location = new System.Drawing.Point(695, 575);
-            this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(301, 22);
-            this.EndDate.TabIndex = 34;
+            this.Sechduling_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Sechduling_lbl.AutoSize = true;
+            this.Sechduling_lbl.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Sechduling_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sechduling_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.Sechduling_lbl.Location = new System.Drawing.Point(354, 55);
+            this.Sechduling_lbl.Name = "Sechduling_lbl";
+            this.Sechduling_lbl.Size = new System.Drawing.Size(346, 49);
+            this.Sechduling_lbl.TabIndex = 1;
+            this.Sechduling_lbl.Text = "Sechdule Courses";
             // 
             // SechdulingCourse2
             // 
