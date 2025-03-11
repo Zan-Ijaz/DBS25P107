@@ -48,11 +48,13 @@ namespace MidProjectDb.UI
             UserDL userdlobject=new UserDL();
             List<User> users = userdlobject.getData();
             int id = -1;
-            foreach(var user in users)
-            {
-                if (username == user.username)
+            if(users.Count > 0){
+                foreach (var user in users)
                 {
-                    id = user.userid;
+                    if (username == user.username)
+                    {
+                        id = user.userid;
+                    }
                 }
             }
             return id;
@@ -61,11 +63,13 @@ namespace MidProjectDb.UI
         {
             UserDL userdlobject = new UserDL();
             List<User> users = userdlobject.getData();
-            foreach (var user in users)
-            {
-                if (id == user.userid)
+            if(users.Count > 0){
+                foreach (var user in users)
                 {
-                    return user;
+                    if (id == user.userid)
+                    {
+                        return user;
+                    }
                 }
             }
             return null;
@@ -74,11 +78,14 @@ namespace MidProjectDb.UI
         {
             UserDL userdlobject = new UserDL();
             List<User> users = userdlobject.getData();
-            foreach (var user in users)
+            if (users.Count > 0)
             {
-                if (name == user.username)
+                foreach (var user in users)
                 {
-                    return user;
+                    if (name == user.username)
+                    {
+                        return user;
+                    }
                 }
             }
             return null;
@@ -87,11 +94,14 @@ namespace MidProjectDb.UI
         {
             UserDL userdlobject = new UserDL();
             List<User> users = userdlobject.getData();
-            foreach (var user in users)
+            if (users.Count > 0)
             {
-                if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase))
+                foreach (var user in users)
                 {
-                    return false;
+                    if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -100,11 +110,14 @@ namespace MidProjectDb.UI
         {
             UserDL userdlobject = new UserDL();
             List<User> users = userdlobject.getData();
-            foreach (var user in users)
+            if (users.Count > 0)
             {
-                if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase))
+                foreach (var user in users)
                 {
-                    return false;
+                    if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -113,11 +126,14 @@ namespace MidProjectDb.UI
         {
             UserDL userdlobject = new UserDL();
             List<User> users = userdlobject.getData();
-            foreach (var user in users)
+            if (users.Count > 0)
             {
-                if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase)&&id!=user.userid)
+                foreach (var user in users)
                 {
-                    return false;
+                    if (user.email.Equals(email, StringComparison.OrdinalIgnoreCase) && id != user.userid)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -126,11 +142,14 @@ namespace MidProjectDb.UI
         {
             UserDL userdlobject = new UserDL();
             List<User> users = userdlobject.getData();
-            foreach (var user in users)
+            if (users.Count>0)
             {
-                if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase)&&id!=user.userid)
+                foreach (var user in users)
                 {
-                    return false;
+                    if (user.username.Equals(name, StringComparison.OrdinalIgnoreCase) && id != user.userid)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;

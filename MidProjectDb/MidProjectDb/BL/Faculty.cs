@@ -50,11 +50,14 @@ namespace MidProjectDb.UI
         {
             FacultyDL facultyDLobject = new FacultyDL();
             List<Faculty> faculty = facultyDLobject.getData();
-            foreach(var member in faculty)
+            if(faculty.Count > 0)
             {
-                if (number == member.Contact)
+                foreach (var member in faculty)
                 {
-                    return false;
+                    if (number == member.Contact)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -63,11 +66,14 @@ namespace MidProjectDb.UI
         {
             FacultyDL facultyDLobject = new FacultyDL();
             List<Faculty> faculty = facultyDLobject.getData();
-            foreach (var member in faculty)
+            if(faculty.Count > 0)
             {
-                if (number == member.Contact && member.UserId!=id)
+                foreach (var member in faculty)
                 {
-                    return false;
+                    if (number == member.Contact && member.UserId != id)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;

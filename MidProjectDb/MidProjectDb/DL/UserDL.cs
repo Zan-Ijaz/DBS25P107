@@ -16,25 +16,28 @@ namespace MidProjectDb.DL
         public static List<UI.User> users = new List<UI.User>();
         public List<UI.User> getData()
         {
-                   List<UI.User> newusers = new List<UI.User>();
-                 string query = $"Select * From users";
+            List<UI.User> newusers = new List<UI.User>();
+            string query = $"Select * From users";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
-            foreach (DataRow reader in dt.Rows)
+            if (dt != null)
             {
-                int userid = Convert.ToInt32(reader["user_id"]);
-                int roleid = Convert.ToInt32(reader["role_id"]);
-                string username = (reader["username"].ToString());
-                string Password = (reader["password_hash"].ToString());
-                string email = reader["email"].ToString();
-                Lookup lookup = Lookup.findlookup(roleid);
-                UI.User u = new UI.User(userid, username, email,Password, roleid, lookup);
-                newusers.Add(u);
+                foreach (DataRow reader in dt.Rows)
+                {
+                    int userid = Convert.ToInt32(reader["user_id"]);
+                    int roleid = Convert.ToInt32(reader["role_id"]);
+                    string username = (reader["username"].ToString());
+                    string Password = (reader["password_hash"].ToString());
+                    string email = reader["email"].ToString();
+                    Lookup lookup = Lookup.findlookup(roleid);
+                    UI.User u = new UI.User(userid, username, email, Password, roleid, lookup);
+                    newusers.Add(u);
+                }
             }
             return newusers;
         }
         public void insertUser(UI.User u)
         {
-            string userquery = $"Insert into users (username,email,password_hash,role_id) Values('{u.username}','{u.email}',SHA2('{u.password}',256),'{2}')";
+            string userquery = $"Insert into users (username,email,password_hash,role_id) Values('{u.username}','{u.email}',SHA2('{u.password}',256),'{u.roleId}')";
             //Assigning 2 bcz newly added member is faculty member
             DatabaseHelper.Instance.Update(userquery);
 

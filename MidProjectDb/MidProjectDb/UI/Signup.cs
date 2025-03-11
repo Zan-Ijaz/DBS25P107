@@ -23,24 +23,81 @@ namespace MidProjectDb.UI
         }
         private void Next_btn_Click(object sender, EventArgs e)
         {
-            string name = "", password = "", email = "", contactnumber = "", research = "", designation="";
+            string name = "", password = "", email = "", contactnumber = "", research = "", designation = "";
             int availablehours = -1;
-            string errorMessage = "", errorMessage2 = "";
             try
             {
-                name = signupusername_txtbox.Text;
-                if (signuppass_txtbox.Text.Length >= 8 &&Utility.Utility.intValidatioin(signuppass_txtbox.Text))
+                if (User.nameduplication(signupusername_txtbox.Text) && Utility.Utility.stringvalidation(signupusername_txtbox.Text))
                 {
-                    password =(signuppass_txtbox.Text);
+                    name = signupusername_txtbox.Text;
+                }
+                else
+                {
+                    if (!User.nameduplication(signupusername_txtbox.Text))
+                    {
+                        MessageBox.Show("Username already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!Utility.Utility.stringvalidation(signupusername_txtbox.Text))
+                    {
+                        MessageBox.Show("Invalid String added as username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    signupusername_txtbox.Text = "";
+                }
+                if (signuppass_txtbox.Text.Length >= 8 && Utility.Utility.intValidatioin(signuppass_txtbox.Text))
+                {
+                    password = (signuppass_txtbox.Text);
                 }
                 else
                 {
                     signuppass_txtbox.Text = "";
                     MessageBox.Show("Password shold be atleast 8 characters and a valid string", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                if (User.emailvalidation(email_txtbox.Text) && User.emailduplication(email_txtbox.Text))
+                {
                     email = email_txtbox.Text;
+                }
+                else
+                {
+                    if (!User.emailvalidation(email_txtbox.Text))
+                    {
+                        MessageBox.Show("Invalid Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!User.emailduplication(email_txtbox.Text))
+                    {
+                        MessageBox.Show("Email already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    email_txtbox.Text = "";
+                }
+                if (contact_txtbox.Text.Length == 11 && Utility.Utility.intValidatioin(contact_txtbox.Text) && Faculty.numberdup(contact_txtbox.Text))
+                {
                     contactnumber = contact_txtbox.Text;
+                }
+                else
+                {
+                    if (contact_txtbox.Text.Length != 11)
+                    {
+                        MessageBox.Show("Contact number must be 11 digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!Utility.Utility.intValidatioin(contact_txtbox.Text))
+                    {
+                        MessageBox.Show("Contact number must Contain only digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!Faculty.numberdup(contact_txtbox.Text))
+                    {
+                        MessageBox.Show("Contact number already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    contact_txtbox.Text = "";
+                }
+                if (Utility.Utility.stringvalidation(reserch_interest_txtbox.Text))
+                {
                     research = reserch_interest_txtbox.Text;
+                }
+                else
+                {
+                    reserch_interest_txtbox.Text = "";
+                    MessageBox.Show("Invalid String as research interest", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
                 if (Utility.Utility.intValidatioin(teaching_hours_txtbox.Text))
                 {
                     availablehours = Convert.ToInt32(teaching_hours_txtbox.Text);
@@ -49,7 +106,8 @@ namespace MidProjectDb.UI
                 {
                     teaching_hours_txtbox.Text = "";
                     MessageBox.Show("Invalid hours selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }                
+                }
+
                 if (comboBox1.SelectedIndex != -1)
                 {
                     designation = comboBox1.SelectedItem?.ToString() ?? "";
@@ -59,17 +117,14 @@ namespace MidProjectDb.UI
                     MessageBox.Show("No designation selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                Lookup look = Lookup.findlookup(designation);
-                if(comboBox1.SelectedIndex != -1 &&availablehours>0&&password!="")//Doing this validation here bcz object takes int so its validation must be done before adding to object
+                if (name != "" && password != "" && email != "" && contactnumber != "" && research != "" && comboBox1.SelectedIndex != -1 && availablehours > -01)
                 {
-                    User user = new User(name, email, password, look.lookupid, look);
-                    int userid = User.findid(name);
-                    Faculty faculty = new Faculty(name, email, contactnumber, research, availablehours, userid, look.lookupid);
-                    bool isUserValid = User.ValidateUser(user, out errorMessage);
-                    bool isFacultyValid = Faculty.validationsCheck(faculty, out errorMessage2);
-                if (isUserValid && isFacultyValid)
-                {
+                    Lookup designationlook = Lookup.findlookup(designation);
+                    Lookup rolelookup = Lookup.findlookup("Faculty");
+                    User user = new User(name, email, password, rolelookup.lookupid, rolelookup);
                     User.insert(user);
+                    int userid = User.findid(name);
+                    Faculty faculty = new Faculty(name, email, contactnumber, research, availablehours, userid, designationlook.lookupid);
                     Faculty.insert(faculty);
                     MessageBox.Show("User added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     signupusername_txtbox.Text = "";
@@ -78,26 +133,16 @@ namespace MidProjectDb.UI
                     contact_txtbox.Text = "";
                     reserch_interest_txtbox.Text = "";
                     teaching_hours_txtbox.Text = "";
-                    comboBox1.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    MessageBox.Show(errorMessage2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    comboBox1.SelectedIndex = -1;
 
                 }
-
-                }
-                LoadDataGrid();
-               
-                }
-            
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-        }
+                LoadDataGrid();
+            }
         private void Back_btn_Click(object sender, EventArgs e)
         {
             AdministrativeStaff admin = new AdministrativeStaff();
@@ -210,7 +255,7 @@ namespace MidProjectDb.UI
             comboBoxColumn.Items.Add("Professor");
             comboBoxColumn.Items.Add("Lecturer");
             comboBoxColumn.Items.Add("Assistant Professor");
-            comboBoxColumn.Items.Add("Research Associate");
+            comboBoxColumn.Items.Add("Associate Professor");
             dataGridView1.Columns.Add(comboBoxColumn);
         }
         private void AddRoleDropdown()

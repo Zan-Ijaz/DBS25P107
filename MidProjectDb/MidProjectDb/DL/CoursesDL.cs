@@ -16,15 +16,18 @@ namespace MidProjectDb.DL
             List<Course> newcourses = new List<Course>();
             string query = $"Select * from courses";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
-            foreach(DataRow row in dt.Rows)
+            if (dt != null)
             {
-            int courseid = Convert.ToInt32(row["course_id"]);
-            string coursename = row["course_name"].ToString();
-            string courseType = row["course_type"].ToString();
-            int credithours = Convert.ToInt32(row["credit_hours"]);
-            int contacthours= Convert.ToInt32(row["contact_hours"]);
-            Course u = new Course(courseid, coursename, courseType, credithours, contacthours);
-                newcourses.Add(u);
+                foreach (DataRow row in dt.Rows)
+                {
+                    int courseid = Convert.ToInt32(row["course_id"]);
+                    string coursename = row["course_name"].ToString();
+                    string courseType = row["course_type"].ToString();
+                    int credithours = Convert.ToInt32(row["credit_hours"]);
+                    int contacthours = Convert.ToInt32(row["contact_hours"]);
+                    Course u = new Course(courseid, coursename, courseType, credithours, contacthours);
+                    newcourses.Add(u);
+                }
             }
             return newcourses;
         }
