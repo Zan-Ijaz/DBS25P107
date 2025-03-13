@@ -30,30 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.year_txtbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.Save_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Sems_lbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.semesterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.ManageSem_lbl = new System.Windows.Forms.Label();
-            this.SemesterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.termDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.term_txtbox = new System.Windows.Forms.TextBox();
-            this.year_txtbox = new System.Windows.Forms.TextBox();
+            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.semesterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.Delete_btn);
+            this.panel1.Controls.Add(this.update_btn);
             this.panel1.Controls.Add(this.year_txtbox);
-            this.panel1.Controls.Add(this.term_txtbox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Back_lbl);
@@ -64,8 +65,39 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 701);
+            this.panel1.Size = new System.Drawing.Size(1428, 701);
             this.panel1.TabIndex = 0;
+            // 
+            // year_txtbox
+            // 
+            this.year_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.year_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.year_txtbox.Location = new System.Drawing.Point(653, 457);
+            this.year_txtbox.Name = "year_txtbox";
+            this.year_txtbox.Size = new System.Drawing.Size(344, 27);
+            this.year_txtbox.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(405, 457);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 32);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Enter Year:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(405, 379);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 32);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Enter Term:";
             // 
             // Back_lbl
             // 
@@ -78,7 +110,7 @@
             this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(97, 584);
+            this.Back_lbl.Location = new System.Drawing.Point(411, 532);
             this.Back_lbl.Name = "Back_lbl";
             this.Back_lbl.Size = new System.Drawing.Size(174, 55);
             this.Back_lbl.TabIndex = 28;
@@ -96,18 +128,19 @@
             this.Save_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Save_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save_btn.ForeColor = System.Drawing.Color.White;
-            this.Save_btn.Location = new System.Drawing.Point(515, 584);
+            this.Save_btn.Location = new System.Drawing.Point(823, 532);
             this.Save_btn.Name = "Save_btn";
             this.Save_btn.Size = new System.Drawing.Size(174, 55);
             this.Save_btn.TabIndex = 27;
             this.Save_btn.Text = "Add";
+            this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
             // Sems_lbl
             // 
             this.Sems_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Sems_lbl.AutoSize = true;
             this.Sems_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sems_lbl.Location = new System.Drawing.Point(91, 159);
+            this.Sems_lbl.Location = new System.Drawing.Point(405, 159);
             this.Sems_lbl.Name = "Sems_lbl";
             this.Sems_lbl.Size = new System.Drawing.Size(157, 32);
             this.Sems_lbl.TabIndex = 26;
@@ -117,23 +150,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SemesterId,
-            this.termDataGridViewTextBoxColumn,
-            this.yearDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.semesterBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(169, 229);
+            this.dataGridView1.Location = new System.Drawing.Point(411, 208);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(455, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(586, 150);
             this.dataGridView1.TabIndex = 25;
-            // 
-            // semesterBindingSource
-            // 
-            this.semesterBindingSource.DataSource = typeof(MidProjectDb.BL.Semester);
             // 
             // panel2
             // 
@@ -143,7 +166,7 @@
             this.panel2.Controls.Add(this.ManageSem_lbl);
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 142);
+            this.panel2.Size = new System.Drawing.Size(1428, 142);
             this.panel2.TabIndex = 3;
             // 
             // ManageSem_lbl
@@ -153,92 +176,82 @@
             this.ManageSem_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.ManageSem_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageSem_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.ManageSem_lbl.Location = new System.Drawing.Point(216, 53);
+            this.ManageSem_lbl.Location = new System.Drawing.Point(530, 53);
             this.ManageSem_lbl.Name = "ManageSem_lbl";
             this.ManageSem_lbl.Size = new System.Drawing.Size(350, 49);
             this.ManageSem_lbl.TabIndex = 1;
             this.ManageSem_lbl.Text = "Manage Semester";
             // 
-            // SemesterId
+            // update_btn
             // 
-            this.SemesterId.DataPropertyName = "SemesterId";
-            this.SemesterId.HeaderText = "SemesterId";
-            this.SemesterId.MinimumWidth = 6;
-            this.SemesterId.Name = "SemesterId";
-            this.SemesterId.ReadOnly = true;
-            this.SemesterId.Width = 125;
+            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.update_btn.BorderRadius = 20;
+            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.White;
+            this.update_btn.Location = new System.Drawing.Point(411, 624);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(174, 55);
+            this.update_btn.TabIndex = 33;
+            this.update_btn.Text = "Update";
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
-            // termDataGridViewTextBoxColumn
+            // Delete_btn
             // 
-            this.termDataGridViewTextBoxColumn.DataPropertyName = "Term";
-            this.termDataGridViewTextBoxColumn.HeaderText = "Term";
-            this.termDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.termDataGridViewTextBoxColumn.Name = "termDataGridViewTextBoxColumn";
-            this.termDataGridViewTextBoxColumn.Width = 125;
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(823, 624);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 34;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Del_btn_Click);
             // 
-            // yearDataGridViewTextBoxColumn
+            // comboBox1
             // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.Width = 125;
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Spring",
+            "Summer",
+            "Fall"});
+            this.comboBox1.Location = new System.Drawing.Point(653, 379);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(344, 24);
+            this.comboBox1.TabIndex = 35;
             // 
-            // label1
+            // semesterBindingSource
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 412);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 32);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Enter Term:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 477);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 32);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Enter Year:";
-            // 
-            // term_txtbox
-            // 
-            this.term_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.term_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.term_txtbox.Location = new System.Drawing.Point(348, 419);
-            this.term_txtbox.Name = "term_txtbox";
-            this.term_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.term_txtbox.TabIndex = 31;
-            // 
-            // year_txtbox
-            // 
-            this.year_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.year_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.year_txtbox.Location = new System.Drawing.Point(348, 500);
-            this.year_txtbox.Name = "year_txtbox";
-            this.year_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.year_txtbox.TabIndex = 32;
+            this.semesterBindingSource.DataSource = typeof(MidProjectDb.BL.Semester);
             // 
             // UpdateSem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 701);
+            this.ClientSize = new System.Drawing.Size(1428, 701);
             this.Controls.Add(this.panel1);
             this.Name = "UpdateSem";
             this.Text = "UpdateSem";
+            this.Load += new System.EventHandler(this.UpdateSem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,12 +266,11 @@
         private System.Windows.Forms.BindingSource semesterBindingSource;
         private Guna.UI2.WinForms.Guna2Button Save_btn;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SemesterId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn termDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox year_txtbox;
-        private System.Windows.Forms.TextBox term_txtbox;
+        private Guna.UI2.WinForms.Guna2Button update_btn;
+        private Guna.UI2.WinForms.Guna2Button Delete_btn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

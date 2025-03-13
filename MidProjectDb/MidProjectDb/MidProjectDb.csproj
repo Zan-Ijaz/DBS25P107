@@ -145,6 +145,8 @@
     <Compile Include="DL\CoursesDL.cs" />
     <Compile Include="DL\FacultyDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
+    <Compile Include="DL\ProjectDL.cs" />
+    <Compile Include="DL\SemesterDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AdminDuties.cs">
       <SubType>Form</SubType>

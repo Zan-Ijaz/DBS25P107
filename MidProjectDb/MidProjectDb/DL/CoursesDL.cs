@@ -10,7 +10,6 @@ namespace MidProjectDb.DL
 {
     public class CoursesDL
     {
-        public static List<Course> courses = new List<Course>();
         public List<Course> getData()
         {
             List<Course> newcourses = new List<Course>();

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Del_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.coursetype_combo = new System.Windows.Forms.ComboBox();
             this.Add_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Contact_txtbox = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ManageCourse_lbl = new System.Windows.Forms.Label();
-            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Del_btn = new Guna.UI2.WinForms.Guna2Button();
             this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -77,6 +77,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 689);
             this.panel1.TabIndex = 0;
+            // 
+            // Del_btn
+            // 
+            this.Del_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Del_btn.BorderRadius = 20;
+            this.Del_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Del_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Del_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Del_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Del_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Del_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Del_btn.ForeColor = System.Drawing.Color.White;
+            this.Del_btn.Location = new System.Drawing.Point(979, 609);
+            this.Del_btn.Name = "Del_btn";
+            this.Del_btn.Size = new System.Drawing.Size(174, 55);
+            this.Del_btn.TabIndex = 36;
+            this.Del_btn.Text = "Delete";
+            this.Del_btn.Click += new System.EventHandler(this.Del_btn_Click);
+            // 
+            // Update_btn
+            // 
+            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Update_btn.BorderRadius = 20;
+            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_btn.ForeColor = System.Drawing.Color.White;
+            this.Update_btn.Location = new System.Drawing.Point(755, 609);
+            this.Update_btn.Name = "Update_btn";
+            this.Update_btn.Size = new System.Drawing.Size(174, 55);
+            this.Update_btn.TabIndex = 35;
+            this.Update_btn.Text = "Update";
+            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
             // 
             // coursetype_combo
             // 
@@ -240,47 +276,11 @@
             this.ManageCourse_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.ManageCourse_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageCourse_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.ManageCourse_lbl.Location = new System.Drawing.Point(480, 53);
+            this.ManageCourse_lbl.Location = new System.Drawing.Point(511, 53);
             this.ManageCourse_lbl.Name = "ManageCourse_lbl";
             this.ManageCourse_lbl.Size = new System.Drawing.Size(331, 49);
             this.ManageCourse_lbl.TabIndex = 1;
             this.ManageCourse_lbl.Text = "Manage Courses";
-            // 
-            // Update_btn
-            // 
-            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Update_btn.BorderRadius = 20;
-            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update_btn.ForeColor = System.Drawing.Color.White;
-            this.Update_btn.Location = new System.Drawing.Point(755, 609);
-            this.Update_btn.Name = "Update_btn";
-            this.Update_btn.Size = new System.Drawing.Size(174, 55);
-            this.Update_btn.TabIndex = 35;
-            this.Update_btn.Text = "Update";
-            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
-            // 
-            // Del_btn
-            // 
-            this.Del_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Del_btn.BorderRadius = 20;
-            this.Del_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Del_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Del_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Del_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Del_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Del_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Del_btn.ForeColor = System.Drawing.Color.White;
-            this.Del_btn.Location = new System.Drawing.Point(979, 609);
-            this.Del_btn.Name = "Del_btn";
-            this.Del_btn.Size = new System.Drawing.Size(174, 55);
-            this.Del_btn.TabIndex = 36;
-            this.Del_btn.Text = "Delete";
-            this.Del_btn.Click += new System.EventHandler(this.Del_btn_Click);
             // 
             // courseBindingSource1
             // 

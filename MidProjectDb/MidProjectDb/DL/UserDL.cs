@@ -13,7 +13,6 @@ namespace MidProjectDb.DL
 {
     public class UserDL
     {
-        public static List<UI.User> users = new List<UI.User>();
         public List<UI.User> getData()
         {
             List<UI.User> newusers = new List<UI.User>();

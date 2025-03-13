@@ -12,7 +12,6 @@ namespace MidProjectDb.DL
 {
     public class FacultyDL
     {
-        public static List<Faculty> facultymembers = new List<Faculty>();
         public List<Faculty> getData()
         {
             List<Faculty> newfac = new List<Faculty>();
