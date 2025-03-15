@@ -118,6 +118,7 @@ namespace MidProjectDb.BL
                 {
                     faculty.TotalTeachingHours -= Course.ContactHours;
                     facultycoursesDL.InsertFacultyCourse(fc);
+                    Faculty.update(faculty);
                     return true;
                 }
                 return false;
@@ -145,6 +146,7 @@ namespace MidProjectDb.BL
                 {
                     Faculty oldfaculty = Faculty.findFaculty(oldfacultyid);
                     oldfaculty.TotalTeachingHours += Contacthrs;
+                    Faculty.update(oldfaculty);
                 }
                 else
                 {
@@ -155,6 +157,7 @@ namespace MidProjectDb.BL
                 {
                     newfaculty.TotalTeachingHours -= newCourse.ContactHours;
                     facultycoursesDL.UpdateFacultyCourse(fc);
+                    Faculty.update(newfaculty);
                     return true;
                 }
                 return false;

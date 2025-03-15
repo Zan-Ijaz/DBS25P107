@@ -27,7 +27,7 @@ namespace MidProjectDb.BL
         private MySqlConnection CreateConnection()
         {
             string connectionString =
-                $"server={serverName};port={port};user={databaseUser};database={databaseName};password={databasePassword};SslMode=None;";
+                $"server={serverName};port={port};user={databaseUser};database={databaseName};password={databasePassword};AllowPublicKeyRetrieval=True;SslMode=none;";
             return new MySqlConnection(connectionString);
         }
         public DataTable GetData(string query)
