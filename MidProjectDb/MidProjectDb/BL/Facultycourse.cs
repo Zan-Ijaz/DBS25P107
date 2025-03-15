@@ -78,6 +78,7 @@ namespace MidProjectDb.BL
                 Course Course = Course.findCourse(facultycourse.Courseid);
                 faculty.TotalTeachingHours += Course.ContactHours;//adding the hours back which were taken 
                 facultycoursesDL.DeleteFacultyCourse(facultycourse.facultyCourseid);
+                Faculty.update(faculty);
                 return true;
             }
             return false;
@@ -100,10 +101,40 @@ namespace MidProjectDb.BL
         }
         public static void Deletebycourses(int id)
         {
+            DataTable dt = Facultycourse.GetTable();
+            if (dt != null)
+            {
+                Course c = Course.findCourse(id);
+                foreach(DataRow dr in dt.Rows)
+                {
+                    if (Convert.ToInt32(dr["course_id"]) == id)
+                    {
+                        Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
+                        f.TotalTeachingHours += c.ContactHours;
+                        Faculty.update(f);
+                    }
+                }
+            }
             facultycoursesDL.Deletebycourses(id);
         }
         public static void DeletebySem(int id)
         {
+
+            DataTable dt = Facultycourse.GetTable();
+            if (dt != null)
+            {
+                Semester s = Semester.finSem(id);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (Convert.ToInt32(dr["semester_id"]) == id)
+                    {
+                        Course c = Course.findCourse(Convert.ToInt32(dr["course_id"]));
+                        Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
+                        f.TotalTeachingHours += c.ContactHours;
+                        Faculty.update(f);
+                    }
+                }
+            }
             facultycoursesDL.DeletebySems(id);
         }
         public static bool addFacultyCourse(Facultycourse fc)
@@ -125,7 +156,7 @@ namespace MidProjectDb.BL
             }
             return false;
         }
-        public static bool updatefaculty(Facultycourse fc,int oldcourseid,int oldfacultyid)
+        public static bool updatefacultycourse(Facultycourse fc,int oldcourseid,int oldfacultyid)
         {
             if(duplicationValidationupdate(fc))
             {

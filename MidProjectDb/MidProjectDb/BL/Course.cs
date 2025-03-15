@@ -99,5 +99,17 @@ namespace MidProjectDb.BL
             }
             return null;
         }
+        public static Course findCourse(string name)
+        {
+            List<Course> courses = getData();
+            foreach (var c in courses)
+            {
+                if (name == c.CourseName)
+                {
+                    return c;
+                }
+            }
+            return null;
+        }
     }
 }

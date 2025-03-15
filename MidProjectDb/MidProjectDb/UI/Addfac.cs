@@ -147,7 +147,6 @@ namespace MidProjectDb.UI
             }
             LoadDataGrid();
         }
-
         private void Update_btn_Click(object sender, EventArgs e)
         {
             try
@@ -219,7 +218,6 @@ namespace MidProjectDb.UI
             }
             LoadDataGrid();
         }
-
         private void Delete_btn_Click(object sender, EventArgs e)
         {
             DeleteSelectedRow();

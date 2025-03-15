@@ -136,20 +136,19 @@ namespace MidProjectDb.UI
             {
                 dataGridView1.Columns.Remove("Faculty");
             }
-
-            DataTable dt = Facultycourse.DatagridTable();
-            foreach (DataRow dr in dt.Rows)
+            DataTable facultyTable = Faculty.GetTable();
+            foreach (DataRow row in facultyTable.Rows)
             {
-                Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
-                dr["Faculty"] = $"{f.Name} - {f.TotalTeachingHours} hours";
+                Faculty f = Faculty.findFaculty(Convert.ToInt32(row["faculty_id"]));
+                row["name"] = $"{f.Name}-{f.TotalTeachingHours} hours";
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
             comboBoxColumn.Name = "Faculty";
             comboBoxColumn.HeaderText = "Faculty";
-            comboBoxColumn.DataSource = dt;
-            comboBoxColumn.DisplayMember = "Faculty";  
-            comboBoxColumn.ValueMember = "faculty_id"; 
-            comboBoxColumn.DataPropertyName = "faculty_id"; 
+            comboBoxColumn.DataSource = facultyTable; 
+            comboBoxColumn.DisplayMember = "name";
+            comboBoxColumn.ValueMember = "name";
+            comboBoxColumn.DataPropertyName = "name";
             dataGridView1.Columns.Add(comboBoxColumn);
         }
 
@@ -159,19 +158,19 @@ namespace MidProjectDb.UI
             {
                 dataGridView1.Columns.Remove("Course");
             }
-            DataTable dt = Facultycourse.DatagridTable();
-            foreach (DataRow dr in dt.Rows)
+            DataTable courseTable = Course.getTable(); 
+            foreach (DataRow row in courseTable.Rows)
             {
-                Course c = Course.findCourse(Convert.ToInt32(dr["course_id"]));
-                dr["Course"] = $"{c.CourseName} - {c.ContactHours} hours"; 
+                Course c = Course.findCourse(Convert.ToInt32(row["course_id"]));
+                row["course_name"] = $"{c.CourseName}-{c.ContactHours} hours";
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
             comboBoxColumn.Name = "Course";
             comboBoxColumn.HeaderText = "Course";
-            comboBoxColumn.DataSource = dt;
-            comboBoxColumn.DisplayMember = "Course";
-            comboBoxColumn.ValueMember = "course_id";
-            comboBoxColumn.DataPropertyName = "course_id"; 
+            comboBoxColumn.DataSource = courseTable;  
+            comboBoxColumn.DisplayMember = "course_name";
+            comboBoxColumn.ValueMember = "course_name";
+            comboBoxColumn.DataPropertyName = "course_name";  
             dataGridView1.Columns.Add(comboBoxColumn);
         }
         private void addSemDropdowns()
@@ -180,20 +179,89 @@ namespace MidProjectDb.UI
             {
                 dataGridView1.Columns.Remove("Semester");
             }
-            DataTable dt = Facultycourse.DatagridTable();
-            foreach (DataRow dr in dt.Rows)
+            DataTable semesterTable = Semester.GetTable();
+            foreach (DataRow row in semesterTable.Rows)
             {
-                Semester s = Semester.finSem(Convert.ToInt32(dr["semester_id"]));
+                Semester s = Semester.finSem(Convert.ToInt32(row["semester_id"]));
+                row["term"] = $"{s.Term} {s.Year}";
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
             comboBoxColumn.Name = "Semester";
             comboBoxColumn.HeaderText = "Semester";
-            comboBoxColumn.DataSource = dt;
-            comboBoxColumn.DisplayMember = "Semester";
+            comboBoxColumn.DataSource = semesterTable;  
+            comboBoxColumn.DisplayMember = "term";
             comboBoxColumn.ValueMember = "semester_id";
-            comboBoxColumn.DataPropertyName = "semester_id"; 
+            comboBoxColumn.DataPropertyName = "semester_id";  
             dataGridView1.Columns.Add(comboBoxColumn);
         }
 
+        private void update_btn_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                if (dataGridView1.DataSource != null)
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        int facultycourseid = Convert.ToInt32(row.Cells["faculty_course_id"].Value);
+                        int oldfacultyid = Convert.ToInt32(row.Cells["faculty_id"].Value);
+                        int oldCourseid = Convert.ToInt32(row.Cells["course_id"].Value);
+                        int semid = Convert.ToInt32(row.Cells["Semester"].Value);
+                        string newfaculty = Utility.Utility.trim(row.Cells["Faculty"].Value.ToString());
+                        string newcourse = Utility.Utility.trim(row.Cells["Course"].Value.ToString());
+                        Faculty f = Faculty.findFaculty(newfaculty);
+                        Course c = Course.findCourse(newcourse);
+                        Semester s = Semester.finSem(semid);
+                        Facultycourse fc = new Facultycourse(facultycourseid,f.FacultyId, c.CourseId, semid, c, f, s);
+                        if (Facultycourse.updatefacultycourse(fc, oldCourseid, oldfacultyid))
+                        {
+                            MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Either the instructor {f.Name} is already teaching same course or instructor does not have enough available hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            loadDatagrid();
+        }
+
+        private void Del_btn_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedRow();
+        }
+        private void DeleteSelectedRow()
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
+                        {
+                            int Id = Convert.ToInt32(dr.Cells["faculty_course_id"].Value);
+                            Facultycourse.DeleteFaccourse(Id);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            loadDatagrid();
+        }
     }
 }
