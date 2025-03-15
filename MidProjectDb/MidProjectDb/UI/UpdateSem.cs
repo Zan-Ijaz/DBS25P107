@@ -127,12 +127,14 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    int Semid = Convert.ToInt32(selectedRow.Cells["semester_id"].Value);
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
-                        Semester.deleteSem(Semid);
+                        foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
+                        {
+                            int Semid = Convert.ToInt32(dr.Cells["semester_id"].Value);
+                            Semester.deleteSem(Semid);
+                        }
                     }
                 }
                 else

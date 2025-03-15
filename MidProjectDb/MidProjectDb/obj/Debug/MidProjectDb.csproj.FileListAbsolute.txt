@@ -147,7 +147,6 @@ D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Sechduling.
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SechdulingCourse2.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SetPassword.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SignIn.resources
-D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Signup.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.UpdateSem.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ViewReqs.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.WorkLoad.resources
@@ -250,3 +249,4 @@ D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\ru\Microsoft.ReportViewer.W
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProje.645C474E.Up2Date
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Addfac.resources

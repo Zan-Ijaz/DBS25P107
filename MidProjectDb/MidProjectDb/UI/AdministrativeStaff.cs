@@ -20,7 +20,7 @@ namespace MidProjectDb.UI
 
         private void Update_btn_Click(object sender, EventArgs e)
         {
-            Signup signup = new Signup();
+            Addfac signup = new Addfac();
             signup.Show();
             signup.Size = this.Size;
             signup.Location = this.Location;

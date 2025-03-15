@@ -14,7 +14,6 @@ namespace MidProjectDb.BL
         public int? facultyid { get;set; }
         public int? roomid { get; set; }
         public int? semesterid { get; set; }
-
         public Faculty faculty { get; set; }
         public Room room { get; set; }
         public Semester semester { get; set; }

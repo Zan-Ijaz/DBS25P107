@@ -78,12 +78,25 @@ namespace MidProjectDb.BL
         public static void deleteSem(int id)
         {
             semsters.DeleteSemester(id);
+            Facultycourse.DeletebySem(id);
         }
         public static DataTable GetTable()
         {
             DataTable dt = semsters.GetDataTable();
             return dt;
 
+        }
+        public static Semester finSem(int id)
+        {
+            List<Semester> sems = semsters.GetData();
+            foreach(var s in sems)
+            {
+                if (s.SemesterId == id)
+                {
+                    return s;
+                }
+            }
+            return null;
         }
     }
 }

@@ -7,20 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Cryptography;
-using MidProjectDb.DL;
-using MidProjectDb.BL;
-using System.Linq.Expressions;
-using System.Web.Security;
-using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+
 namespace MidProjectDb.UI
 {
-    public partial class Signup: Form
+    public partial class Addfac: Form
     {
-        public Signup()
+        public Addfac()
         {
             InitializeComponent();
         }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            AdministrativeStaff admin = new AdministrativeStaff();
+            admin.Show();
+            admin.Size = this.Size;
+            admin.Location = this.Location;
+            this.Close();
+        }
+
         private void Next_btn_Click(object sender, EventArgs e)
         {
             string name = "", password = "", email = "", contactnumber = "", research = "", designation = "";
@@ -141,48 +146,20 @@ namespace MidProjectDb.UI
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                LoadDataGrid();
-            }
-        private void Back_btn_Click(object sender, EventArgs e)
-        {
-            AdministrativeStaff admin = new AdministrativeStaff();
-            admin.Show();
-            admin.Size = this.Size;
-            admin.Location = this.Location;
-            this.Close();
-        }
-        private void Signup_Load(object sender, EventArgs e)
-        {
             LoadDataGrid();
-            
         }
-        private void LoadDataGrid()
+
+        private void Update_btn_Click(object sender, EventArgs e)
         {
             try
             {
-                DataTable dt = User.loadSignupGRID();
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["UserID"].ReadOnly = true;
-                AddDesignationDropdown();
-                AddRoleDropdown();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void Update_btn_Click(object sender, EventArgs e)
-        {
-            try{
-            DataTable dt = new DataTable();
-            if (dataGridView1.DataSource != null)
-            {
-                dt = (DataTable)dataGridView1.DataSource;
+                DataTable dt = new DataTable();
+                if (dataGridView1.DataSource != null)
+                {
+                    dt = (DataTable)dataGridView1.DataSource;
                     foreach (DataRow row in dt.Rows)
                     {
-                        string name = "", email="", contact="", researchArea="";
+                        string name = "", email = "", contact = "", researchArea = "";
                         int totalHours = 0;
                         int userid = Convert.ToInt32(row["UserID"]);
                         name = row["Name"].ToString();
@@ -192,7 +169,7 @@ namespace MidProjectDb.UI
                         contact = row["Contact"].ToString();
                         researchArea = row["ResearchArea"].ToString();
                         string role = row["Role"].ToString();
-                        if(Utility.Utility.intValidatioin(row["TotalTeachingHours"].ToString())&& Convert.ToInt32(row["TotalTeachingHours"])>0)
+                        if (Utility.Utility.intValidatioin(row["TotalTeachingHours"].ToString()) && Convert.ToInt32(row["TotalTeachingHours"]) > 0)
                         {
                             totalHours = Convert.ToInt32(row["TotalTeachingHours"]);
                         }
@@ -207,15 +184,15 @@ namespace MidProjectDb.UI
                             MessageBox.Show("A HoD is already available. User will remain faculty member", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             role = "Faculty";
                         }
-                        Lookup rolellokup = Lookup.findlookup(role);                
+                        Lookup rolellokup = Lookup.findlookup(role);
                         string errorMessage;
                         string errorMessage2;
-                        if(totalHours>0)//Doing this validation here bcz object takes int so its validation must be done before adding to object
+                        if (totalHours > 0)//Doing this validation here bcz object takes int so its validation must be done before adding to object
                         {
-                        User user = new User(userid, name, email, rolellokup.lookupid, rolellokup);
-                        Faculty faculty = new Faculty(name, email, contact, researchArea, totalHours, userid, designationlookup.lookupid);
-                        bool isUserValid = User.ValidateUser(user, out errorMessage);
-                        bool isFacultyValid = Faculty.validationsCheck(faculty, out errorMessage2);
+                            User user = new User(userid, name, email, rolellokup.lookupid, rolellokup);
+                            Faculty faculty = new Faculty(name, email, contact, researchArea, totalHours, userid, designationlookup.lookupid);
+                            bool isUserValid = User.ValidateUser(user, out errorMessage);
+                            bool isFacultyValid = Faculty.validationsCheck(faculty, out errorMessage2);
                             if (isUserValid && isFacultyValid)
                             {
                                 User.update(user);
@@ -236,12 +213,49 @@ namespace MidProjectDb.UI
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             LoadDataGrid();
+        }
+
+        private void Delete_btn_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedRow();
+
+        }
+        private void DeleteSelectedRow()
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
+                        {
+                            int Id = Convert.ToInt32(dr.Cells["UserID"].Value);
+
+                            Faculty.delete(Id);
+                            User.delete(Id);
+                        }
+                    }
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadDataGrid();
+
         }
         private void AddDesignationDropdown()
         {
@@ -250,7 +264,7 @@ namespace MidProjectDb.UI
                 dataGridView1.Columns["Designation"].Visible = false;
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
-            comboBoxColumn.DataPropertyName = "Designation"; 
+            comboBoxColumn.DataPropertyName = "Designation";
             comboBoxColumn.HeaderText = "Designation";
             comboBoxColumn.Items.Add("Professor");
             comboBoxColumn.Items.Add("Lecturer");
@@ -271,39 +285,28 @@ namespace MidProjectDb.UI
             comboBoxColumn.Items.Add("Department Head");
             dataGridView1.Columns.Add(comboBoxColumn);
         }
-
-        private void Delete_btn_Click(object sender, EventArgs e)
-        {
-            DeleteSelectedRow();
-        }
-        private void DeleteSelectedRow()
+        private void LoadDataGrid()
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count > 0)
-                {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    int userId = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (confirm == DialogResult.Yes)
-                    {
-                        Faculty.delete(userId);
-                        User.delete(userId);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                DataTable dt = User.loadSignupGRID();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["UserID"].ReadOnly = true;
+                AddDesignationDropdown();
+                AddRoleDropdown();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Addfac_Load(object sender, EventArgs e)
+        {
             LoadDataGrid();
 
         }
-
     }
-
 }

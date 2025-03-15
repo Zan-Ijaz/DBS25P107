@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MidProjectDb.BL;
+using MidProjectDb.BL.MidProjectDb.BL;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MidProjectDb.UI
@@ -190,12 +191,14 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    int course = Convert.ToInt32(selectedRow.Cells["course_id"].Value);
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
-                        Course.deleteCourse(course);
+                        foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
+                        {
+                            int course = Convert.ToInt32(dr.Cells["course_id"].Value);
+                            Course.deleteCourse(course);
+                        }
                     }
                 }
                 else

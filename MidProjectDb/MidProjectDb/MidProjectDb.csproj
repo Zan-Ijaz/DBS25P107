@@ -142,12 +142,21 @@
     <Compile Include="BL\LoggedInUser.cs" />
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
+    <Compile Include="DL\ConsumeableDL.cs" />
+    <Compile Include="DL\FacultycourseDL.cs" />
     <Compile Include="DL\CoursesDL.cs" />
     <Compile Include="DL\FacultyDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\ProjectDL.cs" />
+    <Compile Include="DL\RoomDL.cs" />
     <Compile Include="DL\SemesterDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\Addfac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Addfac.Designer.cs">
+      <DependentUpon>Addfac.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminDuties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,12 +186,6 @@
     </Compile>
     <Compile Include="UI\Consumeables.Designer.cs">
       <DependentUpon>Consumeables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\CourseAllocation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\CourseAllocation.Designer.cs">
-      <DependentUpon>CourseAllocation.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CourseAllocationfirst.cs">
       <SubType>Form</SubType>
@@ -280,12 +283,6 @@
     <Compile Include="UI\SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Signup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Signup.Designer.cs">
-      <DependentUpon>Signup.cs</DependentUpon>
-    </Compile>
     <Compile Include="BL\User.cs" />
     <Compile Include="UI\UpdateSem.cs">
       <SubType>Form</SubType>
@@ -316,6 +313,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Addfac.resx">
+      <DependentUpon>Addfac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminDuties.resx">
       <DependentUpon>AdminDuties.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consumeables.resx">
       <DependentUpon>Consumeables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\CourseAllocation.resx">
-      <DependentUpon>CourseAllocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CourseAllocationfirst.resx">
       <DependentUpon>CourseAllocationfirst.cs</DependentUpon>
@@ -378,9 +375,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Signup.resx">
-      <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UpdateSem.resx">
       <DependentUpon>UpdateSem.cs</DependentUpon>

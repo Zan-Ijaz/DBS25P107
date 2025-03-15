@@ -79,12 +79,25 @@ namespace MidProjectDb.BL
         public static void deleteCourse(int id)
         {
             CoursesDL courseDLobj = new CoursesDL();
+            Facultycourse.Deletebycourses(id);
             courseDLobj.deleteCourse(id);
         }
         public static void update(Course c)
         {
             CoursesDL courseDLobj = new CoursesDL();
             courseDLobj.update(c);
+        }
+        public static Course findCourse(int id)
+        {
+            List<Course> courses = getData();
+            foreach(var c in courses)
+            {
+                if (id == c.CourseId)
+                {
+                    return c;
+                }
+            }
+            return null;
         }
     }
 }

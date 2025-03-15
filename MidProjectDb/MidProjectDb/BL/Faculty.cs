@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,12 @@ namespace MidProjectDb.UI
         public string Email { get; set; }   
         public string Contact { get; set; }
         public string ResearchArea { get; set; }
-        public int? TotalTeachingHours { get; set; }
+        public int TotalTeachingHours { get; set; }
         public int UserId { get; set; }    
         public int? DesignationId { get; set; }
         public User FacultyUser { get; set; }
         public Lookup designation { get; set; }
-        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int? totalTeachingHours, int userId, int? designationId,User user,Lookup Designation)
+        public Faculty(int facultyId, string name, string email, string contact, string researchArea, int totalTeachingHours, int userId, int? designationId,User user,Lookup Designation)
         {
             FacultyId = facultyId;
             Name = name;
@@ -35,7 +36,7 @@ namespace MidProjectDb.UI
             FacultyUser = user;
             this.designation = Designation;
         }
-        public Faculty( string name, string email, string contact, string researchArea, int? totalTeachingHours, int userId, int? designationId)
+        public Faculty( string name, string email, string contact, string researchArea, int totalTeachingHours, int userId, int? designationId)
         {
             Name = name;
             Email = email;
@@ -78,10 +79,10 @@ namespace MidProjectDb.UI
             }
             return true;
         }
-        
         public static void delete(int id)
         {
             FacultyDL facultyDLobject = new FacultyDL();
+            Facultycourse.DeletebyFac(id);
             facultyDLobject.Delete(id);
         }
         public static void insert(Faculty u)
@@ -116,7 +117,25 @@ namespace MidProjectDb.UI
             return true;
 
         }
-       
+        public static DataTable GetTable()
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            DataTable dt=facultyDLobject.GetTable();
+            return dt;
+        }
+        public static Faculty findFaculty(int id)
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            List<Faculty> faculty = facultyDLobject.getData();
+            foreach(var f in faculty)
+            {
+                if (id == f.FacultyId)
+                {
+                    return f;
+                }
+            }
+            return null;
+        }
 
 
     }

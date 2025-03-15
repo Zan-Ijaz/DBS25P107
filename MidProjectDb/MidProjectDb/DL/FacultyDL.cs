@@ -51,7 +51,12 @@ namespace MidProjectDb.DL
         {
             string facultyquery = $"Update faculty set name='{f.Name}', email='{f.Email}', contact='{f.Contact}', designation_id='{f.DesignationId}', research_area='{f.ResearchArea}', total_teaching_hours='{f.TotalTeachingHours}' where user_id='{f.UserId}'";
             DatabaseHelper.Instance.Update(facultyquery);
-
+        }
+        public DataTable GetTable()
+        {
+            string query = $"Select * from faculty";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
         }
     }
 }

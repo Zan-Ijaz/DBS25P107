@@ -96,12 +96,14 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    int projectid = Convert.ToInt32(selectedRow.Cells["project_id"].Value);
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
-                        Project.deleteProject(projectid);
+                        foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
+                        {
+                            int projectid = Convert.ToInt32(dr.Cells["project_id"].Value);
+                            Project.deleteProject(projectid);
+                        }
                     }
                 }
                 else
