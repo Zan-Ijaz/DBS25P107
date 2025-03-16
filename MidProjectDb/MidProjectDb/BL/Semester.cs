@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MidProjectDb.DL;
+using MidProjectDb.UI;
 
 namespace MidProjectDb.BL
 {
@@ -77,8 +78,9 @@ namespace MidProjectDb.BL
         }
         public static void deleteSem(int id)
         {
-            semsters.DeleteSemester(id);
             Facultycourse.DeletebySem(id);
+            Facultyproject.DeletebySem(id);
+            semsters.DeleteSemester(id);
         }
         public static DataTable GetTable()
         {

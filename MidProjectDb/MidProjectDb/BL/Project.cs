@@ -37,6 +37,7 @@ namespace MidProjectDb.UI
         public static void deleteProject(int id)
         {
             projects.deleteProject(id);
+            Facultyproject.DeletebyProject(id);
         }
         public static bool Updateproject(Project p)
         {
@@ -47,7 +48,6 @@ namespace MidProjectDb.UI
             }
             return false;
         }
-       
         public static DataTable GetTable()
         {
             DataTable dt = projects.GetDataTable();
@@ -92,6 +92,18 @@ namespace MidProjectDb.UI
                 return true;
             }
             return false;
+        }
+        public static Project findProject(int id)
+        {
+            List<Project> projectslist = projects.getData();
+            foreach(var p in projectslist)
+            {
+                if (id == p.projectId)
+                {
+                    return p;
+                }
+            }
+            return null;
         }
     }
 }

@@ -73,7 +73,7 @@ namespace MidProjectDb.DL
         }
         public DataTable loadDatagrid()
         {
-            string query = $"SELECT faculty_course_id,f.name as Faculty,c.course_name as Course,concat(s.term,' ',s.year ) as Semester, f.faculty_id ,c.course_id,s.semester_id FROM faculty_courses natural join faculty f natural join courses c natural join semesters s";
+            string query = $"SELECT faculty_course_id,f.name as Faculty,c.course_name as Course,concat(s.term,' ',s.year ) as Semester,fc.faculty_id as oldfaculty_id,fc.course_id as oldcourse_id, f.faculty_id ,c.course_id,s.semester_id FROM faculty_courses fc natural join faculty f natural join courses c natural join semesters s";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }

@@ -83,6 +83,7 @@ namespace MidProjectDb.UI
         {
             FacultyDL facultyDLobject = new FacultyDL();
             Facultycourse.DeletebyFac(id);
+            Facultyproject.DeletebyFaculty(id);
             facultyDLobject.Delete(id);
         }
         public static void insert(Faculty u)

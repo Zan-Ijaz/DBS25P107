@@ -118,12 +118,23 @@ namespace MidProjectDb.UI
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns["faculty_course_id"].ReadOnly = true;
                 dataGridView1.Columns["faculty_id"].Visible = false;
-                dataGridView1.Columns["course_id"].Visible = false;
+                dataGridView1.Columns["course_id"].Visible = false; 
+                dataGridView1.Columns["oldfaculty_id"].Visible = false;
+                dataGridView1.Columns["oldcourse_id"].Visible = false;
                 dataGridView1.Columns["semester_id"].Visible = false;
                 addFacultyDropdowns();
                 addCourseDropdowns();
                 addSemDropdowns();
                 loadComboBoxes();
+                foreach(DataRow dr in dt.Rows)
+                {
+                    int id =Convert.ToInt32(dr["faculty_id"]);
+                    Faculty f = Faculty.findFaculty(id);
+                    if (f.TotalTeachingHours < 0)
+                    {
+                        MessageBox.Show($"{f.Name } is assigned more hours than available time due to changing of contact hours of courses", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -147,8 +158,8 @@ namespace MidProjectDb.UI
             comboBoxColumn.HeaderText = "Faculty";
             comboBoxColumn.DataSource = facultyTable; 
             comboBoxColumn.DisplayMember = "name";
-            comboBoxColumn.ValueMember = "name";
-            comboBoxColumn.DataPropertyName = "name";
+            comboBoxColumn.ValueMember = "faculty_id";
+            comboBoxColumn.DataPropertyName = "faculty_id";
             dataGridView1.Columns.Add(comboBoxColumn);
         }
 
@@ -169,8 +180,8 @@ namespace MidProjectDb.UI
             comboBoxColumn.HeaderText = "Course";
             comboBoxColumn.DataSource = courseTable;  
             comboBoxColumn.DisplayMember = "course_name";
-            comboBoxColumn.ValueMember = "course_name";
-            comboBoxColumn.DataPropertyName = "course_name";  
+            comboBoxColumn.ValueMember = "course_id";
+            comboBoxColumn.DataPropertyName = "course_id";  
             dataGridView1.Columns.Add(comboBoxColumn);
         }
         private void addSemDropdowns()
@@ -204,20 +215,16 @@ namespace MidProjectDb.UI
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
                         int facultycourseid = Convert.ToInt32(row.Cells["faculty_course_id"].Value);
-                        int oldfacultyid = Convert.ToInt32(row.Cells["faculty_id"].Value);
-                        int oldCourseid = Convert.ToInt32(row.Cells["course_id"].Value);
+                        int oldfacultyid = Convert.ToInt32(row.Cells["oldfaculty_id"].Value);
+                        int oldCourseid = Convert.ToInt32(row.Cells["oldcourse_id"].Value);
                         int semid = Convert.ToInt32(row.Cells["Semester"].Value);
-                        string newfaculty = Utility.Utility.trim(row.Cells["Faculty"].Value.ToString());
-                        string newcourse = Utility.Utility.trim(row.Cells["Course"].Value.ToString());
+                        int newfaculty = Convert.ToInt32(row.Cells["Faculty"].Value);
+                        int newcourse = Convert.ToInt32(row.Cells["Course"].Value);
                         Faculty f = Faculty.findFaculty(newfaculty);
                         Course c = Course.findCourse(newcourse);
                         Semester s = Semester.finSem(semid);
                         Facultycourse fc = new Facultycourse(facultycourseid,f.FacultyId, c.CourseId, semid, c, f, s);
-                        if (Facultycourse.updatefacultycourse(fc, oldCourseid, oldfacultyid))
-                        {
-                            MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
+                        if (!Facultycourse.updatefacultycourse(fc, oldCourseid, oldfacultyid))
                         {
                             MessageBox.Show($"Either the instructor {f.Name} is already teaching same course or instructor does not have enough available hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
@@ -230,7 +237,6 @@ namespace MidProjectDb.UI
             }
             loadDatagrid();
         }
-
         private void Del_btn_Click(object sender, EventArgs e)
         {
             DeleteSelectedRow();

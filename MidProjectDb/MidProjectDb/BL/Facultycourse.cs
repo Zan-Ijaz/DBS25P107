@@ -119,7 +119,6 @@ namespace MidProjectDb.BL
         }
         public static void DeletebySem(int id)
         {
-
             DataTable dt = Facultycourse.GetTable();
             if (dt != null)
             {
