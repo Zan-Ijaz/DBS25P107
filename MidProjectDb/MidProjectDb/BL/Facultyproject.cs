@@ -110,7 +110,6 @@ namespace MidProjectDb.UI
                 int remainghrs = f.TotalTeachingHours-fp.supervisionhours;
                 if (remainghrs >= 0)
                 {
-                    Facultyproject.add(fp);
                     f.TotalTeachingHours -= fp.supervisionhours;
                     Faculty.update(f);
                     FacultyprojectDLobj.InsertFacultyProject(fp);
@@ -120,8 +119,9 @@ namespace MidProjectDb.UI
             }
             return false;
         }
-        public static void delete(Facultyproject fp)
+        public static void delete(int id)
         {
+            Facultyproject fp = findfacultyproject(id);
             Faculty f = Faculty.findFaculty(fp.facultyid);
             f.TotalTeachingHours += fp.supervisionhours;
             Faculty.update(f);
@@ -132,7 +132,7 @@ namespace MidProjectDb.UI
             DataTable dt = FacultyprojectDLobj.GetTable();
             if (dt != null)
             {
-                Semester s = Semester.finSem(id);
+                Semester s = Semester.findSem(id);
                 foreach (DataRow dr in dt.Rows)
                 {
                     if (Convert.ToInt32(dr["semester_id"]) == id)

@@ -26,10 +26,48 @@ namespace MidProjectDb.UI
             work.Location = this.Location;
             this.Close();
         }
-
         private void Assign_btn_Click(object sender, EventArgs e)
         {
+            try 
+            {
+                if (faculty_comboBox.SelectedIndex != -1 && Semester_comboBox.SelectedIndex != -1 && project_comboBox.SelectedIndex != -1)
+                {
+                    int Instructorid = Convert.ToInt32(faculty_comboBox.SelectedValue);
+                    int projectid = Convert.ToInt32(project_comboBox.SelectedValue);
+                    int semid = Convert.ToInt32(Semester_comboBox.SelectedValue);
+                    int superhrs = 0;
+                    Faculty f = Faculty.findFaculty(Instructorid);
+                    Project p = Project.findProject(projectid);
+                    Semester s = Semester.findSem(semid);
+                    if (Utility.Utility.intValidatioin(Supervisionhrs_txtBox.Text))
+                    {
+                        superhrs = Convert.ToInt32(Supervisionhrs_txtBox.Text);
+                    }
+                    Facultyproject facultyproject = new Facultyproject(superhrs,Instructorid,projectid,semid,f,s,p);
+                    if (Facultyproject.add(facultyproject))
+                    {
+                        faculty_comboBox.SelectedIndex = -1;
+                        project_comboBox.SelectedIndex = -1;
+                        Semester_comboBox.SelectedIndex = -1;
+                        Supervisionhrs_txtBox.Text = "";
+                        MessageBox.Show($"Project assigned to {f.Name} successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Either the instructor is already assigned same project or instructor does not have enough available hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Please Select all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            loadDatagrid();
         }
 
         private void ResearchSuper_Load(object sender, EventArgs e)
@@ -41,26 +79,28 @@ namespace MidProjectDb.UI
             try
             {
                 DataTable dt = Facultyproject.DataGridTable();
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["faculty_project_id"].ReadOnly = true;
-                dataGridView1.Columns["faculty_id"].Visible = false;
-                dataGridView1.Columns["project_id"].Visible = false;
-                dataGridView1.Columns["oldfaculty_id"].Visible = false;
-                dataGridView1.Columns["oldproject_id"].Visible = false;
-                dataGridView1.Columns["semester_id"].Visible = false;
-                dataGridView1.Columns["oldhrs"].Visible = false;
-                addFacultyDropdowns();
-                addProjectDropdowns();
-                addSemDropdowns();
-                loadComboBoxes();
-                foreach (DataRow dr in dt.Rows)
+                if(dt!=null)
                 {
-                    int id = Convert.ToInt32(dr["faculty_id"]);
-                    Faculty f = Faculty.findFaculty(id);
-                    if (f.TotalTeachingHours < 0)
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns["faculty_project_id"].ReadOnly = true;
+                    dataGridView1.Columns["faculty_id"].Visible = false;
+                    dataGridView1.Columns["project_id"].Visible = false;
+                    dataGridView1.Columns["oldfaculty_id"].Visible = false;
+                    dataGridView1.Columns["semester_id"].Visible = false;
+                    dataGridView1.Columns["oldhrs"].Visible = false;
+                    addFacultyDropdowns();
+                    addProjectDropdowns();
+                    addSemDropdowns();
+                    loadComboBoxes();
+                    foreach (DataRow dr in dt.Rows)
                     {
-                        MessageBox.Show($"{f.Name} is assigned more hours than available time due to changing of contact hours of courses", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        int id = Convert.ToInt32(dr["faculty_id"]);
+                        Faculty f = Faculty.findFaculty(id);
+                        if (f.TotalTeachingHours < 0)
+                        {
+                            MessageBox.Show($"{f.Name} is assigned more hours than available time due to changing of contact hours of courses", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }
@@ -99,7 +139,7 @@ namespace MidProjectDb.UI
             DataTable semesterTable = Semester.GetTable();
             foreach (DataRow row in semesterTable.Rows)
             {
-                Semester s = Semester.finSem(Convert.ToInt32(row["semester_id"]));
+                Semester s = Semester.findSem(Convert.ToInt32(row["semester_id"]));
                 row["term"] = $"{s.Term} {s.Year}";
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
@@ -167,6 +207,72 @@ namespace MidProjectDb.UI
             project_comboBox.SelectedIndex = -1;
             Semester_comboBox.SelectedIndex = -1;
 
+        }
+
+        private void update_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.DataSource != null)
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        int facultyprojectid = Convert.ToInt32(row.Cells["faculty_project_id"].Value);
+                        int oldfacultyid = Convert.ToInt32(row.Cells["oldfaculty_id"].Value);
+                        int semid = Convert.ToInt32(row.Cells["Semester"].Value);
+                        int newfaculty = Convert.ToInt32(row.Cells["Faculty"].Value);
+                        int newproject = Convert.ToInt32(row.Cells["Project"].Value);
+                        int oldsuperehr= Convert.ToInt32(row.Cells["oldhrs"].Value);
+                        int newhrs= Convert.ToInt32(row.Cells["supervision_hours"].Value);
+                        Faculty f = Faculty.findFaculty(newfaculty);
+                        Project p = Project.findProject(newproject);
+                        Semester s = Semester.findSem(semid);
+                        Facultyproject fp = new Facultyproject(facultyprojectid,newhrs,f.FacultyId,p.projectId,s.SemesterId,f,s,p);
+                        if (!Facultyproject.update(fp,oldfacultyid,oldsuperehr))
+                        {
+                            MessageBox.Show($"Either the instructor {f.Name} is already assigned to same project or instructor does not have enough available hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            loadDatagrid();
+        }
+
+        private void Delete_btn_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedRow();
+        }
+        private void DeleteSelectedRow()
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete Selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
+                        {
+                            int Id = Convert.ToInt32(dr.Cells["faculty_project_id"].Value);
+                            Facultyproject.delete(Id);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Please Select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            loadDatagrid();
         }
     }
 }

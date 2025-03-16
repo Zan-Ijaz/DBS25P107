@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.EndDate = new System.Windows.Forms.DateTimePicker();
@@ -44,19 +43,10 @@
             this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Course_lbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sechduleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultycourseidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.starttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseSechduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Workoad_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseSechduleBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,83 +228,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sechduleidDataGridViewTextBoxColumn,
-            this.facultycourseidDataGridViewTextBoxColumn,
-            this.roomidDataGridViewTextBoxColumn,
-            this.roomDataGridViewTextBoxColumn,
-            this.dayDataGridViewTextBoxColumn,
-            this.starttimeDataGridViewTextBoxColumn,
-            this.endtimeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.courseSechduleBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(95, 203);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(837, 150);
             this.dataGridView1.TabIndex = 35;
-            // 
-            // sechduleidDataGridViewTextBoxColumn
-            // 
-            this.sechduleidDataGridViewTextBoxColumn.DataPropertyName = "Sechduleid";
-            this.sechduleidDataGridViewTextBoxColumn.HeaderText = "Sechduleid";
-            this.sechduleidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sechduleidDataGridViewTextBoxColumn.Name = "sechduleidDataGridViewTextBoxColumn";
-            this.sechduleidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // facultycourseidDataGridViewTextBoxColumn
-            // 
-            this.facultycourseidDataGridViewTextBoxColumn.DataPropertyName = "facultycourseid";
-            this.facultycourseidDataGridViewTextBoxColumn.HeaderText = "facultycourseid";
-            this.facultycourseidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.facultycourseidDataGridViewTextBoxColumn.Name = "facultycourseidDataGridViewTextBoxColumn";
-            this.facultycourseidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // roomidDataGridViewTextBoxColumn
-            // 
-            this.roomidDataGridViewTextBoxColumn.DataPropertyName = "roomid";
-            this.roomidDataGridViewTextBoxColumn.HeaderText = "roomid";
-            this.roomidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roomidDataGridViewTextBoxColumn.Name = "roomidDataGridViewTextBoxColumn";
-            this.roomidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // roomDataGridViewTextBoxColumn
-            // 
-            this.roomDataGridViewTextBoxColumn.DataPropertyName = "room";
-            this.roomDataGridViewTextBoxColumn.HeaderText = "room";
-            this.roomDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roomDataGridViewTextBoxColumn.Name = "roomDataGridViewTextBoxColumn";
-            this.roomDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dayDataGridViewTextBoxColumn
-            // 
-            this.dayDataGridViewTextBoxColumn.DataPropertyName = "day";
-            this.dayDataGridViewTextBoxColumn.HeaderText = "day";
-            this.dayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dayDataGridViewTextBoxColumn.Name = "dayDataGridViewTextBoxColumn";
-            this.dayDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // starttimeDataGridViewTextBoxColumn
-            // 
-            this.starttimeDataGridViewTextBoxColumn.DataPropertyName = "starttime";
-            this.starttimeDataGridViewTextBoxColumn.HeaderText = "starttime";
-            this.starttimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.starttimeDataGridViewTextBoxColumn.Name = "starttimeDataGridViewTextBoxColumn";
-            this.starttimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // endtimeDataGridViewTextBoxColumn
-            // 
-            this.endtimeDataGridViewTextBoxColumn.DataPropertyName = "Endtime";
-            this.endtimeDataGridViewTextBoxColumn.HeaderText = "Endtime";
-            this.endtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endtimeDataGridViewTextBoxColumn.Name = "endtimeDataGridViewTextBoxColumn";
-            this.endtimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // courseSechduleBindingSource
-            // 
-            this.courseSechduleBindingSource.DataSource = typeof(MidProjectDb.BL.CourseSechdule);
             // 
             // panel2
             // 
@@ -353,7 +273,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseSechduleBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -379,13 +298,5 @@
         private Guna.UI2.WinForms.Guna2Button Next_btn;
         private System.Windows.Forms.Label Course_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sechduleidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultycourseidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn starttimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endtimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource courseSechduleBindingSource;
     }
 }

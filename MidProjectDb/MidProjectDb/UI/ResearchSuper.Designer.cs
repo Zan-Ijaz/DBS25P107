@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Supervisionhrs_txtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,23 +43,17 @@
             this.Projects_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.research_lbl = new System.Windows.Forms.Label();
-            this.semesterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facultyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.facultyprojectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyprojectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Delete_btn);
+            this.panel1.Controls.Add(this.update_btn);
             this.panel1.Controls.Add(this.Supervisionhrs_txtBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Semester_comboBox);
@@ -77,7 +70,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1774, 679);
+            this.panel1.Size = new System.Drawing.Size(1774, 739);
             this.panel1.TabIndex = 0;
             // 
             // Supervisionhrs_txtBox
@@ -142,6 +135,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(527, 196);
@@ -244,32 +239,48 @@
             this.research_lbl.TabIndex = 1;
             this.research_lbl.Text = "Research Supervision";
             // 
-            // semesterBindingSource
+            // update_btn
             // 
-            this.semesterBindingSource.DataSource = typeof(MidProjectDb.BL.Semester);
+            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.update_btn.BorderRadius = 20;
+            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.White;
+            this.update_btn.Location = new System.Drawing.Point(527, 672);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(174, 55);
+            this.update_btn.TabIndex = 38;
+            this.update_btn.Text = "Update";
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
-            // facultyBindingSource
+            // Delete_btn
             // 
-            this.facultyBindingSource.DataSource = typeof(MidProjectDb.UI.Faculty);
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataSource = typeof(MidProjectDb.UI.Project);
-            // 
-            // facultyBindingSource1
-            // 
-            this.facultyBindingSource1.DataSource = typeof(MidProjectDb.UI.Faculty);
-            // 
-            // facultyprojectBindingSource
-            // 
-            this.facultyprojectBindingSource.DataSource = typeof(MidProjectDb.UI.Facultyproject);
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(1104, 672);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 39;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
             // 
             // ResearchSuper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1774, 679);
+            this.ClientSize = new System.Drawing.Size(1774, 739);
             this.Controls.Add(this.panel1);
             this.Name = "ResearchSuper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -280,11 +291,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyprojectBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,14 +301,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label research_lbl;
         private System.Windows.Forms.Label Projects_lbl;
-        private System.Windows.Forms.BindingSource projectBindingSource;
         private System.Windows.Forms.Label facprojects_lbl;
-        private System.Windows.Forms.BindingSource facultyprojectBindingSource;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private Guna.UI2.WinForms.Guna2Button Assign_btn;
-        private System.Windows.Forms.BindingSource semesterBindingSource;
-        private System.Windows.Forms.BindingSource facultyBindingSource;
-        private System.Windows.Forms.BindingSource facultyBindingSource1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
@@ -311,5 +312,7 @@
         private System.Windows.Forms.ComboBox project_comboBox;
         private System.Windows.Forms.TextBox Supervisionhrs_txtBox;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button update_btn;
+        private Guna.UI2.WinForms.Guna2Button Delete_btn;
     }
 }

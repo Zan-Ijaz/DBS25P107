@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -44,11 +43,9 @@
             this.Rooms_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Addroom_lbl = new System.Windows.Forms.Label();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -255,10 +252,6 @@
             this.Addroom_lbl.TabIndex = 1;
             this.Addroom_lbl.Text = "Manage Rooms";
             // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataSource = typeof(MidProjectDb.UI.Room);
-            // 
             // Rooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,7 +266,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,7 +277,6 @@
         private System.Windows.Forms.Label Addroom_lbl;
         private System.Windows.Forms.Label Rooms_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource roomBindingSource;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private Guna.UI2.WinForms.Guna2Button Add_btn;
         private System.Windows.Forms.Label capacity_lbl;

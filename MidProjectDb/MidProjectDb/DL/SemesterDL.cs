@@ -12,7 +12,7 @@ namespace MidProjectDb.DL
     {
         public DataTable GetDataTable()
         {
-            string query = "select * from semesters";
+            string query = "Select * From semesters";
             DataTable dt=DatabaseHelper.Instance.GetData(query);
             return dt;
         }
@@ -35,12 +35,12 @@ namespace MidProjectDb.DL
         }
         public void InsertSemester(Semester semester)
         {
-            string query = $"insert into semesters (term, year) VALUES ('{semester.Term}', {semester.Year})";
+            string query = $"Insert into semesters (term, year) VALUES ('{semester.Term}', {semester.Year})";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteSemester(int id)
         {
-            string query = $"delete from semesters where semester_id = {id}";
+            string query = $"delete From semesters where semester_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void UpdateSemester(Semester semester)

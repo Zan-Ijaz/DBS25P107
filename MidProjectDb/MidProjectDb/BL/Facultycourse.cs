@@ -122,7 +122,7 @@ namespace MidProjectDb.BL
             DataTable dt = Facultycourse.GetTable();
             if (dt != null)
             {
-                Semester s = Semester.finSem(id);
+                Semester s = Semester.findSem(id);
                 foreach (DataRow dr in dt.Rows)
                 {
                     if (Convert.ToInt32(dr["semester_id"]) == id)

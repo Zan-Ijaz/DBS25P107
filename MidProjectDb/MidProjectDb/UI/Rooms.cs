@@ -81,7 +81,7 @@ namespace MidProjectDb.UI
             }
             else
             {
-                MessageBox.Show("Room Type not selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Room Type not Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBox1.SelectedIndex = -1;
             }
             Room r = new Room(name, type, capacity);
@@ -138,7 +138,7 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete Selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
                         foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
@@ -151,7 +151,7 @@ namespace MidProjectDb.UI
                 }
                 else
                 {
-                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

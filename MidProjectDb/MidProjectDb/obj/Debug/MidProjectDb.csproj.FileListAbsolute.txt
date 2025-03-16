@@ -98,7 +98,6 @@ D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Addfac.reso
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdminDuties.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdministrativeStaff.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AssignedCourses.resources
-D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AssignProject.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Consumeables.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.CourseAllocationfirst.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.DepartmentHead.resources

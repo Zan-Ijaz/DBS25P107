@@ -80,6 +80,7 @@ namespace MidProjectDb.BL
         {
             Facultycourse.DeletebySem(id);
             Facultyproject.DeletebySem(id);
+            Facultyadmin.deletebysem(id);
             semsters.DeleteSemester(id);
         }
         public static DataTable GetTable()
@@ -88,7 +89,7 @@ namespace MidProjectDb.BL
             return dt;
 
         }
-        public static Semester finSem(int id)
+        public static Semester findSem(int id)
         {
             List<Semester> sems = semsters.GetData();
             foreach(var s in sems)

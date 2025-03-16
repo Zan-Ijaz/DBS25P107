@@ -13,7 +13,7 @@ namespace MidProjectDb.DL
         public List<Course> getData()
         {
             List<Course> newcourses = new List<Course>();
-            string query = $"Select * from courses";
+            string query = $"Select * From courses";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if (dt != null)
             {
@@ -32,7 +32,7 @@ namespace MidProjectDb.DL
         }
         public DataTable GetDataTable()
         {
-            string query = $"Select * from courses";
+            string query = $"Select * From courses";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
@@ -43,7 +43,7 @@ namespace MidProjectDb.DL
         }
         public void deleteCourse(int id)
         {
-            string query = $"DELETE FROM courses WHERE course_id = {id}";
+            string query = $"DELETE From courses WHERE course_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void update(Course c)

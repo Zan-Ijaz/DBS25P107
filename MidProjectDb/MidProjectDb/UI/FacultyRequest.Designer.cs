@@ -28,41 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Save_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Date_lbl = new System.Windows.Forms.Label();
             this.Quantity_txtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.itemname_txtbox = new System.Windows.Forms.TextBox();
             this.itemname_lbl = new System.Windows.Forms.Label();
             this.facultyrequest_lbl = new System.Windows.Forms.Label();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.requestid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Facultyreq_lbl = new System.Windows.Forms.Label();
+            this.itemname_txtBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.itemname_txtBox);
             this.panel1.Controls.Add(this.Save_btn);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.Date_lbl);
             this.panel1.Controls.Add(this.Quantity_txtbox);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.itemname_txtbox);
             this.panel1.Controls.Add(this.itemname_lbl);
             this.panel1.Controls.Add(this.facultyrequest_lbl);
             this.panel1.Controls.Add(this.Back_lbl);
@@ -90,14 +79,6 @@
             this.Save_btn.Size = new System.Drawing.Size(174, 55);
             this.Save_btn.TabIndex = 31;
             this.Save_btn.Text = "Add";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.Location = new System.Drawing.Point(664, 502);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 22);
-            this.dateTimePicker1.TabIndex = 30;
             // 
             // Date_lbl
             // 
@@ -129,15 +110,6 @@
             this.label1.Size = new System.Drawing.Size(198, 32);
             this.label1.TabIndex = 27;
             this.label1.Text = "Enter quantity:";
-            // 
-            // itemname_txtbox
-            // 
-            this.itemname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.itemname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemname_txtbox.Location = new System.Drawing.Point(663, 384);
-            this.itemname_txtbox.Name = "itemname_txtbox";
-            this.itemname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.itemname_txtbox.TabIndex = 26;
             // 
             // itemname_lbl
             // 
@@ -184,16 +156,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.requestid,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView1.DataSource = this.facultyReqBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(150, 196);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -201,64 +164,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(813, 150);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // requestid
-            // 
-            this.requestid.DataPropertyName = "requestid";
-            this.requestid.HeaderText = "requestid";
-            this.requestid.MinimumWidth = 6;
-            this.requestid.Name = "requestid";
-            this.requestid.ReadOnly = true;
-            this.requestid.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "facultyid";
-            this.dataGridViewTextBoxColumn2.HeaderText = "facultyid";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "statusid";
-            this.dataGridViewTextBoxColumn3.HeaderText = "status";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "itemid";
-            this.dataGridViewTextBoxColumn4.HeaderText = "item";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "quantity";
-            this.dataGridViewTextBoxColumn5.HeaderText = "quantity";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "request_date";
-            this.dataGridViewTextBoxColumn6.HeaderText = "request_date";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // facultyReqBindingSource
-            // 
-            this.facultyReqBindingSource.DataSource = typeof(MidProjectDb.UI.FacultyReq);
             // 
             // panel2
             // 
@@ -279,11 +184,21 @@
             this.Facultyreq_lbl.BackColor = System.Drawing.Color.Transparent;
             this.Facultyreq_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Facultyreq_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Facultyreq_lbl.Location = new System.Drawing.Point(323, 43);
+            this.Facultyreq_lbl.Location = new System.Drawing.Point(345, 43);
             this.Facultyreq_lbl.Name = "Facultyreq_lbl";
             this.Facultyreq_lbl.Size = new System.Drawing.Size(331, 49);
             this.Facultyreq_lbl.TabIndex = 0;
             this.Facultyreq_lbl.Text = "Make a  Request";
+            // 
+            // itemname_txtBox
+            // 
+            this.itemname_txtBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.itemname_txtBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.itemname_txtBox.FormattingEnabled = true;
+            this.itemname_txtBox.Location = new System.Drawing.Point(663, 379);
+            this.itemname_txtBox.Name = "itemname_txtBox";
+            this.itemname_txtBox.Size = new System.Drawing.Size(301, 24);
+            this.itemname_txtBox.TabIndex = 32;
             // 
             // FacultyRequest
             // 
@@ -298,7 +213,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -322,19 +236,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private System.Windows.Forms.Label facultyrequest_lbl;
-        private System.Windows.Forms.BindingSource facultyReqBindingSource;
         private System.Windows.Forms.Label itemname_lbl;
-        private System.Windows.Forms.TextBox itemname_txtbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label Date_lbl;
         private System.Windows.Forms.TextBox Quantity_txtbox;
         private Guna.UI2.WinForms.Guna2Button Save_btn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requestid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.ComboBox itemname_txtBox;
     }
 }

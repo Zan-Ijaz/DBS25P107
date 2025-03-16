@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Del_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -46,13 +45,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ManageCourse_lbl = new System.Windows.Forms.Label();
-            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -282,14 +277,6 @@
             this.ManageCourse_lbl.TabIndex = 1;
             this.ManageCourse_lbl.Text = "Manage Courses";
             // 
-            // courseBindingSource1
-            // 
-            this.courseBindingSource1.DataSource = typeof(MidProjectDb.BL.Course);
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(MidProjectDb.BL.Course);
-            // 
             // ManageCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,8 +293,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,10 +303,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label ManageCourse_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource courseBindingSource;
         private System.Windows.Forms.Label Courses_lbl;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
-        private System.Windows.Forms.BindingSource courseBindingSource1;
         private System.Windows.Forms.Label Name_lbl;
         private System.Windows.Forms.TextBox name_txtbox;
         private System.Windows.Forms.Label type_lbl;

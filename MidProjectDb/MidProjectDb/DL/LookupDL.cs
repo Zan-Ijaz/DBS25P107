@@ -16,7 +16,7 @@ namespace MidProjectDb.DL
         public static List<UI.Lookup> getData()
         {
         List<UI.Lookup> lookups = new List<UI.Lookup>();
-            string query = $"Select * from lookup";
+            string query = $"Select * From lookup";
             try
             {
                  

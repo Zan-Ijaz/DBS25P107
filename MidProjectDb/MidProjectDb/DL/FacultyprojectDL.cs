@@ -13,14 +13,14 @@ namespace MidProjectDb.DL
     {
         public DataTable GetTable()
         {
-            string query = "SELECT * FROM faculty_projects";
+            string query = "Select * From faculty_projects";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
         public List<Facultyproject> GetData()
         {
             List<Facultyproject> facultyProjects = new List<Facultyproject>();
-            string query = "SELECT * FROM faculty_projects";
+            string query = "Select * From faculty_projects";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if (dt != null)
             {
@@ -32,7 +32,7 @@ namespace MidProjectDb.DL
                     int projectId = Convert.ToInt32(row["project_id"]);
                     Project project = Project.findProject(projectId);
                     int semesterId = Convert.ToInt32(row["semester_id"]);
-                    Semester sem = Semester.finSem(semesterId);
+                    Semester sem = Semester.findSem(semesterId);
                     int supervisionHours = Convert.ToInt32(row["supervision_hours"]);
                     Facultyproject fp = new Facultyproject(facultyProjectId, supervisionHours, facultyId, projectId, semesterId, faculty, sem, project);
                     facultyProjects.Add(fp);
@@ -42,12 +42,12 @@ namespace MidProjectDb.DL
         }
         public void InsertFacultyProject(Facultyproject fp)
         {
-            string query = $"INSERT INTO faculty_projects (faculty_id, project_id, semester_id, supervision_hours) VALUES ({fp.facultyid}, {fp.projectid}, {fp.semsterid}, {fp.supervisionhours})";
+            string query = $"Insert into faculty_projects (faculty_id, project_id, semester_id, supervision_hours) VALUES ({fp.facultyid}, {fp.projectid}, {fp.semsterid}, {fp.supervisionhours})";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteFacultyProject(int id)
         {
-            string query = $"DELETE FROM faculty_projects WHERE faculty_project_id = {id}";
+            string query = $"DELETE From faculty_projects WHERE faculty_project_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void UpdateFacultyProject(Facultyproject fp)
@@ -57,22 +57,22 @@ namespace MidProjectDb.DL
         }
         public void DeleteBySemester(int semesterId)
         {
-            string query = $"DELETE FROM faculty_projects WHERE semester_id = {semesterId}";
+            string query = $"DELETE From faculty_projects WHERE semester_id = {semesterId}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteByProject(int projectId)
         {
-            string query = $"DELETE FROM faculty_projects WHERE project_id = {projectId}";
+            string query = $"DELETE From faculty_projects WHERE project_id = {projectId}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteByFaculty(int facultyId)
         {
-            string query = $"DELETE FROM faculty_projects WHERE faculty_id = {facultyId}";
+            string query = $"DELETE From faculty_projects WHERE faculty_id = {facultyId}";
             DatabaseHelper.Instance.Update(query);
         }
         public DataTable LoadDataGrid()
         {
-            string query = "SELECT fp.faculty_project_id, f.name AS Faculty, p.title AS Project, CONCAT(s.term, ' ', s.year) AS Semester, fp.supervision_hours as oldhrs ,fp.supervision_hours, fp.faculty_id ,f.faculty_id as oldfaculty_id, fp.project_id,p.project_id as oldproject_id, s.semester_id FROM faculty_projects fp NATURAL JOIN faculty f NATURAL JOIN projects p NATURAL JOIN semesters s";
+            string query = "Select fp.faculty_project_id, f.name AS Faculty, p.title AS Project, CONCAT(s.term, ' ', s.year) AS Semester, fp.supervision_hours as oldhrs ,fp.supervision_hours, fp.faculty_id ,f.faculty_id as oldfaculty_id, fp.project_id, s.semester_id From faculty_projects fp NATURAL JOIN faculty f NATURAL JOIN projects p NATURAL JOIN semesters s";
 
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;

@@ -17,7 +17,6 @@ namespace MidProjectDb.UI
         {
             InitializeComponent();
         }
-
         private void Next_btn_Click(object sender, EventArgs e)
         {
             try
@@ -29,7 +28,7 @@ namespace MidProjectDb.UI
                     int semid = Convert.ToInt32(Sem_combobox.SelectedValue);
                     Faculty f = Faculty.findFaculty(Instructorid);
                     Course c = Course.findCourse(coursesid);
-                    Semester s = Semester.finSem(semid);
+                    Semester s = Semester.findSem(semid);
                     Facultycourse facultycourse = new Facultycourse(Instructorid, coursesid, semid, c, f, s);
                     if (Facultycourse.addFacultyCourse(facultycourse))
                     {
@@ -45,7 +44,7 @@ namespace MidProjectDb.UI
                 }
                 else
                 {
-                    MessageBox.Show($"Please select all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Please Select all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch(Exception ex)
@@ -54,7 +53,6 @@ namespace MidProjectDb.UI
             }
             loadDatagrid();
         }
-
         private void Back_lbl_Click(object sender, EventArgs e)
         {
             WorkLoad work = new WorkLoad();
@@ -64,7 +62,6 @@ namespace MidProjectDb.UI
             this.Close();
 
         }
-
         private void CourseAllocationfirst_Load(object sender, EventArgs e)
         {
             loadDatagrid();
@@ -162,7 +159,6 @@ namespace MidProjectDb.UI
             comboBoxColumn.DataPropertyName = "faculty_id";
             dataGridView1.Columns.Add(comboBoxColumn);
         }
-
         private void addCourseDropdowns()
         {
             if (dataGridView1.Columns["Course"] != null)
@@ -193,7 +189,7 @@ namespace MidProjectDb.UI
             DataTable semesterTable = Semester.GetTable();
             foreach (DataRow row in semesterTable.Rows)
             {
-                Semester s = Semester.finSem(Convert.ToInt32(row["semester_id"]));
+                Semester s = Semester.findSem(Convert.ToInt32(row["semester_id"]));
                 row["term"] = $"{s.Term} {s.Year}";
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
@@ -205,7 +201,6 @@ namespace MidProjectDb.UI
             comboBoxColumn.DataPropertyName = "semester_id";  
             dataGridView1.Columns.Add(comboBoxColumn);
         }
-
         private void update_btn_Click(object sender, EventArgs e)
         {
             try 
@@ -222,7 +217,7 @@ namespace MidProjectDb.UI
                         int newcourse = Convert.ToInt32(row.Cells["Course"].Value);
                         Faculty f = Faculty.findFaculty(newfaculty);
                         Course c = Course.findCourse(newcourse);
-                        Semester s = Semester.finSem(semid);
+                        Semester s = Semester.findSem(semid);
                         Facultycourse fc = new Facultycourse(facultycourseid,f.FacultyId, c.CourseId, semid, c, f, s);
                         if (!Facultycourse.updatefacultycourse(fc, oldCourseid, oldfacultyid))
                         {
@@ -247,7 +242,7 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete Selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
                         foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
@@ -260,7 +255,7 @@ namespace MidProjectDb.UI
                 }
                 else
                 {
-                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

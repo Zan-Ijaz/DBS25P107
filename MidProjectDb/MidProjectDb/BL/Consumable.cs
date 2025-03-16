@@ -75,6 +75,18 @@ namespace MidProjectDb.BL
                 DataTable dt = consumeables.GetDataTable();
                 return dt;
             }
+            public static Consumable findconsumable(int id)
+            {
+                List<Consumable> cons = consumeables.getData();
+                foreach(var c in cons)
+                {
+                    if (id == c.ConsumableId)
+                    {
+                        return c;
+                    }
+                }
+                return null;
+            }
         }
     }
 }

@@ -79,7 +79,7 @@ namespace MidProjectDb.UI
             }
             else
             {
-                MessageBox.Show("Course Type not selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Course Type not Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 coursetype_combo.SelectedIndex = -1;
             }
             if (Utility.Utility.intValidatioin(Credithour_txtbox.Text)&&Convert.ToInt32(Credithour_txtbox.Text)>0)
@@ -191,7 +191,7 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete Selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
                         foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
@@ -203,7 +203,7 @@ namespace MidProjectDb.UI
                 }
                 else
                 {
-                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

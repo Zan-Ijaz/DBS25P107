@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.year_txtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,14 +41,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ManageSem_lbl = new System.Windows.Forms.Label();
-            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.semesterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,6 +64,56 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1428, 701);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Spring",
+            "Summer",
+            "Fall"});
+            this.comboBox1.Location = new System.Drawing.Point(653, 379);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(344, 24);
+            this.comboBox1.TabIndex = 35;
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(823, 624);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 34;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Del_btn_Click);
+            // 
+            // update_btn
+            // 
+            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.update_btn.BorderRadius = 20;
+            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.White;
+            this.update_btn.Location = new System.Drawing.Point(411, 624);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(174, 55);
+            this.update_btn.TabIndex = 33;
+            this.update_btn.Text = "Update";
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
             // year_txtbox
             // 
@@ -182,60 +229,6 @@
             this.ManageSem_lbl.TabIndex = 1;
             this.ManageSem_lbl.Text = "Manage Semester";
             // 
-            // update_btn
-            // 
-            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.update_btn.BorderRadius = 20;
-            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.update_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_btn.ForeColor = System.Drawing.Color.White;
-            this.update_btn.Location = new System.Drawing.Point(411, 624);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(174, 55);
-            this.update_btn.TabIndex = 33;
-            this.update_btn.Text = "Update";
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
-            // 
-            // Delete_btn
-            // 
-            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Delete_btn.BorderRadius = 20;
-            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete_btn.ForeColor = System.Drawing.Color.White;
-            this.Delete_btn.Location = new System.Drawing.Point(823, 624);
-            this.Delete_btn.Name = "Delete_btn";
-            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
-            this.Delete_btn.TabIndex = 34;
-            this.Delete_btn.Text = "Delete";
-            this.Delete_btn.Click += new System.EventHandler(this.Del_btn_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Spring",
-            "Summer",
-            "Fall"});
-            this.comboBox1.Location = new System.Drawing.Point(653, 379);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(344, 24);
-            this.comboBox1.TabIndex = 35;
-            // 
-            // semesterBindingSource
-            // 
-            this.semesterBindingSource.DataSource = typeof(MidProjectDb.BL.Semester);
-            // 
             // UpdateSem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,7 +244,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semesterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,7 +255,6 @@
         private System.Windows.Forms.Label ManageSem_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label Sems_lbl;
-        private System.Windows.Forms.BindingSource semesterBindingSource;
         private Guna.UI2.WinForms.Guna2Button Save_btn;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private System.Windows.Forms.Label label2;

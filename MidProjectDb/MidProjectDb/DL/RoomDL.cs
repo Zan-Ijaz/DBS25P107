@@ -10,7 +10,7 @@ namespace MidProjectDb.DL
     {
         public DataTable GetDataTable()
         {
-            string query = "Select * FROM rooms";
+            string query = "Select * From rooms";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
@@ -18,7 +18,7 @@ namespace MidProjectDb.DL
         public List<Room> GetData()
         {
             List<Room> rooms = new List<Room>();
-            string query = "Select * FROM rooms";
+            string query = "Select * From rooms";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if (dt != null)
             {
@@ -37,13 +37,13 @@ namespace MidProjectDb.DL
 
         public void InsertRoom(Room room)
         {
-            string query = $"Insert Into rooms (room_name, room_type, capacity) Values ('{room.roomname}', '{room.roomtype}', {room.capacity})";
+            string query = $"Insert into rooms (room_name, room_type, capacity) Values ('{room.roomname}', '{room.roomtype}', {room.capacity})";
             DatabaseHelper.Instance.Update(query);
         }
 
         public void DeleteRoom(int id)
         {
-            string query = $"Delete from rooms where room_id = {id}";
+            string query = $"Delete From rooms where room_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
 

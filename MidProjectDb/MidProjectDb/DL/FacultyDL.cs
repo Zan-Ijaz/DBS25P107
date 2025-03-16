@@ -15,7 +15,7 @@ namespace MidProjectDb.DL
         public List<Faculty> getData()
         {
             List<Faculty> newfac = new List<Faculty>();
-            string query = $"Select * from faculty";
+            string query = $"Select * From faculty";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if(dt!=null){
                 foreach (DataRow reader in dt.Rows)
@@ -38,7 +38,7 @@ namespace MidProjectDb.DL
         }
         public void Delete(int userId)
         {
-            string deleteFacultyQuery = $"DELETE FROM faculty WHERE user_id = {userId}";
+            string deleteFacultyQuery = $"DELETE From faculty WHERE user_id = {userId}";
             DatabaseHelper.Instance.Update(deleteFacultyQuery);
 
         }
@@ -54,7 +54,7 @@ namespace MidProjectDb.DL
         }
         public DataTable GetTable()
         {
-            string query = $"Select * from faculty";
+            string query = $"Select * From faculty";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }

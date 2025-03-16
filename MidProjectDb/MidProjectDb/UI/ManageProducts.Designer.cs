@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.descry_txtbox = new System.Windows.Forms.TextBox();
             this.title_txtbox = new System.Windows.Forms.TextBox();
             this.Description_lbl = new System.Windows.Forms.Label();
@@ -40,13 +41,9 @@
             this.Projects_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ManageProjects_lbl = new System.Windows.Forms.Label();
-            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,6 +64,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1615, 686);
             this.panel1.TabIndex = 0;
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(992, 599);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 32;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
+            // 
+            // Update_btn
+            // 
+            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Update_btn.BorderRadius = 20;
+            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_btn.ForeColor = System.Drawing.Color.White;
+            this.Update_btn.Location = new System.Drawing.Point(433, 599);
+            this.Update_btn.Name = "Update_btn";
+            this.Update_btn.Size = new System.Drawing.Size(174, 55);
+            this.Update_btn.TabIndex = 31;
+            this.Update_btn.Text = "Update";
+            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
             // 
             // descry_txtbox
             // 
@@ -192,46 +225,6 @@
             this.ManageProjects_lbl.TabIndex = 1;
             this.ManageProjects_lbl.Text = "Manage Projects";
             // 
-            // Update_btn
-            // 
-            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Update_btn.BorderRadius = 20;
-            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update_btn.ForeColor = System.Drawing.Color.White;
-            this.Update_btn.Location = new System.Drawing.Point(433, 599);
-            this.Update_btn.Name = "Update_btn";
-            this.Update_btn.Size = new System.Drawing.Size(174, 55);
-            this.Update_btn.TabIndex = 31;
-            this.Update_btn.Text = "Update";
-            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
-            // 
-            // Delete_btn
-            // 
-            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Delete_btn.BorderRadius = 20;
-            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete_btn.ForeColor = System.Drawing.Color.White;
-            this.Delete_btn.Location = new System.Drawing.Point(992, 599);
-            this.Delete_btn.Name = "Delete_btn";
-            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
-            this.Delete_btn.TabIndex = 32;
-            this.Delete_btn.Text = "Delete";
-            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataSource = typeof(MidProjectDb.UI.Project);
-            // 
             // ManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,7 +241,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,7 +252,6 @@
         private System.Windows.Forms.Label ManageProjects_lbl;
         private System.Windows.Forms.Label Projects_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource projectBindingSource;
         private Guna.UI2.WinForms.Guna2Button Save_btn;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private System.Windows.Forms.Label Description_lbl;

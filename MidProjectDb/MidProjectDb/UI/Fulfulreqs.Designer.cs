@@ -28,26 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reqid_txtbox = new System.Windows.Forms.TextBox();
             this.Supervision_lbl = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.requestidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyReqBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facProjects_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Department_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,16 +118,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.requestidDataGridViewTextBoxColumn,
-            this.facultyidDataGridViewTextBoxColumn,
-            this.statusidDataGridViewTextBoxColumn,
-            this.itemidDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.requestdateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.facultyReqBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(95, 211);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -144,64 +126,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(829, 150);
             this.dataGridView1.TabIndex = 32;
-            // 
-            // requestidDataGridViewTextBoxColumn
-            // 
-            this.requestidDataGridViewTextBoxColumn.DataPropertyName = "requestid";
-            this.requestidDataGridViewTextBoxColumn.HeaderText = "requestid";
-            this.requestidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.requestidDataGridViewTextBoxColumn.Name = "requestidDataGridViewTextBoxColumn";
-            this.requestidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.requestidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // facultyidDataGridViewTextBoxColumn
-            // 
-            this.facultyidDataGridViewTextBoxColumn.DataPropertyName = "facultyid";
-            this.facultyidDataGridViewTextBoxColumn.HeaderText = "facultyid";
-            this.facultyidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.facultyidDataGridViewTextBoxColumn.Name = "facultyidDataGridViewTextBoxColumn";
-            this.facultyidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.facultyidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusidDataGridViewTextBoxColumn
-            // 
-            this.statusidDataGridViewTextBoxColumn.DataPropertyName = "statusid";
-            this.statusidDataGridViewTextBoxColumn.HeaderText = "statusid";
-            this.statusidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusidDataGridViewTextBoxColumn.Name = "statusidDataGridViewTextBoxColumn";
-            this.statusidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // itemidDataGridViewTextBoxColumn
-            // 
-            this.itemidDataGridViewTextBoxColumn.DataPropertyName = "itemid";
-            this.itemidDataGridViewTextBoxColumn.HeaderText = "itemid";
-            this.itemidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.itemidDataGridViewTextBoxColumn.Name = "itemidDataGridViewTextBoxColumn";
-            this.itemidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // requestdateDataGridViewTextBoxColumn
-            // 
-            this.requestdateDataGridViewTextBoxColumn.DataPropertyName = "request_date";
-            this.requestdateDataGridViewTextBoxColumn.HeaderText = "request_date";
-            this.requestdateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.requestdateDataGridViewTextBoxColumn.Name = "requestdateDataGridViewTextBoxColumn";
-            this.requestdateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.requestdateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // facultyReqBindingSource
-            // 
-            this.facultyReqBindingSource.DataSource = typeof(MidProjectDb.UI.FacultyReq);
             // 
             // facProjects_lbl
             // 
@@ -250,7 +174,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultyReqBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -265,13 +188,6 @@
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label facProjects_lbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requestidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultyidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requestdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource facultyReqBindingSource;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label Supervision_lbl;
         private System.Windows.Forms.TextBox reqid_txtbox;

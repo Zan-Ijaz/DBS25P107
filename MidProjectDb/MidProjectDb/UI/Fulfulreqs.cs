@@ -28,7 +28,7 @@ namespace MidProjectDb.UI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //Select reqid approved and remove things from consumeables
+            //Select reqid approved and remove things From consumeables
         }
     }
 }

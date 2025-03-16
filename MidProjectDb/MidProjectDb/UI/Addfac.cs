@@ -109,7 +109,7 @@ namespace MidProjectDb.UI
                 else
                 {
                     teaching_hours_txtbox.Text = "";
-                    MessageBox.Show("Invalid hours selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid hours Selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 if (comboBox1.SelectedIndex != -1)
@@ -118,7 +118,7 @@ namespace MidProjectDb.UI
                 }
                 else
                 {
-                    MessageBox.Show("No designation selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No designation Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 if (name != "" && password != "" && email != "" && contactnumber != "" && research != "" && comboBox1.SelectedIndex != -1 && availablehours > -01)
@@ -229,7 +229,7 @@ namespace MidProjectDb.UI
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete Selected records?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (confirm == DialogResult.Yes)
                     {
                         foreach (DataGridViewRow dr in dataGridView1.SelectedRows)
@@ -244,7 +244,7 @@ namespace MidProjectDb.UI
                 }
                 else
                 {
-                    MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

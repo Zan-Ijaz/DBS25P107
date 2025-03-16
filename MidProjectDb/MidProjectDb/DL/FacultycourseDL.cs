@@ -11,7 +11,7 @@ namespace MidProjectDb.DL
     {
         public DataTable GetDataTable()
         {
-            string query = "SELECT * FROM faculty_courses";
+            string query = "Select * From faculty_courses";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
@@ -19,7 +19,7 @@ namespace MidProjectDb.DL
         public List<Facultycourse> GetData()
         {
             List<Facultycourse> facultyCourses = new List<Facultycourse>();
-            string query = "SELECT * FROM faculty_courses";
+            string query = "Select * From faculty_courses";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if (dt != null)
             {
@@ -31,7 +31,7 @@ namespace MidProjectDb.DL
                     int courseId = Convert.ToInt32(row["course_id"]);
                     Course course = Course.findCourse(courseId);
                     int semesterId = Convert.ToInt32(row["semester_id"]);
-                    Semester sem = Semester.finSem(semesterId);
+                    Semester sem = Semester.findSem(semesterId);
                     Facultycourse f = new Facultycourse(facultyCourseId, facultyId, courseId, semesterId,course,faculty,sem);
                     facultyCourses.Add(f);
                 }
@@ -41,13 +41,13 @@ namespace MidProjectDb.DL
 
         public void InsertFacultyCourse(Facultycourse f)
         {
-            string query = $"INSERT INTO faculty_courses (faculty_id, course_id, semester_id) VALUES ({f.facultyid}, {f.Courseid}, {f.Semesterid})";
+            string query = $"Insert into faculty_courses (faculty_id, course_id, semester_id) VALUES ({f.facultyid}, {f.Courseid}, {f.Semesterid})";
             DatabaseHelper.Instance.Update(query);
         }
 
         public void DeleteFacultyCourse(int id)
         {
-            string query = $"DELETE FROM faculty_courses WHERE faculty_course_id = {id}";
+            string query = $"DELETE From faculty_courses WHERE faculty_course_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
 
@@ -58,22 +58,22 @@ namespace MidProjectDb.DL
         }
         public void DeletebySems(int id)
         {
-            string query = $"DELETE FROM faculty_courses WHERE semester_id = {id}";
+            string query = $"DELETE From faculty_courses WHERE semester_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void Deletebycourses(int id)
         {
-            string query = $"DELETE FROM faculty_courses WHERE course_id = {id}";
+            string query = $"DELETE From faculty_courses WHERE course_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void Deletebyfaculty(int id)
         {
-            string query = $"DELETE FROM faculty_courses WHERE faculty_id = {id}";
+            string query = $"DELETE From faculty_courses WHERE faculty_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public DataTable loadDatagrid()
         {
-            string query = $"SELECT faculty_course_id,f.name as Faculty,c.course_name as Course,concat(s.term,' ',s.year ) as Semester,fc.faculty_id as oldfaculty_id,fc.course_id as oldcourse_id, f.faculty_id ,c.course_id,s.semester_id FROM faculty_courses fc natural join faculty f natural join courses c natural join semesters s";
+            string query = $"Select faculty_course_id,f.name as Faculty,c.course_name as Course,concat(s.term,' ',s.year ) as Semester,fc.faculty_id as oldfaculty_id,fc.course_id as oldcourse_id, f.faculty_id ,c.course_id,s.semester_id From faculty_courses fc natural join faculty f natural join courses c natural join semesters s";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }

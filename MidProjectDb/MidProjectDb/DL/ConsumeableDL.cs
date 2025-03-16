@@ -14,14 +14,14 @@ namespace MidProjectDb.DL
     {
         public DataTable GetDataTable()
         {
-            string query = $"Select * from consumables";
+            string query = $"Select * From consumables";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
         public List<Consumable> getData()
         {
             List<Consumable> consumables = new List<Consumable>();
-            string query = $"Select * from consumables";
+            string query = $"Select * From consumables";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if (dt != null)
             {
@@ -43,7 +43,7 @@ namespace MidProjectDb.DL
 
         public void deleteconsumables(int id)
         {
-            string query = $"DELETE FROM consumables WHERE consumable_id = {id}";
+            string query = $"DELETE From consumables WHERE consumable_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void update(Consumable ca)

@@ -38,11 +38,11 @@ namespace MidProjectDb.UI
 
         private void Allocation_btn_Click(object sender, EventArgs e)
         {
-            ResourseAllocation resourseAllocation = new ResourseAllocation();
-            resourseAllocation.Show();
-            resourseAllocation.Size = this.Size;
-            resourseAllocation.Location = this.Location;
-            this.Close();
+            //ResourseAllocation resourseAllocation = new ResourseAllocation();
+            //resourseAllocation.Show();
+            //resourseAllocation.Size = this.Size;
+            //resourseAllocation.Location = this.Location;
+            //this.Close();
         }
 
         private void logout_btn_Click(object sender, EventArgs e)

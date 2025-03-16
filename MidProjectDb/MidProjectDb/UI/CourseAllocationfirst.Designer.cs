@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Del_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Instructors = new System.Windows.Forms.Label();
@@ -42,15 +43,9 @@
             this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Cousresallocation_lbl = new System.Windows.Forms.Label();
-            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Del_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.facultycourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facultycourseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +68,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1782, 769);
             this.panel1.TabIndex = 0;
+            // 
+            // Del_btn
+            // 
+            this.Del_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Del_btn.BorderRadius = 20;
+            this.Del_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Del_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Del_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Del_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Del_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Del_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Del_btn.ForeColor = System.Drawing.Color.White;
+            this.Del_btn.Location = new System.Drawing.Point(1042, 672);
+            this.Del_btn.Name = "Del_btn";
+            this.Del_btn.Size = new System.Drawing.Size(174, 55);
+            this.Del_btn.TabIndex = 29;
+            this.Del_btn.Text = "Delete";
+            this.Del_btn.Click += new System.EventHandler(this.Del_btn_Click);
+            // 
+            // update_btn
+            // 
+            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.update_btn.BorderRadius = 20;
+            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.White;
+            this.update_btn.Location = new System.Drawing.Point(519, 672);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(174, 55);
+            this.update_btn.TabIndex = 28;
+            this.update_btn.Text = "Update";
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
             // label3
             // 
@@ -221,50 +252,6 @@
             this.Cousresallocation_lbl.TabIndex = 0;
             this.Cousresallocation_lbl.Text = "Course Allocation";
             // 
-            // update_btn
-            // 
-            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.update_btn.BorderRadius = 20;
-            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.update_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_btn.ForeColor = System.Drawing.Color.White;
-            this.update_btn.Location = new System.Drawing.Point(519, 672);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(174, 55);
-            this.update_btn.TabIndex = 28;
-            this.update_btn.Text = "Update";
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
-            // 
-            // Del_btn
-            // 
-            this.Del_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Del_btn.BorderRadius = 20;
-            this.Del_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Del_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Del_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Del_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Del_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Del_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Del_btn.ForeColor = System.Drawing.Color.White;
-            this.Del_btn.Location = new System.Drawing.Point(1042, 672);
-            this.Del_btn.Name = "Del_btn";
-            this.Del_btn.Size = new System.Drawing.Size(174, 55);
-            this.Del_btn.TabIndex = 29;
-            this.Del_btn.Text = "Delete";
-            this.Del_btn.Click += new System.EventHandler(this.Del_btn_Click);
-            // 
-            // facultycourseBindingSource
-            // 
-            this.facultycourseBindingSource.DataSource = typeof(MidProjectDb.BL.Facultycourse);
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(MidProjectDb.BL.Course);
-            // 
             // CourseAllocationfirst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -280,8 +267,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facultycourseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,14 +280,12 @@
         private Guna.UI2.WinForms.Guna2Button Next_btn;
         private System.Windows.Forms.Label facultyCourse_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource facultycourseBindingSource;
         private System.Windows.Forms.ComboBox Sem_combobox;
         private System.Windows.Forms.ComboBox Courses_combobox;
         private System.Windows.Forms.ComboBox Instructor_comboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Instructors;
-        private System.Windows.Forms.BindingSource courseBindingSource;
         private Guna.UI2.WinForms.Guna2Button update_btn;
         private Guna.UI2.WinForms.Guna2Button Del_btn;
     }

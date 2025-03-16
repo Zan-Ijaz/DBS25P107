@@ -143,10 +143,12 @@
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
     <Compile Include="DL\ConsumeableDL.cs" />
+    <Compile Include="DL\FacultyadminDL.cs" />
     <Compile Include="DL\FacultycourseDL.cs" />
     <Compile Include="DL\CoursesDL.cs" />
     <Compile Include="DL\FacultyDL.cs" />
     <Compile Include="DL\FacultyprojectDL.cs" />
+    <Compile Include="DL\FacultyReqDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\ProjectDL.cs" />
     <Compile Include="DL\RoomDL.cs" />
@@ -378,22 +380,6 @@
       <DependentUpon>WorkLoad.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.Course.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.CourseSechdule.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.FacultyAdminRole.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.Facultycourse.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.Facultyroom.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.MidProjectDb.BL.Consumable.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.BL.Semester.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.DL.FacultyDL.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.Faculty.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.Facultyproject.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.FacultyReq.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.FacultyRequest.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.Lookup.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.Project.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.Room.datasource" />
-    <None Include="Properties\DataSources\MidProjectDb.UI.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -422,6 +408,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

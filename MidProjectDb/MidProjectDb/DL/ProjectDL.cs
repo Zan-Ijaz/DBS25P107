@@ -13,14 +13,14 @@ namespace MidProjectDb.DL
     {
         public DataTable GetDataTable()
         {
-            string query = $"Select * from projects";
+            string query = $"Select * From projects";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
         public List<Project> getData()
         {
             List<Project> projects = new List<Project>();
-            string query = $"Select * from projects";
+            string query = $"Select * From projects";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             if (dt != null)
             {
@@ -43,7 +43,7 @@ namespace MidProjectDb.DL
 
         public void deleteProject(int id)
         {
-            string query = $"DELETE FROM projects WHERE project_id = {id}";
+            string query = $"DELETE From projects WHERE project_id = {id}";
             DatabaseHelper.Instance.Update(query);
         }
         public void update(Project p)
