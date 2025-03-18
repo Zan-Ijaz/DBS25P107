@@ -40,12 +40,14 @@
             this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AdminStaff_lbl = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.Consumeable_btn);
             this.guna2Panel1.Controls.Add(this.room_btn);
             this.guna2Panel1.Controls.Add(this.Semester_btn);
@@ -59,7 +61,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(800, 508);
+            this.guna2Panel1.Size = new System.Drawing.Size(800, 631);
             this.guna2Panel1.TabIndex = 0;
             // 
             // Consumeable_btn
@@ -163,7 +165,7 @@
             this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(121, 451);
+            this.logout_btn.Location = new System.Drawing.Point(117, 524);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 11;
@@ -248,11 +250,29 @@
             this.AdminStaff_lbl.TabIndex = 1;
             this.AdminStaff_lbl.Text = "Administrative Staff";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(117, 449);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
+            this.guna2Button1.TabIndex = 17;
+            this.guna2Button1.Text = "Reports";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // AdministrativeStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 508);
+            this.ClientSize = new System.Drawing.Size(800, 631);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "AdministrativeStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -278,5 +298,6 @@
         private Guna.UI2.WinForms.Guna2Button Semester_btn;
         private Guna.UI2.WinForms.Guna2Button Consumeable_btn;
         private Guna.UI2.WinForms.Guna2Button room_btn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

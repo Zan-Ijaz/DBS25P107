@@ -1,6 +1,6 @@
 ﻿namespace MidProjectDb.UI
 {
-    partial class DepartmentHead
+    partial class Reports
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Department_lbl = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Allocation_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Approvereq_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Assignworkload_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Department_lbl = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,15 +44,56 @@
             // 
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.logout_btn);
-            this.panel1.Controls.Add(this.Allocation_btn);
-            this.panel1.Controls.Add(this.Approvereq_btn);
-            this.panel1.Controls.Add(this.Assignworkload_btn);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.Allocation_btn);
+            this.panel1.Controls.Add(this.Assignworkload_btn);
+            this.panel1.Controls.Add(this.Approvereq_btn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1315, 586);
+            this.panel1.Size = new System.Drawing.Size(1342, 659);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.Department_lbl);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1336, 142);
+            this.panel2.TabIndex = 3;
+            // 
+            // Department_lbl
+            // 
+            this.Department_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Department_lbl.AutoSize = true;
+            this.Department_lbl.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Department_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Department_lbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.Department_lbl.Location = new System.Drawing.Point(567, 50);
+            this.Department_lbl.Name = "Department_lbl";
+            this.Department_lbl.Size = new System.Drawing.Size(167, 49);
+            this.Department_lbl.TabIndex = 1;
+            this.Department_lbl.Text = "Reports";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(433, 421);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
+            this.guna2Button1.TabIndex = 15;
+            this.guna2Button1.Text = "Faculty Role Distribution Report";
             // 
             // logout_btn
             // 
@@ -65,11 +106,11 @@
             this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(419, 459);
+            this.logout_btn.Location = new System.Drawing.Point(433, 483);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
-            this.logout_btn.TabIndex = 9;
-            this.logout_btn.Text = "Logout";
+            this.logout_btn.TabIndex = 14;
+            this.logout_btn.Text = "Go Back";
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // Allocation_btn
@@ -83,12 +124,11 @@
             this.Allocation_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Allocation_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Allocation_btn.ForeColor = System.Drawing.Color.White;
-            this.Allocation_btn.Location = new System.Drawing.Point(419, 334);
+            this.Allocation_btn.Location = new System.Drawing.Point(433, 358);
             this.Allocation_btn.Name = "Allocation_btn";
             this.Allocation_btn.Size = new System.Drawing.Size(496, 45);
-            this.Allocation_btn.TabIndex = 8;
-            this.Allocation_btn.Text = "Manage Resourse Allocation";
-            this.Allocation_btn.Click += new System.EventHandler(this.Allocation_btn_Click);
+            this.Allocation_btn.TabIndex = 13;
+            this.Allocation_btn.Text = "Most Requested Resources Report";
             // 
             // Approvereq_btn
             // 
@@ -101,12 +141,11 @@
             this.Approvereq_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Approvereq_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Approvereq_btn.ForeColor = System.Drawing.Color.White;
-            this.Approvereq_btn.Location = new System.Drawing.Point(419, 258);
+            this.Approvereq_btn.Location = new System.Drawing.Point(433, 282);
             this.Approvereq_btn.Name = "Approvereq_btn";
             this.Approvereq_btn.Size = new System.Drawing.Size(496, 45);
-            this.Approvereq_btn.TabIndex = 7;
-            this.Approvereq_btn.Text = "Approve Faculty Request";
-            this.Approvereq_btn.Click += new System.EventHandler(this.Approvereq_btn_Click);
+            this.Approvereq_btn.TabIndex = 12;
+            this.Approvereq_btn.Text = "Faculty Requests Summary Report";
             // 
             // Assignworkload_btn
             // 
@@ -119,64 +158,22 @@
             this.Assignworkload_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Assignworkload_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Assignworkload_btn.ForeColor = System.Drawing.Color.White;
-            this.Assignworkload_btn.Location = new System.Drawing.Point(419, 188);
+            this.Assignworkload_btn.Location = new System.Drawing.Point(433, 212);
             this.Assignworkload_btn.Name = "Assignworkload_btn";
             this.Assignworkload_btn.Size = new System.Drawing.Size(496, 45);
-            this.Assignworkload_btn.TabIndex = 6;
-            this.Assignworkload_btn.Text = "Assign workload";
-            this.Assignworkload_btn.Click += new System.EventHandler(this.Assignworkload_btn_Click);
+            this.Assignworkload_btn.TabIndex = 11;
+            this.Assignworkload_btn.Text = "Faculty Workload Report";
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.Department_lbl);
-            this.panel2.Location = new System.Drawing.Point(2, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1314, 142);
-            this.panel2.TabIndex = 2;
-            // 
-            // Department_lbl
-            // 
-            this.Department_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Department_lbl.AutoSize = true;
-            this.Department_lbl.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Department_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Department_lbl.Location = new System.Drawing.Point(483, 42);
-            this.Department_lbl.Name = "Department_lbl";
-            this.Department_lbl.Size = new System.Drawing.Size(353, 49);
-            this.Department_lbl.TabIndex = 1;
-            this.Department_lbl.Text = "Department Head";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(419, 397);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "Reports";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // DepartmentHead
+            // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 586);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1342, 659);
             this.Controls.Add(this.panel1);
-            this.Name = "DepartmentHead";
+            this.Name = "Reports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DepartmentHead";
+            this.Text = "Reports";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -189,10 +186,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Department_lbl;
-        private Guna.UI2.WinForms.Guna2Button Approvereq_btn;
-        private Guna.UI2.WinForms.Guna2Button Assignworkload_btn;
-        private Guna.UI2.WinForms.Guna2Button Allocation_btn;
-        private Guna.UI2.WinForms.Guna2Button logout_btn;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button logout_btn;
+        private Guna.UI2.WinForms.Guna2Button Allocation_btn;
+        private Guna.UI2.WinForms.Guna2Button Assignworkload_btn;
+        private Guna.UI2.WinForms.Guna2Button Approvereq_btn;
     }
 }

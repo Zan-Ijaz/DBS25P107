@@ -7,25 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MidProjectDb.BL;
 using MidProjectDb.BL.MidProjectDb.BL;
+using MidProjectDb.BL;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace MidProjectDb.UI
 {
-    public partial class ViewReqs: Form
+    public partial class Requts_Admin_: Form
     {
-        public ViewReqs()
+        public Requts_Admin_()
         {
             InitializeComponent();
-        }
-
-        private void Back_lbl_Click(object sender, EventArgs e)
-        {
-                Faculty_Members fac = new Faculty_Members();
-                fac.Show();
-                fac.Size = this.Size;
-                fac.Location = this.Location;
-                this.Close();
         }
         private void loadDatagrid()
         {
@@ -33,7 +25,7 @@ namespace MidProjectDb.UI
             {
                 List<FacultyReq> requests = FacultyReq.GetData();
                 dataGridView1.DataSource = null;
-                List<FacultyReq> filteredRequests = requests.Where(req => req.facultymember.UserId == Convert.ToInt32(LoggedInUser.LoggedUser["user_id"])).ToList();
+                List<FacultyReq> filteredRequests = requests.Where(req => req.status.lookupid == 9).ToList();
                 dataGridView1.DataSource = filteredRequests;
 
                 dataGridView1.Columns["requestid"].ReadOnly = true;
@@ -50,17 +42,30 @@ namespace MidProjectDb.UI
                 dataGridView1.Columns["facultymember"].Visible = false;
                 loadStatus();
                 loadItems();
+                loadComboboxes();
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void ViewReqs_Load(object sender, EventArgs e)
+        private void loadComboboxes()
         {
-            loadDatagrid();
+            List<FacultyReq> facultyReqs = FacultyReq.GetData();
+            List<FacultyReq> filteredRequests = facultyReqs.Where(req => req.status.lookupid == 9).ToList();
+
+            if (filteredRequests != null)
+            {
+                reqid_comboBox.DataSource = filteredRequests;
+                reqid_comboBox.DisplayMember = "requestid";
+                reqid_comboBox.ValueMember = "requestid";
+            }
+
+            reqid_comboBox.SelectedIndex = -1;
         }
+
+
         private void loadStatus()
         {
             if (!dataGridView1.Columns.Contains("DisplayStatus"))
@@ -106,29 +111,32 @@ namespace MidProjectDb.UI
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Back_lbl_Click_1(object sender, EventArgs e)
         {
-
+            AdministrativeStaff admin = new AdministrativeStaff();
+            admin.Size = this.Size;
+            admin.Location = this.Location;
+            admin.Show();
+            this.Close();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Requts_Admin__Load(object sender, EventArgs e)
         {
-
+            loadDatagrid();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void facProjects_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminStaff_lbl_Click(object sender, EventArgs e)
-        {
-
+            int requesid = Convert.ToInt32(reqid_comboBox.SelectedValue);
+            int status = 11;//fulfilled
+            Lookup s = Lookup.findlookup(status);
+            FacultyReq fr = FacultyReq.findReq(requesid);
+            fr.statusid = s.lookupid;
+            fr.status = s;
+            if (FacultyReq.update(fr))
+            {
+                MessageBox.Show($"Status set to\"{s.value}\" Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            loadDatagrid();
         }
     }
 }

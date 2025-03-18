@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MidProjectDb.BL;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace MidProjectDb.UI
 {
@@ -48,7 +49,7 @@ namespace MidProjectDb.UI
 
         private void Processfaculty_btn_Click(object sender, EventArgs e)
         {
-            ViewReqs reqs = new ViewReqs();
+            Requts_Admin_ reqs= new Requts_Admin_();
             reqs.Show();
             reqs.Size = this.Size;
             reqs.Location = this.Location;
@@ -99,6 +100,15 @@ namespace MidProjectDb.UI
             signIn.Show();
             signIn.Size = this.Size;
             signIn.Location = this.Location;
+            this.Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Reports Reports = new Reports();
+            Reports.Size = this.Size;
+            Reports.Location = this.Location;
+            Reports.Show();
             this.Close();
         }
     }

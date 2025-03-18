@@ -54,5 +54,14 @@ namespace MidProjectDb.UI
             signIn.Location = this.Location;
             this.Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Reports Reports = new Reports();
+            Reports.Size = this.Size;
+            Reports.Location = this.Location;
+            Reports.Show();
+            this.Close();
+        }
     }
 }

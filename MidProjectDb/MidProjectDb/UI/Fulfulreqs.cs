@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MidProjectDb.BL;
 using MidProjectDb.BL.MidProjectDb.BL;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace MidProjectDb.UI
 {
@@ -122,9 +123,11 @@ namespace MidProjectDb.UI
         private void loadComboboxes()
         {
             List<FacultyReq> facultyReqs = FacultyReq.GetData();
+            List<FacultyReq> filteredRequests = facultyReqs.Where(req => req.status.lookupid == 8).ToList();
+
             if (facultyReqs != null)
             {
-                reqid_comboBox.DataSource = facultyReqs;
+                reqid_comboBox.DataSource = filteredRequests;
                 reqid_comboBox.DisplayMember = "requestid";
                 reqid_comboBox.ValueMember = "requestid";
             }

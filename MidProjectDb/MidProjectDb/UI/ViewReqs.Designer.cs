@@ -50,6 +50,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(978, 450);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Back_lbl
             // 
@@ -62,7 +63,7 @@
             this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(398, 383);
+            this.Back_lbl.Location = new System.Drawing.Point(401, 383);
             this.Back_lbl.Name = "Back_lbl";
             this.Back_lbl.Size = new System.Drawing.Size(174, 55);
             this.Back_lbl.TabIndex = 30;
@@ -75,24 +76,26 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(86, 212);
+            this.dataGridView1.Location = new System.Drawing.Point(89, 212);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(829, 150);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // facProjects_lbl
             // 
             this.facProjects_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facProjects_lbl.AutoSize = true;
             this.facProjects_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facProjects_lbl.Location = new System.Drawing.Point(80, 165);
+            this.facProjects_lbl.Location = new System.Drawing.Point(83, 165);
             this.facProjects_lbl.Name = "facProjects_lbl";
             this.facProjects_lbl.Size = new System.Drawing.Size(243, 32);
             this.facProjects_lbl.TabIndex = 9;
             this.facProjects_lbl.Text = "Current Requests:";
+            this.facProjects_lbl.Click += new System.EventHandler(this.facProjects_lbl_Click);
             // 
             // panel2
             // 
@@ -100,10 +103,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.AdminStaff_lbl);
-            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(978, 142);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // AdminStaff_lbl
             // 
@@ -112,11 +116,12 @@
             this.AdminStaff_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.AdminStaff_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminStaff_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.AdminStaff_lbl.Location = new System.Drawing.Point(267, 55);
+            this.AdminStaff_lbl.Location = new System.Drawing.Point(323, 55);
             this.AdminStaff_lbl.Name = "AdminStaff_lbl";
-            this.AdminStaff_lbl.Size = new System.Drawing.Size(397, 49);
+            this.AdminStaff_lbl.Size = new System.Drawing.Size(288, 49);
             this.AdminStaff_lbl.TabIndex = 1;
-            this.AdminStaff_lbl.Text = "Administrative Staff";
+            this.AdminStaff_lbl.Text = "View Requests\r\n";
+            this.AdminStaff_lbl.Click += new System.EventHandler(this.AdminStaff_lbl_Click);
             // 
             // ViewReqs
             // 
