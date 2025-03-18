@@ -9,7 +9,7 @@ using MidProjectDb.UI;
 
 namespace MidProjectDb.BL
 {
-    public class LoggedInUser
+    public class LoggedInUser//Uusing this class to keep track of signed in user
     {
         public static DataRow LoggedUser { get; private set; }
         public static void SetLoggedInUser(DataRow userRow)

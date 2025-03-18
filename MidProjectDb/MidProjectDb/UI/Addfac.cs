@@ -167,7 +167,7 @@ namespace MidProjectDb.UI
                         contact = row["Contact"].ToString();
                         researchArea = row["ResearchArea"].ToString();
                         string role = row["Role"].ToString();
-                        if (Utility.Utility.intValidatioin(row["TotalTeachingHours"].ToString()) && Convert.ToInt32(row["TotalTeachingHours"]) > 0)
+                        if (Utility.Utility.intValidatioin(row["TotalTeachingHours"].ToString()) && Convert.ToInt32(row["TotalTeachingHours"]) >= 0)
                         {
                             totalHours = Convert.ToInt32(row["TotalTeachingHours"]);
                         }

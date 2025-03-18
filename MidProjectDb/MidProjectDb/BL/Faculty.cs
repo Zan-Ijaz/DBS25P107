@@ -85,6 +85,7 @@ namespace MidProjectDb.UI
             Facultycourse.DeletebyFac(id);
             Facultyproject.DeletebyFaculty(id);
             Facultyadmin.deletebyfac(id);
+            FacultyReq.deletebyfac(id);
             facultyDLobject.Delete(id);
         }
         public static void insert(Faculty u)
@@ -151,7 +152,12 @@ namespace MidProjectDb.UI
             }
             return null;
         }
-
-
+        public static List<Faculty> getList()
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            List<Faculty> faculty = facultyDLobject.getData();
+            return faculty;
+        }
+        
     }
 }

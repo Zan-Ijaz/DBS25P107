@@ -4,8 +4,9 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MidProjectDb.BL;
+using System.Windows.Forms;
 using MidProjectDb.BL.MidProjectDb.BL;
+using MidProjectDb.DL;
 
 namespace MidProjectDb.UI
 {
@@ -42,6 +43,78 @@ namespace MidProjectDb.UI
             this.facultymember = facultymember;
             this.item = item;
             this.status = status;
+        }
+        static FacultyReqDL FacultyReqDLobj = new FacultyReqDL();
+        public static bool validation(FacultyReq fr)
+        {
+            List<FacultyReq> reqs = FacultyReqDLobj.GetData();
+            foreach(var req in reqs)
+            {
+                if (req.itemid == fr.itemid && fr.facultyid == req.facultyid&&req.quantity>0&&fr.statusid==req.statusid)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool validation(FacultyReq fr,int id)
+        {
+            List<FacultyReq> reqs = FacultyReqDLobj.GetData();
+            foreach (var req in reqs)
+            {
+                if (req.itemid == fr.itemid && fr.facultyid == req.facultyid && id!=req.requestid && fr.statusid == req.statusid )
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool add(FacultyReq fr)
+        {
+            if (validation(fr) && fr.quantity > 0)
+            {
+                FacultyReqDLobj.InsertFacultyRequest(fr);
+                return true;
+            }
+            return false;
+        }
+        public static bool update(FacultyReq fr)
+        {
+            if (validation(fr,fr.requestid) && fr.quantity > 0)
+            {
+                FacultyReqDLobj.UpdateFacultyRequest(fr);
+                return true;
+            }
+            return false;
+        }
+        public static void delete(int id)
+        {
+            FacultyReqDLobj.DeleteFacultyRequest(id);
+        }
+        public static void deletebyfac(int id)
+        {
+            FacultyReqDLobj.DeleteByFaculty(id);
+        }
+        public static void deletebyitem(int id)
+        {
+            FacultyReqDLobj.DeleteByitem(id);
+        }
+        public static List<FacultyReq> GetData()
+        {
+            List<FacultyReq> reqs = FacultyReqDLobj.GetData();
+            return reqs;
+        }
+        public static FacultyReq findReq(int id)
+        {
+            List<FacultyReq> reqs = GetData();
+            foreach(var r in reqs)
+            {
+                if (id == r.requestid)
+                {
+                    return r;
+                }
+            }
+            return null;
         }
     }
 }

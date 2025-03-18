@@ -20,20 +20,20 @@ namespace MidProjectDb.Utility
             }
             return true;
         }
-        public static string trim(string str)
-        {
-            return str.Split('-')[0].Trim();
-        }
         public static bool intValidatioin(string number)
         {
-            foreach (char c in number)
+            if (number != ""&&number!=null) 
             {
-                if (c < '0' || c > '9')
+                foreach (char c in number)
                 {
-                    return false;
+                    if (c < '0' || c > '9')
+                    {
+                        return false;
+                    }
                 }
+                return true;
             }
-            return true;
+            return false;
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.reqid_txtbox = new System.Windows.Forms.TextBox();
             this.Supervision_lbl = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
@@ -37,6 +36,9 @@
             this.facProjects_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Department_lbl = new System.Windows.Forms.Label();
+            this.reqid_comboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.status_comboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -44,7 +46,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.reqid_txtbox);
+            this.panel1.Controls.Add(this.status_comboBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.reqid_comboBox);
             this.panel1.Controls.Add(this.Supervision_lbl);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.Back_lbl);
@@ -54,28 +58,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 562);
+            this.panel1.Size = new System.Drawing.Size(1096, 667);
             this.panel1.TabIndex = 0;
-            // 
-            // reqid_txtbox
-            // 
-            this.reqid_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.reqid_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reqid_txtbox.Location = new System.Drawing.Point(623, 406);
-            this.reqid_txtbox.Name = "reqid_txtbox";
-            this.reqid_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.reqid_txtbox.TabIndex = 36;
             // 
             // Supervision_lbl
             // 
             this.Supervision_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Supervision_lbl.AutoSize = true;
             this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervision_lbl.Location = new System.Drawing.Point(73, 399);
+            this.Supervision_lbl.Location = new System.Drawing.Point(89, 399);
             this.Supervision_lbl.Name = "Supervision_lbl";
-            this.Supervision_lbl.Size = new System.Drawing.Size(233, 32);
+            this.Supervision_lbl.Size = new System.Drawing.Size(245, 32);
             this.Supervision_lbl.TabIndex = 35;
-            this.Supervision_lbl.Text = "Enter Request Id:";
+            this.Supervision_lbl.Text = "Select Request Id:";
             // 
             // guna2Button1
             // 
@@ -88,7 +83,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(734, 478);
+            this.guna2Button1.Location = new System.Drawing.Point(750, 541);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(174, 55);
             this.guna2Button1.TabIndex = 34;
@@ -106,7 +101,7 @@
             this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(79, 478);
+            this.Back_lbl.Location = new System.Drawing.Point(95, 541);
             this.Back_lbl.Name = "Back_lbl";
             this.Back_lbl.Size = new System.Drawing.Size(174, 55);
             this.Back_lbl.TabIndex = 33;
@@ -132,7 +127,7 @@
             this.facProjects_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facProjects_lbl.AutoSize = true;
             this.facProjects_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facProjects_lbl.Location = new System.Drawing.Point(73, 158);
+            this.facProjects_lbl.Location = new System.Drawing.Point(89, 158);
             this.facProjects_lbl.Name = "facProjects_lbl";
             this.facProjects_lbl.Size = new System.Drawing.Size(243, 32);
             this.facProjects_lbl.TabIndex = 31;
@@ -162,15 +157,50 @@
             this.Department_lbl.TabIndex = 1;
             this.Department_lbl.Text = "Approve Requests";
             // 
+            // reqid_comboBox
+            // 
+            this.reqid_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.reqid_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.reqid_comboBox.FormattingEnabled = true;
+            this.reqid_comboBox.Location = new System.Drawing.Point(640, 399);
+            this.reqid_comboBox.Name = "reqid_comboBox";
+            this.reqid_comboBox.Size = new System.Drawing.Size(284, 24);
+            this.reqid_comboBox.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(89, 478);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 32);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Select Status:";
+            // 
+            // status_comboBox
+            // 
+            this.status_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.status_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.status_comboBox.FormattingEnabled = true;
+            this.status_comboBox.Items.AddRange(new object[] {
+            "Rejected",
+            "Approved"});
+            this.status_comboBox.Location = new System.Drawing.Point(640, 478);
+            this.status_comboBox.Name = "status_comboBox";
+            this.status_comboBox.Size = new System.Drawing.Size(284, 24);
+            this.status_comboBox.TabIndex = 38;
+            // 
             // Fulfulreqs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1096, 562);
+            this.ClientSize = new System.Drawing.Size(1096, 667);
             this.Controls.Add(this.panel1);
             this.Name = "Fulfulreqs";
             this.Text = "Fulfulreqs";
+            this.Load += new System.EventHandler(this.Fulfulreqs_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -190,6 +220,8 @@
         private System.Windows.Forms.Label facProjects_lbl;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label Supervision_lbl;
-        private System.Windows.Forms.TextBox reqid_txtbox;
+        private System.Windows.Forms.ComboBox reqid_comboBox;
+        private System.Windows.Forms.ComboBox status_comboBox;
+        private System.Windows.Forms.Label label1;
     }
 }
