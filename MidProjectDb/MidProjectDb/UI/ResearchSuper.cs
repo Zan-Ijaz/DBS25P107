@@ -119,7 +119,8 @@ namespace MidProjectDb.UI
             foreach (DataRow row in facultyTable.Rows)
             {
                 Faculty f = Faculty.findFaculty(Convert.ToInt32(row["faculty_id"]));
-                row["name"] = $"{f.Name}-{f.TotalTeachingHours} hours";
+                int remaing = f.TotalTeachingHours - f.totalteaching();
+                row["name"] = $"{f.Name}-{remaing} hours";
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
             comboBoxColumn.Name = "Faculty";
@@ -178,7 +179,10 @@ namespace MidProjectDb.UI
             {
                 foreach (DataRow row in instructors.Rows)
                 {
-                    row["name"] = $"{row["name"]} - {row["total_teaching_hours"]} hours";
+                    int id = Convert.ToInt32(row["faculty_id"]);
+                    Faculty f = Faculty.findFaculty(id);
+                    int remaing = f.TotalTeachingHours - f.totalteaching();
+                    row["name"] = $"{row["name"]} - {remaing} hours";
                 }
                 faculty_comboBox.DataSource = instructors;
                 faculty_comboBox.DisplayMember = "name";

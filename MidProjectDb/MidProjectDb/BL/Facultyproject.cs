@@ -74,31 +74,14 @@ namespace MidProjectDb.UI
         {
             if (validationupdate(fp, fp.facultyprojectid))
             {
-                if (oldfac != fp.facultyid)
-                {
-                    Faculty oldf = Faculty.findFaculty(oldfac);
-                    oldf.TotalTeachingHours += oldsuperhrs;
-                    Faculty.update(oldf);
-                }
-                else
-                {
-                    Faculty newf = Faculty.findFaculty(fp.facultyid);
-                    newf.TotalTeachingHours += oldsuperhrs;
-                    Faculty.update(newf);
-                }
                 Faculty f = Faculty.findFaculty(fp.facultyid);
-                int remainhrs = f.TotalTeachingHours - fp.supervisionhours;
-                if (remainhrs >= 0)
+                int totalteaching = f.totalteaching();
+                int remaing = f.TotalTeachingHours - (totalteaching + fp.supervisionhours);
+                if(remaing>=0)
                 {
-                    f.TotalTeachingHours -= fp.supervisionhours;
                     FacultyprojectDLobj.UpdateFacultyProject(fp);
-                    Faculty.update(f);
+                    return true;
                 }
-                else
-                {
-                    return false;
-                }
-                return true;
             }
             return false;
         }
@@ -107,11 +90,10 @@ namespace MidProjectDb.UI
             if (validation(fp))
             {
                 Faculty f = Faculty.findFaculty(fp.facultyid);
-                int remainghrs = f.TotalTeachingHours-fp.supervisionhours;
-                if (remainghrs >= 0)
+                int totalteaching = f.totalteaching();
+                int remaing = f.TotalTeachingHours - (totalteaching + fp.supervisionhours);
+                if (remaing >= 0)
                 {
-                    f.TotalTeachingHours -= fp.supervisionhours;
-                    Faculty.update(f);
                     FacultyprojectDLobj.InsertFacultyProject(fp);
                     return true;
                 }
@@ -121,47 +103,16 @@ namespace MidProjectDb.UI
         }
         public static void delete(int id)
         {
-            Facultyproject fp = findfacultyproject(id);
-            Faculty f = Faculty.findFaculty(fp.facultyid);
-            f.TotalTeachingHours += fp.supervisionhours;
-            Faculty.update(f);
-            FacultyprojectDLobj.DeleteFacultyProject(fp.facultyprojectid);
+            FacultyprojectDLobj.DeleteFacultyProject(id);
         }
         public static void DeletebySem(int id)
         {
-            DataTable dt = FacultyprojectDLobj.GetTable();
-            if (dt != null)
-            {
-                Semester s = Semester.findSem(id);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (Convert.ToInt32(dr["semester_id"]) == id)
-                    {
-                        Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
-                        f.TotalTeachingHours += Convert.ToInt32(dr["supervision_hours"]);
-                        Faculty.update(f);
-                    }
-                }
+            
                 FacultyprojectDLobj.DeleteBySemester(id);
-            }
         }
         public static void DeletebyProject(int id)
         {
-            DataTable dt = FacultyprojectDLobj.GetTable();
-            if (dt != null)
-            {
-                Project p = Project.findProject(id);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (Convert.ToInt32(dr["project_id"]) == id)
-                    {
-                        Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
-                        f.TotalTeachingHours += Convert.ToInt32(dr["supervision_hours"]);
-                        Faculty.update(f);
-                    }
-                }
-                FacultyprojectDLobj.DeleteByProject(id);
-            }
+            FacultyprojectDLobj.DeleteByProject(id);
         }
         public static void DeletebyFaculty(int id)
         {

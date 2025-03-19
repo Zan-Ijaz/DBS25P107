@@ -69,19 +69,9 @@ namespace MidProjectDb.BL
             }
             return true;
         }
-        public static bool DeleteFaccourse(int id)
+        public static void DeleteFaccourse(int id)
         {
-            Facultycourse facultycourse = findfacultycourse(id);
-            if (facultycourse != null)
-            {
-                Faculty faculty = Faculty.findFaculty(facultycourse.facultyid);
-                Course Course = Course.findCourse(facultycourse.Courseid);
-                faculty.TotalTeachingHours += Course.ContactHours;//adding the hours back which were taken 
-                facultycoursesDL.DeleteFacultyCourse(facultycourse.facultyCourseid);
-                Faculty.update(faculty);
-                return true;
-            }
-            return false;
+            facultycoursesDL.DeleteFacultyCourse(id);
         }
         public static Facultycourse findfacultycourse(int id)
         {
@@ -101,39 +91,10 @@ namespace MidProjectDb.BL
         }
         public static void Deletebycourses(int id)
         {
-            DataTable dt = Facultycourse.GetTable();
-            if (dt != null)
-            {
-                Course c = Course.findCourse(id);
-                foreach(DataRow dr in dt.Rows)
-                {
-                    if (Convert.ToInt32(dr["course_id"]) == id)
-                    {
-                        Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
-                        f.TotalTeachingHours += c.ContactHours;
-                        Faculty.update(f);
-                    }
-                }
-            }
             facultycoursesDL.Deletebycourses(id);
         }
         public static void DeletebySem(int id)
         {
-            DataTable dt = Facultycourse.GetTable();
-            if (dt != null)
-            {
-                Semester s = Semester.findSem(id);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (Convert.ToInt32(dr["semester_id"]) == id)
-                    {
-                        Course c = Course.findCourse(Convert.ToInt32(dr["course_id"]));
-                        Faculty f = Faculty.findFaculty(Convert.ToInt32(dr["faculty_id"]));
-                        f.TotalTeachingHours += c.ContactHours;
-                        Faculty.update(f);
-                    }
-                }
-            }
             facultycoursesDL.DeletebySems(id);
         }
         public static bool addFacultyCourse(Facultycourse fc)
@@ -142,13 +103,12 @@ namespace MidProjectDb.BL
             {
                 int remainghours = 0;
                 Faculty faculty = Faculty.findFaculty(fc.facultyid);
+                int totalteaching = faculty.totalteaching();
                 Course Course = Course.findCourse(fc.Courseid);
-                remainghours = faculty.TotalTeachingHours-Course.ContactHours;
+                remainghours = faculty.TotalTeachingHours-(Course.ContactHours+totalteaching);
                 if (remainghours>=0)
                 {
-                    faculty.TotalTeachingHours -= Course.ContactHours;
                     facultycoursesDL.InsertFacultyCourse(fc);
-                    Faculty.update(faculty);
                     return true;
                 }
                 return false;
@@ -159,35 +119,15 @@ namespace MidProjectDb.BL
         {
             if(duplicationValidationupdate(fc))
             {
-                int Contacthrs = 0;
+
                 int remainghours = 0;
                 Faculty newfaculty = Faculty.findFaculty(fc.facultyid);
+                int totalteaching = newfaculty.totalteaching();
                 Course newCourse = Course.findCourse(fc.Courseid);
-                if (newCourse.CourseId != oldcourseid)
-                {
-                    Course oldCourse = Course.findCourse(oldcourseid);
-                    Contacthrs = oldCourse.ContactHours;
-                }
-                else
-                {
-                    Contacthrs = newCourse.ContactHours;
-                }
-                if (newfaculty.FacultyId != oldfacultyid)
-                {
-                    Faculty oldfaculty = Faculty.findFaculty(oldfacultyid);
-                    oldfaculty.TotalTeachingHours += Contacthrs;
-                    Faculty.update(oldfaculty);
-                }
-                else
-                {
-                    newfaculty.TotalTeachingHours += Contacthrs;
-                }
-                remainghours = newfaculty.TotalTeachingHours - newCourse.ContactHours;
+                remainghours = newfaculty.TotalTeachingHours - (newCourse.ContactHours + totalteaching);
                 if (remainghours >= 0)
                 {
-                    newfaculty.TotalTeachingHours -= newCourse.ContactHours;
                     facultycoursesDL.UpdateFacultyCourse(fc);
-                    Faculty.update(newfaculty);
                     return true;
                 }
                 return false;
@@ -198,6 +138,11 @@ namespace MidProjectDb.BL
         {
             DataTable dt = facultycoursesDL.loadDatagrid();
             return dt;
+        }
+        public static List<Facultycourse> getList()
+        {
+            List<Facultycourse> fcourses = facultycoursesDL.GetData();
+            return fcourses;
         }
     }
 }

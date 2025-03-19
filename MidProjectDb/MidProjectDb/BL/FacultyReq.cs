@@ -62,7 +62,7 @@ namespace MidProjectDb.UI
             List<FacultyReq> reqs = FacultyReqDLobj.GetData();
             foreach (var req in reqs)
             {
-                if (req.itemid == fr.itemid && fr.facultyid == req.facultyid && id!=req.requestid && fr.statusid == req.statusid )
+                if (req.itemid == fr.itemid && fr.facultyid == req.facultyid && id!=req.requestid && fr.statusid == req.statusid && req.statusid!=11)
                 {
                     return false;
                 }

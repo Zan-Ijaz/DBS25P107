@@ -127,8 +127,8 @@ namespace MidProjectDb.UI
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             int requesid = Convert.ToInt32(reqid_comboBox.SelectedValue);
-            int status = 11;//fulfilled
-            Lookup s = Lookup.findlookup(status);
+            int statusid = 11;//fulfilled
+            Lookup s = Lookup.findlookup(statusid);
             FacultyReq fr = FacultyReq.findReq(requesid);
             fr.statusid = s.lookupid;
             fr.status = s;

@@ -158,6 +158,27 @@ namespace MidProjectDb.UI
             List<Faculty> faculty = facultyDLobject.getData();
             return faculty;
         }
+        public int totalteaching()
+        {
+            int hrs=0;
+            List<Facultycourse> courses = Facultycourse.getList();
+            foreach(var c in courses)
+            {
+                if (c.facultyid == this.FacultyId)
+                {
+                    hrs += c.course.ContactHours;
+                }
+            }
+            List<Facultyproject> projects = new List<Facultyproject>();
+            foreach(var p in projects)
+            {
+                if (p.facultyid == this.FacultyId)
+                {
+                    hrs += p.supervisionhours;
+                }
+            }
+            return hrs;
+        }
         
     }
 }
