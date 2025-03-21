@@ -26,8 +26,10 @@ namespace MidProjectDb.DL
                     int faculty_course_id = Convert.ToInt32(row["faculty_course_id"]);
                     int room_id = Convert.ToInt32(row["room_id"]);
                     string day = row["day_of_week"].ToString();
-                    DateTime starttime = Convert.ToDateTime(row["start_time"]);
-                    DateTime endtime = Convert.ToDateTime(row["end_time"]);
+                    TimeSpan startTimeSpan = (TimeSpan)row["start_time"];
+                    TimeSpan endTimeSpan = (TimeSpan)row["end_time"];
+                    TimeSpan starttime = startTimeSpan;
+                    TimeSpan endtime = endTimeSpan;
                     Facultycourse fc = Facultycourse.findfacultycourse(faculty_course_id);
                     Room room = Room.findroom(room_id);
                     CourseSechdule cs = new CourseSechdule(schedule_id, faculty_course_id, room_id, fc, room, day, starttime, endtime);
@@ -38,7 +40,9 @@ namespace MidProjectDb.DL
         }
         public void InsertCourseSechdule(CourseSechdule cs)
         {
-            string query = $"Insert into faculty_course_schedule (faculty_course_id, room_id, day_of_week, start_time, end_time) Values ({cs.facultycourseid}, {cs.roomid}, '{cs.day}', '{cs.starttime:HH:mm:ss}', '{cs.Endtime:HH:mm:ss}')";
+            string starttimeFormatted = cs.starttime.ToString(@"hh\:mm\:ss");
+            string endtimeFormatted = cs.Endtime.ToString(@"hh\:mm\:ss");
+            string query = $"INSERT INTO faculty_course_schedule (faculty_course_id, room_id, day_of_week, start_time, end_time) VALUES ({cs.facultycourseid}, {cs.roomid}, '{cs.day}', '{starttimeFormatted}', '{endtimeFormatted}')";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteCourseSechdule(int schedule_id)
@@ -48,7 +52,9 @@ namespace MidProjectDb.DL
         }
         public void UpdateCourseSechdule(CourseSechdule cs)
         {
-            string query = $"Update faculty_course_schedule SET faculty_course_id = {cs.facultycourseid}, room_id = {cs.roomid}, day_of_week = '{cs.day}', start_time = '{cs.starttime:HH:mm:ss}', end_time = '{cs.Endtime:HH:mm:ss}' where schedule_id = {cs.Sechduleid}";
+            string starttimeFormatted = cs.starttime.ToString(@"hh\:mm\:ss");
+            string endtimeFormatted = cs.Endtime.ToString(@"hh\:mm\:ss");
+            string query = $"Update faculty_course_schedule SET faculty_course_id = {cs.facultycourseid}, room_id = {cs.roomid}, day_of_week = '{cs.day}', start_time = '{starttimeFormatted}', end_time = '{endtimeFormatted}' where schedule_id = {cs.Sechduleid}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeletebyFacultycourse(int id)

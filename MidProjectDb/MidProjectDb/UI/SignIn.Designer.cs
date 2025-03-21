@@ -67,7 +67,7 @@
             this.forgot_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.forgot_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgot_btn.ForeColor = System.Drawing.Color.White;
-            this.forgot_btn.Location = new System.Drawing.Point(649, 383);
+            this.forgot_btn.Location = new System.Drawing.Point(626, 383);
             this.forgot_btn.Name = "forgot_btn";
             this.forgot_btn.Size = new System.Drawing.Size(174, 64);
             this.forgot_btn.TabIndex = 16;

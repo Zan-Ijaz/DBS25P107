@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\sechdulingcourse2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\dl\\coursesechduledl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\coursesechduledl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\bl\\coursesechdule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\coursesechdule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\adminduties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\adminduties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\sechdulingcourse2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\sechdulingcourse2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\sechdulingcourse2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -38,28 +38,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminDuties.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdminDuties.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\AdminDuties.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdminDuties.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\AdminDuties.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAApwIYAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CourseSechduleDL.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\CourseSechduleDL.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\DL\\CourseSechduleDL.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\CourseSechduleDL.cs",
+              "RelativeToolTip": "MidProjectDb\\DL\\CourseSechduleDL.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwCwAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:43:38.205Z",
+              "WhenOpened": "2025-03-21T20:12:09.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CourseSechdule.cs",
               "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\CourseSechdule.cs",
               "RelativeDocumentMoniker": "MidProjectDb\\BL\\CourseSechdule.cs",
               "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\CourseSechdule.cs",
               "RelativeToolTip": "MidProjectDb\\BL\\CourseSechdule.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAiwBMAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAHwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:14:00.24Z",
+              "WhenOpened": "2025-03-21T18:12:25.61Z",
               "EditorCaption": ""
             },
             {
@@ -70,7 +70,7 @@
               "RelativeDocumentMoniker": "MidProjectDb\\UI\\SechdulingCourse2.cs",
               "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\SechdulingCourse2.cs",
               "RelativeToolTip": "MidProjectDb\\UI\\SechdulingCourse2.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAowE8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAEwI0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T11:53:51.656Z",
               "EditorCaption": ""

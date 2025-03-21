@@ -45,6 +45,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Sechduling_lbl = new System.Windows.Forms.Label();
+            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,6 +54,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Delete_btn);
+            this.panel1.Controls.Add(this.Update_btn);
             this.panel1.Controls.Add(this.facultycourse_comboBox);
             this.panel1.Controls.Add(this.room_comboBox);
             this.panel1.Controls.Add(this.EndDate);
@@ -70,7 +74,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1111, 706);
+            this.panel1.Size = new System.Drawing.Size(1525, 815);
             this.panel1.TabIndex = 0;
             // 
             // facultycourse_comboBox
@@ -78,7 +82,7 @@
             this.facultycourse_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facultycourse_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.facultycourse_comboBox.FormattingEnabled = true;
-            this.facultycourse_comboBox.Location = new System.Drawing.Point(695, 390);
+            this.facultycourse_comboBox.Location = new System.Drawing.Point(902, 390);
             this.facultycourse_comboBox.Name = "facultycourse_comboBox";
             this.facultycourse_comboBox.Size = new System.Drawing.Size(301, 24);
             this.facultycourse_comboBox.TabIndex = 36;
@@ -88,7 +92,7 @@
             this.room_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.room_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.room_comboBox.FormattingEnabled = true;
-            this.room_comboBox.Location = new System.Drawing.Point(695, 433);
+            this.room_comboBox.Location = new System.Drawing.Point(902, 433);
             this.room_comboBox.Name = "room_comboBox";
             this.room_comboBox.Size = new System.Drawing.Size(301, 24);
             this.room_comboBox.TabIndex = 35;
@@ -97,19 +101,21 @@
             // 
             this.EndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.EndDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.EndDate.Location = new System.Drawing.Point(695, 575);
+            this.EndDate.Location = new System.Drawing.Point(902, 575);
             this.EndDate.Name = "EndDate";
             this.EndDate.Size = new System.Drawing.Size(301, 22);
             this.EndDate.TabIndex = 34;
+            this.EndDate.Value = new System.DateTime(2025, 3, 21, 8, 0, 0, 0);
             // 
             // Startdate
             // 
             this.Startdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Startdate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.Startdate.Location = new System.Drawing.Point(695, 526);
+            this.Startdate.Location = new System.Drawing.Point(902, 526);
             this.Startdate.Name = "Startdate";
             this.Startdate.Size = new System.Drawing.Size(301, 22);
             this.Startdate.TabIndex = 33;
+            this.Startdate.Value = new System.DateTime(2025, 3, 21, 8, 0, 0, 0);
             // 
             // day_comboBox
             // 
@@ -123,7 +129,7 @@
             "Thursday",
             "Friday",
             "Saturday"});
-            this.day_comboBox.Location = new System.Drawing.Point(695, 479);
+            this.day_comboBox.Location = new System.Drawing.Point(902, 479);
             this.day_comboBox.Name = "day_comboBox";
             this.day_comboBox.Size = new System.Drawing.Size(301, 24);
             this.day_comboBox.TabIndex = 32;
@@ -133,7 +139,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(153, 565);
+            this.label4.Location = new System.Drawing.Point(360, 565);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 32);
             this.label4.TabIndex = 29;
@@ -144,7 +150,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(153, 516);
+            this.label3.Location = new System.Drawing.Point(360, 516);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 32);
             this.label3.TabIndex = 28;
@@ -155,7 +161,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 471);
+            this.label2.Location = new System.Drawing.Point(360, 471);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 32);
             this.label2.TabIndex = 27;
@@ -166,7 +172,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 425);
+            this.label1.Location = new System.Drawing.Point(360, 425);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 32);
             this.label1.TabIndex = 26;
@@ -177,7 +183,7 @@
             this.Supervision_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Supervision_lbl.AutoSize = true;
             this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervision_lbl.Location = new System.Drawing.Point(153, 380);
+            this.Supervision_lbl.Location = new System.Drawing.Point(360, 380);
             this.Supervision_lbl.Name = "Supervision_lbl";
             this.Supervision_lbl.Size = new System.Drawing.Size(293, 32);
             this.Supervision_lbl.TabIndex = 25;
@@ -194,11 +200,12 @@
             this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_btn.ForeColor = System.Drawing.Color.White;
-            this.Next_btn.Location = new System.Drawing.Point(865, 639);
+            this.Next_btn.Location = new System.Drawing.Point(1029, 639);
             this.Next_btn.Name = "Next_btn";
             this.Next_btn.Size = new System.Drawing.Size(174, 55);
             this.Next_btn.TabIndex = 24;
             this.Next_btn.Text = "Add";
+            this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
             // 
             // Back_lbl
             // 
@@ -211,7 +218,7 @@
             this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(159, 639);
+            this.Back_lbl.Location = new System.Drawing.Point(366, 639);
             this.Back_lbl.Name = "Back_lbl";
             this.Back_lbl.Size = new System.Drawing.Size(174, 55);
             this.Back_lbl.TabIndex = 21;
@@ -223,7 +230,7 @@
             this.Course_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Course_lbl.AutoSize = true;
             this.Course_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Course_lbl.Location = new System.Drawing.Point(153, 160);
+            this.Course_lbl.Location = new System.Drawing.Point(360, 160);
             this.Course_lbl.Name = "Course_lbl";
             this.Course_lbl.Size = new System.Drawing.Size(254, 32);
             this.Course_lbl.TabIndex = 8;
@@ -235,7 +242,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 215);
+            this.dataGridView1.Location = new System.Drawing.Point(366, 215);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -250,7 +257,7 @@
             this.panel2.Controls.Add(this.Sechduling_lbl);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 142);
+            this.panel2.Size = new System.Drawing.Size(1525, 142);
             this.panel2.TabIndex = 3;
             // 
             // Sechduling_lbl
@@ -260,17 +267,54 @@
             this.Sechduling_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.Sechduling_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sechduling_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Sechduling_lbl.Location = new System.Drawing.Point(354, 55);
+            this.Sechduling_lbl.Location = new System.Drawing.Point(561, 55);
             this.Sechduling_lbl.Name = "Sechduling_lbl";
             this.Sechduling_lbl.Size = new System.Drawing.Size(346, 49);
             this.Sechduling_lbl.TabIndex = 1;
             this.Sechduling_lbl.Text = "Sechdule Courses";
             // 
+            // Update_btn
+            // 
+            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Update_btn.BorderRadius = 20;
+            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_btn.ForeColor = System.Drawing.Color.White;
+            this.Update_btn.Location = new System.Drawing.Point(370, 729);
+            this.Update_btn.Name = "Update_btn";
+            this.Update_btn.Size = new System.Drawing.Size(174, 55);
+            this.Update_btn.TabIndex = 37;
+            this.Update_btn.Text = "Update";
+            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(1029, 729);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 38;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
+            // 
             // SechdulingCourse2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 706);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1525, 815);
             this.Controls.Add(this.panel1);
             this.Name = "SechdulingCourse2";
             this.Text = "SechdulingCourse2";
@@ -303,5 +347,7 @@
         private System.Windows.Forms.DateTimePicker Startdate;
         private System.Windows.Forms.ComboBox facultycourse_comboBox;
         private System.Windows.Forms.ComboBox room_comboBox;
+        private Guna.UI2.WinForms.Guna2Button Delete_btn;
+        private Guna.UI2.WinForms.Guna2Button Update_btn;
     }
 }

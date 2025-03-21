@@ -19,10 +19,10 @@ namespace MidProjectDb.BL
         public Facultycourse facultycourse { get; set; }
         public Room room { get; set; }
         public string day { get; set; }
-        public DateTime starttime { get; set; }
-        public DateTime Endtime { get; set; }
+        public TimeSpan starttime { get; set; }
+        public TimeSpan Endtime { get; set; }
 
-        public CourseSechdule(int sechduleid, int facultycourseid, int roomid, Facultycourse facultycourse, Room room, string day, DateTime starttime, DateTime endtime)
+        public CourseSechdule(int sechduleid, int facultycourseid, int roomid, Facultycourse facultycourse, Room room, string day, TimeSpan starttime, TimeSpan endtime)
         {
             Sechduleid = sechduleid;
             this.facultycourseid = facultycourseid;
@@ -33,7 +33,7 @@ namespace MidProjectDb.BL
             this.starttime = starttime;
             Endtime = endtime;
         }
-        public CourseSechdule( int facultycourseid, int roomid, Facultycourse facultycourse, Room room, string day, DateTime starttime, DateTime endtime)
+        public CourseSechdule( int facultycourseid, int roomid, Facultycourse facultycourse, Room room, string day, TimeSpan starttime, TimeSpan endtime)
         {
             this.facultycourseid = facultycourseid;
             this.roomid = roomid;
@@ -78,6 +78,10 @@ namespace MidProjectDb.BL
                         }
                     }
                 }
+                    if((cs.Endtime - cs.starttime).Hours < 01 )
+                    {
+                        return false;
+                    }
                 return true;
             }
         }
@@ -115,6 +119,10 @@ namespace MidProjectDb.BL
                         }
                     }
                 }
+                    if ((cs.Endtime - cs.starttime).Hours < 01)
+                    {
+                        return false;
+                    }
                 return true;
             }
         }
