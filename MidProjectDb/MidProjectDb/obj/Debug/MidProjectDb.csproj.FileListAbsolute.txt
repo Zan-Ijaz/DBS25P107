@@ -110,7 +110,6 @@ D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ManageProdu
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ResearchSuper.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ResourseAllocation.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Rooms.resources
-D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Sechduling.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SechdulingCourse2.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SetPassword.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.SignIn.resources

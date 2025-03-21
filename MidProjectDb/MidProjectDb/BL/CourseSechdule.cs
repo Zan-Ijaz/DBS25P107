@@ -140,13 +140,18 @@ namespace MidProjectDb.BL
         {
             SechduleDL.DeleteCourseSechdule(id);
         }
-        //public static void deletebyfaccourse(int id)
-        //{
-        //    SechduleDL.DeleteCourseSechdule(id);
-        //}
-        //public static void deletebyroom(int id)
-        //{
-        //    SechduleDL.DeleteCourseSechdule(id);
-        //}
+        public static void deletebyfaccourse(int id)
+        {
+            SechduleDL.DeletebyFacultycourse(id);
+        }
+        public static void deletebyroom(int id)
+        {
+            SechduleDL.Deletebyroom(id);
+        }
+        public static List<CourseSechdule> getData()
+        {
+            List<CourseSechdule> sechdules = SechduleDL.GetData();
+            return sechdules;
+        }
     }
 }

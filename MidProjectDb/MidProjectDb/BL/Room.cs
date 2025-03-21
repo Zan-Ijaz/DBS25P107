@@ -85,6 +85,7 @@ namespace MidProjectDb.UI
         public static void Delete(int id)
         {
             Facultyroom.deletebyroom(id);
+            CourseSechdule.deletebyroom(id);
             rooms.DeleteRoom(id);
         }
         public static DataTable GetTable()
@@ -103,6 +104,11 @@ namespace MidProjectDb.UI
                 }
             }
             return null;
+        }
+        public static List<Room> getData()
+        {
+            List<Room> roomList = rooms.GetData();
+            return roomList;
         }
     }
 }

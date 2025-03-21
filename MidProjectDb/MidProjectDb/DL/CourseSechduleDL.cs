@@ -38,7 +38,7 @@ namespace MidProjectDb.DL
         }
         public void InsertCourseSechdule(CourseSechdule cs)
         {
-            string query = $"Insert into faculty_course_schedule (faculty_course_id, room_id, day_of_week, start_time, end_time) Values ({cs.facultycourseid}, {cs.roomid}, '{cs.day}', '{cs.starttime}', '{cs.Endtime}')";
+            string query = $"Insert into faculty_course_schedule (faculty_course_id, room_id, day_of_week, start_time, end_time) Values ({cs.facultycourseid}, {cs.roomid}, '{cs.day}', '{cs.starttime:HH:mm:ss}', '{cs.Endtime:HH:mm:ss}')";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteCourseSechdule(int schedule_id)
@@ -48,7 +48,7 @@ namespace MidProjectDb.DL
         }
         public void UpdateCourseSechdule(CourseSechdule cs)
         {
-            string query = $"Update faculty_course_schedule SET faculty_course_id = {cs.facultycourseid}, room_id = {cs.roomid}, day_of_week = '{cs.day}', start_time = '{cs.starttime}', end_time = '{cs.Endtime}' where schedule_id = {cs.Sechduleid}";
+            string query = $"Update faculty_course_schedule SET faculty_course_id = {cs.facultycourseid}, room_id = {cs.roomid}, day_of_week = '{cs.day}', start_time = '{cs.starttime:HH:mm:ss}', end_time = '{cs.Endtime:HH:mm:ss}' where schedule_id = {cs.Sechduleid}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeletebyFacultycourse(int id)
@@ -56,7 +56,7 @@ namespace MidProjectDb.DL
             string query = $"Delete from faculty_course_schedule where  faculty_course_id={id}";
             DatabaseHelper.Instance.Update(query);
         }
-        public void DeletebyFacultyroom(int id)
+        public void Deletebyroom(int id)
         {
             string query = $"Delete from faculty_course_schedule where  room_id={id}";
             DatabaseHelper.Instance.Update(query);

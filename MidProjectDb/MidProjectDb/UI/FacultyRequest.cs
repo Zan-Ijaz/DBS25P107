@@ -92,9 +92,9 @@ namespace MidProjectDb.UI
                 dataGridView1.Columns["status"].Visible = false;
                 dataGridView1.Columns["facultyid"].Visible = false;
                 dataGridView1.Columns["facultymember"].Visible = false;
-            loadStatus();
-            addItemDropdowns();
-            loadComboboxes();
+                loadStatus();
+                addItemDropdowns();
+                loadComboboxes();
             }
             catch(Exception ex)
             {

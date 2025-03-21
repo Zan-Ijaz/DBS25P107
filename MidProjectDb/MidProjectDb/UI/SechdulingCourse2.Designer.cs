@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.facultycourse_comboBox = new System.Windows.Forms.ComboBox();
+            this.room_comboBox = new System.Windows.Forms.ComboBox();
             this.EndDate = new System.Windows.Forms.DateTimePicker();
             this.Startdate = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.roomname_txtbox = new System.Windows.Forms.TextBox();
-            this.facultyname_txtbox = new System.Windows.Forms.TextBox();
+            this.day_comboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
             this.Course_lbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Sechduleid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Sechduling_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -53,11 +52,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.facultycourse_comboBox);
+            this.panel1.Controls.Add(this.room_comboBox);
             this.panel1.Controls.Add(this.EndDate);
             this.panel1.Controls.Add(this.Startdate);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.roomname_txtbox);
-            this.panel1.Controls.Add(this.facultyname_txtbox);
+            this.panel1.Controls.Add(this.day_comboBox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -73,6 +72,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1111, 706);
             this.panel1.TabIndex = 0;
+            // 
+            // facultycourse_comboBox
+            // 
+            this.facultycourse_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.facultycourse_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.facultycourse_comboBox.FormattingEnabled = true;
+            this.facultycourse_comboBox.Location = new System.Drawing.Point(695, 390);
+            this.facultycourse_comboBox.Name = "facultycourse_comboBox";
+            this.facultycourse_comboBox.Size = new System.Drawing.Size(301, 24);
+            this.facultycourse_comboBox.TabIndex = 36;
+            // 
+            // room_comboBox
+            // 
+            this.room_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.room_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.room_comboBox.FormattingEnabled = true;
+            this.room_comboBox.Location = new System.Drawing.Point(695, 433);
+            this.room_comboBox.Name = "room_comboBox";
+            this.room_comboBox.Size = new System.Drawing.Size(301, 24);
+            this.room_comboBox.TabIndex = 35;
             // 
             // EndDate
             // 
@@ -92,39 +111,22 @@
             this.Startdate.Size = new System.Drawing.Size(301, 22);
             this.Startdate.TabIndex = 33;
             // 
-            // comboBox1
+            // day_comboBox
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.day_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.day_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.day_comboBox.FormattingEnabled = true;
+            this.day_comboBox.Items.AddRange(new object[] {
             "Monday",
             "Tuesday",
             "Wednesday",
             "Thursday",
             "Friday",
             "Saturday"});
-            this.comboBox1.Location = new System.Drawing.Point(695, 481);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(301, 24);
-            this.comboBox1.TabIndex = 32;
-            // 
-            // roomname_txtbox
-            // 
-            this.roomname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roomname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomname_txtbox.Location = new System.Drawing.Point(695, 430);
-            this.roomname_txtbox.Name = "roomname_txtbox";
-            this.roomname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.roomname_txtbox.TabIndex = 31;
-            // 
-            // facultyname_txtbox
-            // 
-            this.facultyname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.facultyname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facultyname_txtbox.Location = new System.Drawing.Point(695, 387);
-            this.facultyname_txtbox.Name = "facultyname_txtbox";
-            this.facultyname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.facultyname_txtbox.TabIndex = 30;
+            this.day_comboBox.Location = new System.Drawing.Point(695, 479);
+            this.day_comboBox.Name = "day_comboBox";
+            this.day_comboBox.Size = new System.Drawing.Size(301, 24);
+            this.day_comboBox.TabIndex = 32;
             // 
             // label4
             // 
@@ -166,9 +168,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(153, 425);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 32);
+            this.label1.Size = new System.Drawing.Size(184, 32);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Enter Room Name:";
+            this.label1.Text = "Select Room:";
             // 
             // Supervision_lbl
             // 
@@ -177,9 +179,9 @@
             this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Supervision_lbl.Location = new System.Drawing.Point(153, 380);
             this.Supervision_lbl.Name = "Supervision_lbl";
-            this.Supervision_lbl.Size = new System.Drawing.Size(267, 32);
+            this.Supervision_lbl.Size = new System.Drawing.Size(293, 32);
             this.Supervision_lbl.TabIndex = 25;
-            this.Supervision_lbl.Text = "Enter Faculty name:";
+            this.Supervision_lbl.Text = "Select Faculty course:";
             // 
             // Next_btn
             // 
@@ -230,25 +232,15 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Sechduleid});
             this.dataGridView1.Location = new System.Drawing.Point(159, 215);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(837, 150);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // Sechduleid
-            // 
-            this.Sechduleid.DataPropertyName = "Sechduleid";
-            this.Sechduleid.HeaderText = "Sechduleid";
-            this.Sechduleid.MinimumWidth = 6;
-            this.Sechduleid.Name = "Sechduleid";
-            this.Sechduleid.ReadOnly = true;
-            this.Sechduleid.Width = 125;
             // 
             // panel2
             // 
@@ -282,6 +274,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "SechdulingCourse2";
             this.Text = "SechdulingCourse2";
+            this.Load += new System.EventHandler(this.SechdulingCourse2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -302,14 +295,13 @@
         private Guna.UI2.WinForms.Guna2Button Next_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Supervision_lbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sechduleid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox roomname_txtbox;
-        private System.Windows.Forms.TextBox facultyname_txtbox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox day_comboBox;
         private System.Windows.Forms.DateTimePicker EndDate;
         private System.Windows.Forms.DateTimePicker Startdate;
+        private System.Windows.Forms.ComboBox facultycourse_comboBox;
+        private System.Windows.Forms.ComboBox room_comboBox;
     }
 }

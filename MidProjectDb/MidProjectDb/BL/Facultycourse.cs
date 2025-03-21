@@ -71,6 +71,7 @@ namespace MidProjectDb.BL
         }
         public static void DeleteFaccourse(int id)
         {
+            CourseSechdule.deletebyfaccourse(id);
             facultycoursesDL.DeleteFacultyCourse(id);
         }
         public static Facultycourse findfacultycourse(int id)
