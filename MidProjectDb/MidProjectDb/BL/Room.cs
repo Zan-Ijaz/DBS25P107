@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.SessionState;
+using MidProjectDb.BL;
 using MidProjectDb.DL;
+using Mysqlx.Crud;
 
 namespace MidProjectDb.UI
 {
@@ -82,12 +84,25 @@ namespace MidProjectDb.UI
         }
         public static void Delete(int id)
         {
+            Facultyroom.deletebyroom(id);
             rooms.DeleteRoom(id);
         }
         public static DataTable GetTable()
         {
             DataTable dt = rooms.GetDataTable();
             return dt;
+        }
+        public static Room findroom(int id)
+        {
+            List<Room> roomList = rooms.GetData();
+            foreach(var r in roomList)
+            {
+                if (r.roomid == id)
+                {
+                    return r;
+                }
+            }
+            return null;
         }
     }
 }

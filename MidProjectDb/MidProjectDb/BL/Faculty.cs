@@ -86,6 +86,7 @@ namespace MidProjectDb.UI
             Facultyproject.DeletebyFaculty(id);
             Facultyadmin.deletebyfac(id);
             FacultyReq.deletebyfac(id);
+            Facultyroom.deletebyfac(id);
             facultyDLobject.Delete(id);
         }
         public static void insert(Faculty u)

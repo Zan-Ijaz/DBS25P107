@@ -143,6 +143,7 @@
     <Compile Include="BL\Semester.cs" />
     <Compile Include="BL\Facultyproject.cs" />
     <Compile Include="DL\ConsumeableDL.cs" />
+    <Compile Include="DL\CourseSechduleDL.cs" />
     <Compile Include="DL\FacultyadminDL.cs" />
     <Compile Include="DL\FacultycourseDL.cs" />
     <Compile Include="DL\CoursesDL.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="DL\FacultyReqDL.cs" />
     <Compile Include="DL\LookupDL.cs" />
     <Compile Include="DL\ProjectDL.cs" />
+    <Compile Include="DL\FacultyroomDL.cs" />
     <Compile Include="DL\RoomDL.cs" />
     <Compile Include="DL\SemesterDL.cs" />
     <Compile Include="DL\UserDL.cs" />

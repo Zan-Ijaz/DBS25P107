@@ -39,7 +39,7 @@ namespace MidProjectDb.BL
             List<Course> courses = getData();
             foreach (var c in courses)
             {
-                if (c.CourseName.Equals(title, StringComparison.OrdinalIgnoreCase))
+                if (c.CourseName==title)
                 {
                     return false;
                 }
@@ -51,7 +51,7 @@ namespace MidProjectDb.BL
             List<Course> courses=getData();
             foreach (var c in courses)
             {
-                if (c.CourseName.Equals(title, StringComparison.OrdinalIgnoreCase) && c.CourseId!=id)
+                if (c.CourseName == title && c.CourseId!=id)
                 {
                     return false;
                 }

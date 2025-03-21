@@ -80,7 +80,8 @@ namespace MidProjectDb.BL
         {
             Facultycourse.DeletebySem(id);
             Facultyproject.DeletebySem(id);
-            Facultyadmin.deletebysem(id);
+            Facultyadmin.deletebysem(id); 
+            Facultyroom.deletebySem(id);
             semsters.DeleteSemester(id);
         }
         public static DataTable GetTable()

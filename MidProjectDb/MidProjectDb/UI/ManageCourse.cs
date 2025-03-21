@@ -82,7 +82,7 @@ namespace MidProjectDb.UI
                 MessageBox.Show("Course Type not Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 coursetype_combo.SelectedIndex = -1;
             }
-            if (Utility.Utility.intValidatioin(Credithour_txtbox.Text)&&Convert.ToInt32(Credithour_txtbox.Text)>0)
+            if (Utility.Utility.intValidatioin(Credithour_txtbox.Text)&&(Convert.ToInt32(Credithour_txtbox.Text)>0|| Convert.ToInt32(Credithour_txtbox.Text)>3))
             {
                 creditHour=Convert.ToInt32(Credithour_txtbox.Text);
             }
@@ -149,7 +149,7 @@ namespace MidProjectDb.UI
                             MessageBox.Show("Invalid string or course already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         type = row["course_type"].ToString();
-                        if (Utility.Utility.intValidatioin(row["credit_hours"].ToString())&& Convert.ToInt32(row["credit_hours"])>0)
+                        if (Utility.Utility.intValidatioin(row["credit_hours"].ToString())&& (Convert.ToInt32(row["credit_hours"])>0|| Convert.ToInt32(row["credit_hours"]) < 03))
                         {
                             credit = Convert.ToInt32(row["credit_hours"]);
                         }
