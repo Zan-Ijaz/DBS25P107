@@ -58,5 +58,11 @@ namespace MidProjectDb.DL
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }
+        public DataTable report()
+        {
+            string query = $"SELECT f.name as Name ,f.email as Email ,contact as \"Contact Number\",l.value as Designation,l2.value as Role, f.total_teaching_hours as \"Total Teaching Hours\" from faculty f Inner join lookup l on l.lookup_id=f.designation_id natural join users u inner join lookup l2 on u.role_id=l2.lookup_id";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
     }
 }

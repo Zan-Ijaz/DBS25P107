@@ -9,6 +9,7 @@ using Mysqlx.Crud;
 using Org.BouncyCastle.Cms;
 using System.Runtime.Remoting.Messaging;
 using Org.BouncyCastle.Bcpg.OpenPgp;
+using System.Data;
 
 namespace MidProjectDb.BL
 {
@@ -179,6 +180,16 @@ namespace MidProjectDb.BL
             {
                 return false;
             }
+        }
+        public static DataTable report()
+        {
+            DataTable dt =SechduleDL.report();
+            return dt;
+        }
+        public static DataTable report(int id)
+        {
+            DataTable dt = SechduleDL.timetable(id);
+            return dt;
         }
     }
 }

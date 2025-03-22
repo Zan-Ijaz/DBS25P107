@@ -180,6 +180,12 @@ namespace MidProjectDb.UI
             }
             return hrs;
         }
-        
+        public static DataTable report()
+        {
+            FacultyDL facultyDLobject = new FacultyDL();
+            DataTable dt = facultyDLobject.report();
+            return dt;
+        }
+
     }
 }

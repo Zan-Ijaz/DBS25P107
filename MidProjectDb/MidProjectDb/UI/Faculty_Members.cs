@@ -54,5 +54,32 @@ namespace MidProjectDb.UI
             request.Location = this.Location;
             this.Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Assignedprojects projects = new Assignedprojects();
+            projects.Show();
+            projects.Size = this.Size;
+            projects.Location = this.Location;
+            this.Close();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            AssignedDuties Duties = new AssignedDuties();
+            Duties.Show();
+            Duties.Size = this.Size;
+            Duties.Location = this.Location;
+            this.Close();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            AllocatedRoom room = new AllocatedRoom();
+            room.Show();
+            room.Size = this.Size;
+            room.Location = this.Location;
+            this.Close();
+        }
     }
 }

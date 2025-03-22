@@ -181,7 +181,7 @@
             this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(117, 524);
+            this.logout_btn.Location = new System.Drawing.Point(119, 474);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 11;

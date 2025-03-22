@@ -139,5 +139,15 @@ namespace MidProjectDb.UI
             DataTable dt = FacultyprojectDLobj.LoadDataGrid();
             return dt;
         }
+        public static DataTable report()
+        {
+            DataTable dt = FacultyprojectDLobj.report();
+            return dt;
+        }
+        public static List<Facultyproject> getData()
+        {
+            List<Facultyproject> facultyprojects = FacultyprojectDLobj.GetData();
+            return facultyprojects;
+        }
     }
 }

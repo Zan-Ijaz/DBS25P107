@@ -70,5 +70,11 @@ namespace MidProjectDb.DL
             DataTable dt= DatabaseHelper.Instance.GetData(query);
             return dt;
         }
+        public DataTable report()
+        {
+            string query = $"Select f.Name as Faculty, fr.role_name as Role,concat(s.Term,' ',s.Year) as Semester from faculty_admin_roles as fr natural join faculty as f natural join semesters s";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
     }
 }

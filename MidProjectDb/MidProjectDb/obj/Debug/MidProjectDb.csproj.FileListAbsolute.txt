@@ -123,3 +123,9 @@ D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.exe
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.pdb
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Requts_Admin_.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Reports.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AssignedDuties.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Assignedprojects.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AllocatedRoom.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\itextsharp.dll
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\itextsharp.xml
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdminReports.resources

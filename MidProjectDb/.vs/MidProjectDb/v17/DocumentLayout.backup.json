@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\Git\\DBS25P107\\MidProjectDb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\bl\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\dl\\facultydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\facultydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\bl\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\addfac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\addfac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\dl\\userdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\ui\\addfac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\addfac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|D:\\Git\\DBS25P107\\MidProjectDb\\midprojectdb\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\bl\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|d:\\git\\dbs25p107\\midprojectdb\\midprojectdb\\ui\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDF4A73-D366-4174-8D36-0459468F6C2D}|MidProjectDb\\MidProjectDb.csproj|solutionrelative:midprojectdb\\ui\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,64 +46,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserDL.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\UserDL.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\DL\\UserDL.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\UserDL.cs",
-              "RelativeToolTip": "MidProjectDb\\DL\\UserDL.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAUwDgAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FacultyDL.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\FacultyDL.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\DL\\FacultyDL.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\DL\\FacultyDL.cs",
+              "RelativeToolTip": "MidProjectDb\\DL\\FacultyDL.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAmwD4AAABGAQAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:43:37.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\User.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\BL\\User.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\User.cs",
-              "RelativeToolTip": "MidProjectDb\\BL\\User.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAqwFwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:41:08.038Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Addfac.cs",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Addfac.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Addfac.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Addfac.cs",
-              "RelativeToolTip": "MidProjectDb\\UI\\Addfac.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAAAPUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:36:40.099Z",
+              "WhenOpened": "2025-03-22T21:33:08.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Faculty.cs",
               "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Faculty.cs",
               "RelativeDocumentMoniker": "MidProjectDb\\BL\\Faculty.cs",
               "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\BL\\Faculty.cs",
               "RelativeToolTip": "MidProjectDb\\BL\\Faculty.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAuwFkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAswLkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:36:12.902Z",
+              "WhenOpened": "2025-03-22T21:31:34.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminReports.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdminReports.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\AdminReports.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdminReports.cs",
+              "RelativeToolTip": "MidProjectDb\\UI\\AdminReports.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T21:29:20.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Addfac.cs [Design]",
-              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Addfac.cs",
-              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Addfac.cs",
-              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Addfac.cs [Design]",
-              "RelativeToolTip": "MidProjectDb\\UI\\Addfac.cs [Design]",
+              "Title": "AdminReports.cs [Design]",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdminReports.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\AdminReports.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\AdminReports.cs [Design]",
+              "RelativeToolTip": "MidProjectDb\\UI\\AdminReports.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:34:20.117Z"
+              "WhenOpened": "2025-03-22T21:26:50.66Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Reports.cs",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Reports.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Reports.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Reports.cs",
+              "RelativeToolTip": "MidProjectDb\\UI\\Reports.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAmwC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T18:34:18.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Reports.cs [Design]",
+              "DocumentMoniker": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Reports.cs",
+              "RelativeDocumentMoniker": "MidProjectDb\\UI\\Reports.cs",
+              "ToolTip": "D:\\Git\\DBS25P107\\MidProjectDb\\MidProjectDb\\UI\\Reports.cs [Design]",
+              "RelativeToolTip": "MidProjectDb\\UI\\Reports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T18:33:40.684Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

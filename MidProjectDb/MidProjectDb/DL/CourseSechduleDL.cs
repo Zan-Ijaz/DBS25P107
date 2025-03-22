@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using MidProjectDb.BL;
 using MidProjectDb.UI;
 
@@ -67,6 +68,17 @@ namespace MidProjectDb.DL
             string query = $"Delete from faculty_course_schedule where  room_id={id}";
             DatabaseHelper.Instance.Update(query);
         }
-
+        public DataTable report()
+        {
+            string query = $"SELECT f.name as Faculty,c.course_name as Course,concat(s.term ,' ',s.year ) as Semester, r.room_name as Room,fcs.day_of_week as Day ,fcs.start_time as StartTime,fcs.end_time as EndTime From faculty_course_schedule as fcs Natural Join faculty_courses as fc Natural Join faculty as f Natural Join courses as c  Natural Join semesters as s Natural Join rooms as r";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
+        public DataTable timetable(int id)
+        {
+            string query = $"SELECT f.name as Faculty,c.course_name as Course,concat(s.term ,' ',s.year ) as Semester, r.room_name as Room,fcs.day_of_week as Day ,fcs.start_time as StartTime,fcs.end_time as EndTime From faculty_course_schedule as fcs Natural Join faculty_courses as fc Natural Join faculty as f Natural Join courses as c  Natural Join semesters as s Natural Join rooms as r where faculty_id={id}";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
     }
 }

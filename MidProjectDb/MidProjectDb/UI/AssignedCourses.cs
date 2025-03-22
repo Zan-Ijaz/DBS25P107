@@ -54,12 +54,21 @@ namespace MidProjectDb.UI
                 {
                     SechduleId = c.Sechduleid,
                     CourseName = c.facultycourse.course.CourseName,
-                    Semester=$"{c.facultycourse.Semester.Term} {c.facultycourse.Semester.Year}",
-                    Day=c.day,
-                    Starttime=c.starttime,
-                    Endtime=c.Endtime
+                    Semester = $"{c.facultycourse.Semester.Term} {c.facultycourse.Semester.Year}",
+                    Day = c.day,
+                    Starttime = c.starttime,
+                    Endtime = c.Endtime
                 }).ToList();
             dataGridView1.DataSource = formattedSchedule;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DataRow dr = LoggedInUser.LoggedUser;
+            string email = dr["email"].ToString();
+            Faculty f = Faculty.findFaculty(email);
+            DataTable dt = CourseSechdule.report(f.FacultyId);
+            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"{f.Name} Course Schedule Report");
         }
     }
 }

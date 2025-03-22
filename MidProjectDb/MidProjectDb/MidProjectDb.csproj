@@ -34,13 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -174,11 +177,35 @@
     <Compile Include="UI\AdministrativeStaff.Designer.cs">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\AdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminReports.Designer.cs">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AllocatedRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AllocatedRoom.Designer.cs">
+      <DependentUpon>AllocatedRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AssignedCourses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\AssignedCourses.Designer.cs">
       <DependentUpon>AssignedCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssignedDuties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AssignedDuties.Designer.cs">
+      <DependentUpon>AssignedDuties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assignedprojects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assignedprojects.Designer.cs">
+      <DependentUpon>Assignedprojects.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consumeables.cs">
       <SubType>Form</SubType>
@@ -307,6 +334,7 @@
     <Compile Include="UI\WorkLoad.Designer.cs">
       <DependentUpon>WorkLoad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\PDFGenerator.cs" />
     <Compile Include="Utility\Utility.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -327,8 +355,20 @@
     <EmbeddedResource Include="UI\AdministrativeStaff.resx">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminReports.resx">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AllocatedRoom.resx">
+      <DependentUpon>AllocatedRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AssignedCourses.resx">
       <DependentUpon>AssignedCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AssignedDuties.resx">
+      <DependentUpon>AssignedDuties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assignedprojects.resx">
+      <DependentUpon>Assignedprojects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consumeables.resx">
       <DependentUpon>Consumeables.cs</DependentUpon>
@@ -391,6 +431,7 @@
       <DependentUpon>WorkLoad.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MidProjectDb.BL.Facultycourse1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -419,8 +460,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

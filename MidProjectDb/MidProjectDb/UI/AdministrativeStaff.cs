@@ -101,7 +101,7 @@ namespace MidProjectDb.UI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Reports Reports = new Reports();
+            AdminReports Reports = new AdminReports();
             Reports.Size = this.Size;
             Reports.Location = this.Location;
             Reports.Show();

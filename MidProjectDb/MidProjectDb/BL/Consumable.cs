@@ -108,6 +108,11 @@ namespace MidProjectDb.BL
                 return cons;
 
             }
+            public static DataTable report()
+            {
+                DataTable dt = consumeables.report();
+                return dt;
+            }
         }
     }
 }

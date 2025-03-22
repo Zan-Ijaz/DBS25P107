@@ -73,7 +73,12 @@ namespace MidProjectDb.DL
         public DataTable LoadDataGrid()
         {
             string query = "Select fp.faculty_project_id, f.name AS Faculty, p.title AS Project, CONCAT(s.term, ' ', s.year) AS Semester, fp.supervision_hours as oldhrs ,fp.supervision_hours, fp.faculty_id ,f.faculty_id as oldfaculty_id, fp.project_id, s.semester_id From faculty_projects fp NATURAL JOIN faculty f NATURAL JOIN projects p NATURAL JOIN semesters s";
-
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
+        public DataTable report()
+        {
+            string query = "Select f.name as Faculty, p.title as Project ,concat(s.term,' ', s.year) as Semester ,fp.supervision_hours as \"Superision Hours\", p.description as Description From faculty_projects fp Natural Join faculty as f natural join projects p Natural join semesters s";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }

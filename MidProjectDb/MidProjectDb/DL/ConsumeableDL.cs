@@ -51,5 +51,11 @@ namespace MidProjectDb.DL
             string query = $"Update consumables set item_name='{ca.ItemName}' where consumable_id='{ca.ConsumableId}'";
             DatabaseHelper.Instance.Update(query);
         }
+        public DataTable report()
+        {
+            string query = $"Select c.item_name item ,Sum(fr.quantity) as \"Amount Requested\" From consumables c inner join faculty_requests fr on fr.item_id=c.consumable_id group by c.consumable_id";
+            DataTable dt = DatabaseHelper.Instance.GetData(query);
+            return dt;
+        }
     }
 }

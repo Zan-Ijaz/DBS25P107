@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MidProjectDb.BL;
+using MidProjectDb.BL.MidProjectDb.BL;
 
 namespace MidProjectDb.UI
 {
@@ -20,23 +21,29 @@ namespace MidProjectDb.UI
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            int role = Convert.ToInt32(LoggedInUser.LoggedUser["role_id"]);
-            if (role == 1)
-            {
-                AdministrativeStaff admin = new AdministrativeStaff();
-                admin.Size = this.Size;
-                admin.Location = this.Location;
-                admin.Show();
-                this.Close();
-            }
-            else if (role == 3)
-            {
-                DepartmentHead head = new DepartmentHead();
-                head.Size = this.Size;
-                head.Location = this.Location;
-                head.Show();
-                this.Close();
-            }
+            DepartmentHead head = new DepartmentHead();
+            head.Size = this.Size;
+            head.Location = this.Location;
+            head.Show();
+            this.Close();
+        }
+
+        private void Assignworkload_btn_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CourseSechdule.report();
+            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Course Schedule Report");
+        }
+
+        private void Adminduty_btn_Click(object sender, EventArgs e)
+        {
+            DataTable dt = Facultyadmin.report();
+            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Admin Duties Report");
+
+        }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = Facultyproject.report();
+            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Project Report");
         }
     }
 }

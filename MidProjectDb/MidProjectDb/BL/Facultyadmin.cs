@@ -47,6 +47,10 @@ namespace MidProjectDb.BL
             }
             return true;
         }
+        public static List<Facultyadmin> getData()
+        {
+            return adminRoleDL.GetData();
+        }
         public static bool validation(Facultyadmin ar,int id)
         {
             List<Facultyadmin> adminroles = adminRoleDL.GetData();
@@ -94,10 +98,9 @@ namespace MidProjectDb.BL
             }
             return false;
         }
-        public static DataTable GetTable()
+        public static DataTable report()
         {
-            DataTable dt= adminRoleDL.GetDataTable();
-            return dt;
+            return adminRoleDL.report();
         }
     }
 }
