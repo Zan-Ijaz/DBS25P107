@@ -27,10 +27,14 @@ namespace MidProjectDb.UI
 
         private void Next_btn_Click(object sender, EventArgs e)
         {
-            string name = "", password = "", email = "", contactnumber = "", research = "", designation = "";
+            string facname="";string name = "", password = "", email = "", contactnumber = "", research = "", designation = "";
             int availablehours = -1;
             try
             {
+                if (Utility.Utility.stringvalidation(facname_txtBox.Text))
+                {
+                    facname = facname_txtBox.Text;
+                }
                 if (User.nameduplication(signupusername_txtbox.Text) && Utility.Utility.stringvalidation(signupusername_txtbox.Text))
                 {
                     name = signupusername_txtbox.Text;
@@ -121,14 +125,14 @@ namespace MidProjectDb.UI
                     MessageBox.Show("No designation Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                if (name != "" && password != "" && email != "" && contactnumber != "" && research != "" && comboBox1.SelectedIndex != -1 && availablehours > -01)
+                if (facname!=""&&name != "" && password != "" && email != "" && contactnumber != "" && research != "" && comboBox1.SelectedIndex != -1 && availablehours > -01)
                 {
                     Lookup designationlook = Lookup.findlookup(designation);
                     Lookup rolelookup = Lookup.findlookup("Faculty");
                     User user = new User(name, email, password, rolelookup.lookupid, rolelookup);
                     User.insert(user);
                     int userid = User.findid(name);
-                    Faculty faculty = new Faculty(name, email, contactnumber, research, availablehours, userid, designationlook.lookupid);
+                    Faculty faculty = new Faculty(facname, email, contactnumber, research, availablehours, userid, designationlook.lookupid);
                     Faculty.insert(faculty);
                     MessageBox.Show("User added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     signupusername_txtbox.Text = "";
@@ -138,6 +142,7 @@ namespace MidProjectDb.UI
                     reserch_interest_txtbox.Text = "";
                     teaching_hours_txtbox.Text = "";
                     comboBox1.SelectedIndex = -1;
+                    facname_txtBox.Text = "";
 
                 }
             }
@@ -157,9 +162,11 @@ namespace MidProjectDb.UI
                     dt = (DataTable)dataGridView1.DataSource;
                     foreach (DataRow row in dt.Rows)
                     {
-                        string name = "", email = "", contact = "", researchArea = "";
+                        string username="",name = "", email = "", contact = "", researchArea = "";
                         int totalHours = 0;
                         int userid = Convert.ToInt32(row["UserID"]);
+                        User u = User.finduser(userid);
+                        username = u.username;
                         name = row["Name"].ToString();
                         email = row["Email"].ToString();
                         string designation = row["Designation"].ToString();
@@ -187,7 +194,7 @@ namespace MidProjectDb.UI
                         string errorMessage2;
                         if (totalHours > 0)//Doing this validation here bcz object takes int so its validation must be done before adding to object
                         {
-                            User user = new User(userid, name, email, rolellokup.lookupid, rolellokup);
+                            User user = new User(userid, username, email, rolellokup.lookupid, rolellokup);
                             Faculty faculty = new Faculty(name, email, contact, researchArea, totalHours, userid, designationlookup.lookupid);
                             bool isUserValid = User.ValidateUser(user, out errorMessage);
                             bool isFacultyValid = Faculty.validationsCheck(faculty, out errorMessage2);

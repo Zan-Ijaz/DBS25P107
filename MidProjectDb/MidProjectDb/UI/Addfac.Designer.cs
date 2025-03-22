@@ -50,6 +50,8 @@
             this.contact_txtbox = new System.Windows.Forms.TextBox();
             this.reserch_interest_lbl = new System.Windows.Forms.Label();
             this.Next_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.facname_txtBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,6 +61,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.facname_txtBox);
             this.panel1.Controls.Add(this.Delete_btn);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.Update_btn);
@@ -201,7 +205,7 @@
             this.password_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.password_lbl.AutoSize = true;
             this.password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_lbl.Location = new System.Drawing.Point(926, 167);
+            this.password_lbl.Location = new System.Drawing.Point(926, 222);
             this.password_lbl.Name = "password_lbl";
             this.password_lbl.Size = new System.Drawing.Size(221, 32);
             this.password_lbl.TabIndex = 31;
@@ -226,7 +230,7 @@
             // 
             this.signuppass_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.signuppass_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signuppass_txtbox.Location = new System.Drawing.Point(1413, 167);
+            this.signuppass_txtbox.Location = new System.Drawing.Point(1413, 220);
             this.signuppass_txtbox.Name = "signuppass_txtbox";
             this.signuppass_txtbox.Size = new System.Drawing.Size(301, 27);
             this.signuppass_txtbox.TabIndex = 32;
@@ -257,7 +261,7 @@
             // 
             this.teaching_hours_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.teaching_hours_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teaching_hours_txtbox.Location = new System.Drawing.Point(1413, 291);
+            this.teaching_hours_txtbox.Location = new System.Drawing.Point(1413, 356);
             this.teaching_hours_txtbox.Name = "teaching_hours_txtbox";
             this.teaching_hours_txtbox.Size = new System.Drawing.Size(301, 27);
             this.teaching_hours_txtbox.TabIndex = 41;
@@ -276,7 +280,7 @@
             this.teachinghours_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.teachinghours_lbl.AutoSize = true;
             this.teachinghours_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teachinghours_lbl.Location = new System.Drawing.Point(926, 284);
+            this.teachinghours_lbl.Location = new System.Drawing.Point(926, 356);
             this.teachinghours_lbl.Name = "teachinghours_lbl";
             this.teachinghours_lbl.Size = new System.Drawing.Size(422, 32);
             this.teachinghours_lbl.TabIndex = 40;
@@ -287,7 +291,7 @@
             this.contactnmbr_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.contactnmbr_lbl.AutoSize = true;
             this.contactnmbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactnmbr_lbl.Location = new System.Drawing.Point(926, 227);
+            this.contactnmbr_lbl.Location = new System.Drawing.Point(926, 291);
             this.contactnmbr_lbl.Name = "contactnmbr_lbl";
             this.contactnmbr_lbl.Size = new System.Drawing.Size(302, 32);
             this.contactnmbr_lbl.TabIndex = 35;
@@ -306,7 +310,7 @@
             // 
             this.contact_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.contact_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact_txtbox.Location = new System.Drawing.Point(1413, 234);
+            this.contact_txtbox.Location = new System.Drawing.Point(1413, 296);
             this.contact_txtbox.Name = "contact_txtbox";
             this.contact_txtbox.Size = new System.Drawing.Size(301, 27);
             this.contact_txtbox.TabIndex = 36;
@@ -339,6 +343,26 @@
             this.Next_btn.TabIndex = 37;
             this.Next_btn.Text = "Add";
             this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
+            // 
+            // facname_txtBox
+            // 
+            this.facname_txtBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.facname_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facname_txtBox.Location = new System.Drawing.Point(1413, 160);
+            this.facname_txtBox.Name = "facname_txtBox";
+            this.facname_txtBox.Size = new System.Drawing.Size(301, 27);
+            this.facname_txtBox.TabIndex = 48;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(926, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 32);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Enter Name:";
             // 
             // Addfac
             // 
@@ -384,5 +408,7 @@
         private System.Windows.Forms.TextBox contact_txtbox;
         private System.Windows.Forms.Label reserch_interest_lbl;
         private Guna.UI2.WinForms.Guna2Button Next_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox facname_txtBox;
     }
 }

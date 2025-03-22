@@ -44,8 +44,8 @@ namespace MidProjectDb.UI
                 MessageBox.Show("Enter valid quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             DateTime currentDate = DateTime.Now;
-            string name = LoggedInUser.LoggedUser["username"].ToString();
-            Faculty f = Faculty.findFaculty(name);
+            string email = LoggedInUser.LoggedUser["email"].ToString();
+            Faculty f = Faculty.findFaculty(email);
             Consumable c = Consumable.findconsumable(itemId);
             Lookup status = Lookup.findlookup(8);
             if(itemname_comboBox.SelectedIndex!=-1)

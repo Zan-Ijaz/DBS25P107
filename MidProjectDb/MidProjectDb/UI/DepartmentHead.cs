@@ -72,5 +72,14 @@ namespace MidProjectDb.UI
             resourseAllocation.Location = this.Location;
             this.Close();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            AssignedCourses courses = new AssignedCourses();
+            courses.Show();
+            courses.Size = this.Size;
+            courses.Location = this.Location;
+            this.Close();
+        }
     }
 }

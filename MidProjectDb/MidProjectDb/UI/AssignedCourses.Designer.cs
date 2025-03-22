@@ -125,6 +125,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AssignedCourses";
             this.Text = "AssignedCourses";
+            this.Load += new System.EventHandler(this.AssignedCourses_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

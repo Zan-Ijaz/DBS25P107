@@ -54,7 +54,7 @@ namespace MidProjectDb.DL
         }
         public void update(UI.User u)
         {
-            string userquery = $"Update users set username='{u.username}', email='{u.email}', role_id='{u.roleId}' where user_id='{u.userid}' ";
+            string userquery = $"Update users set email='{u.email}', role_id='{u.roleId}' where user_id='{u.userid}' ";
             DatabaseHelper.Instance.Update(userquery);
         }
         public void Delete(int userId)

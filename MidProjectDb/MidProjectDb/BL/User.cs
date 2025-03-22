@@ -90,6 +90,7 @@ namespace MidProjectDb.UI
             }
             return null;
         }
+        
         public static bool emailduplication(string email)
         {
             UserDL userdlobject = new UserDL();

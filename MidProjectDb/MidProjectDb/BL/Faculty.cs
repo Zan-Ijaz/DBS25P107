@@ -140,13 +140,13 @@ namespace MidProjectDb.UI
             }
             return null;
         }
-        public static Faculty findFaculty(string name)
+        public static Faculty findFaculty(string email)
         {
             FacultyDL facultyDLobject = new FacultyDL();
             List<Faculty> faculty = facultyDLobject.getData();
             foreach (var f in faculty)
             {
-                if (name == f.Name)
+                if (email == f.Email)
                 {
                     return f;
                 }
