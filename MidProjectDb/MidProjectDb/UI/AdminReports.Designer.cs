@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Inventort_btn = new Guna.UI2.WinForms.Guna2Button();
             this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Department_lbl = new System.Windows.Forms.Label();
             this.req_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,24 @@
             this.panel1.Size = new System.Drawing.Size(1690, 755);
             this.panel1.TabIndex = 1;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(607, 208);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
+            this.guna2Button1.TabIndex = 16;
+            this.guna2Button1.Text = "Faculty Report";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // Inventort_btn
             // 
             this.Inventort_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -63,7 +81,7 @@
             this.Inventort_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Inventort_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inventort_btn.ForeColor = System.Drawing.Color.White;
-            this.Inventort_btn.Location = new System.Drawing.Point(607, 376);
+            this.Inventort_btn.Location = new System.Drawing.Point(607, 349);
             this.Inventort_btn.Name = "Inventort_btn";
             this.Inventort_btn.Size = new System.Drawing.Size(496, 45);
             this.Inventort_btn.TabIndex = 15;
@@ -81,7 +99,7 @@
             this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(607, 450);
+            this.logout_btn.Location = new System.Drawing.Point(607, 416);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 14;
@@ -123,30 +141,12 @@
             this.req_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.req_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.req_btn.ForeColor = System.Drawing.Color.White;
-            this.req_btn.Location = new System.Drawing.Point(607, 299);
+            this.req_btn.Location = new System.Drawing.Point(607, 279);
             this.req_btn.Name = "req_btn";
             this.req_btn.Size = new System.Drawing.Size(496, 45);
             this.req_btn.TabIndex = 12;
             this.req_btn.Text = "Faculty Requests Summary Report";
             this.req_btn.Click += new System.EventHandler(this.req_btn_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(607, 208);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
-            this.guna2Button1.TabIndex = 16;
-            this.guna2Button1.Text = "Faculty Report";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // AdminReports
             // 
