@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Room_comboBox = new System.Windows.Forms.ComboBox();
+            this.faculty_comboBox = new System.Windows.Forms.ComboBox();
             this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
-            this.EndDate = new System.Windows.Forms.DateTimePicker();
-            this.Startdate = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.roomname_txtbox = new System.Windows.Forms.TextBox();
-            this.facultyname_txtbox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +41,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Workoad_lbl = new System.Windows.Forms.Label();
+            this.semester_comboBox = new System.Windows.Forms.ComboBox();
+            this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Delete_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.reservedhres_txtbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,13 +52,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.reservedhres_txtbox);
+            this.panel1.Controls.Add(this.Delete_btn);
+            this.panel1.Controls.Add(this.Update_btn);
+            this.panel1.Controls.Add(this.semester_comboBox);
+            this.panel1.Controls.Add(this.Room_comboBox);
+            this.panel1.Controls.Add(this.faculty_comboBox);
             this.panel1.Controls.Add(this.Back_lbl);
-            this.panel1.Controls.Add(this.EndDate);
-            this.panel1.Controls.Add(this.Startdate);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.roomname_txtbox);
-            this.panel1.Controls.Add(this.facultyname_txtbox);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -70,8 +70,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1043, 704);
+            this.panel1.Size = new System.Drawing.Size(1594, 794);
             this.panel1.TabIndex = 0;
+            // 
+            // Room_comboBox
+            // 
+            this.Room_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Room_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Room_comboBox.FormattingEnabled = true;
+            this.Room_comboBox.Location = new System.Drawing.Point(907, 421);
+            this.Room_comboBox.Name = "Room_comboBox";
+            this.Room_comboBox.Size = new System.Drawing.Size(300, 24);
+            this.Room_comboBox.TabIndex = 50;
+            // 
+            // faculty_comboBox
+            // 
+            this.faculty_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.faculty_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.faculty_comboBox.FormattingEnabled = true;
+            this.faculty_comboBox.Location = new System.Drawing.Point(907, 376);
+            this.faculty_comboBox.Name = "faculty_comboBox";
+            this.faculty_comboBox.Size = new System.Drawing.Size(300, 24);
+            this.faculty_comboBox.TabIndex = 49;
             // 
             // Back_lbl
             // 
@@ -84,102 +104,41 @@
             this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
             this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(95, 627);
+            this.Back_lbl.Location = new System.Drawing.Point(370, 601);
             this.Back_lbl.Name = "Back_lbl";
             this.Back_lbl.Size = new System.Drawing.Size(174, 55);
             this.Back_lbl.TabIndex = 30;
             this.Back_lbl.Text = "Back";
             this.Back_lbl.Click += new System.EventHandler(this.Back_lbl_Click);
             // 
-            // EndDate
-            // 
-            this.EndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.EndDate.Location = new System.Drawing.Point(631, 563);
-            this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(301, 22);
-            this.EndDate.TabIndex = 48;
-            // 
-            // Startdate
-            // 
-            this.Startdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Startdate.Location = new System.Drawing.Point(631, 514);
-            this.Startdate.Name = "Startdate";
-            this.Startdate.Size = new System.Drawing.Size(301, 22);
-            this.Startdate.TabIndex = 47;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"});
-            this.comboBox1.Location = new System.Drawing.Point(631, 469);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(301, 24);
-            this.comboBox1.TabIndex = 46;
-            // 
-            // roomname_txtbox
-            // 
-            this.roomname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roomname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomname_txtbox.Location = new System.Drawing.Point(631, 418);
-            this.roomname_txtbox.Name = "roomname_txtbox";
-            this.roomname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.roomname_txtbox.TabIndex = 45;
-            // 
-            // facultyname_txtbox
-            // 
-            this.facultyname_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.facultyname_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facultyname_txtbox.Location = new System.Drawing.Point(631, 375);
-            this.facultyname_txtbox.Name = "facultyname_txtbox";
-            this.facultyname_txtbox.Size = new System.Drawing.Size(301, 27);
-            this.facultyname_txtbox.TabIndex = 44;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 553);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 32);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Enter End Time:";
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(89, 504);
+            this.label3.Location = new System.Drawing.Point(364, 469);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 32);
+            this.label3.Size = new System.Drawing.Size(230, 32);
             this.label3.TabIndex = 42;
-            this.label3.Text = "Enter Start time:";
+            this.label3.Text = "Select Semester:";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 459);
+            this.label2.Location = new System.Drawing.Point(364, 514);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 32);
+            this.label2.Size = new System.Drawing.Size(309, 32);
             this.label2.TabIndex = 41;
-            this.label2.Text = "Select day:";
+            this.label2.Text = "Enter Reserverd Hours:";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 413);
+            this.label1.Location = new System.Drawing.Point(365, 413);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(254, 32);
             this.label1.TabIndex = 40;
@@ -190,7 +149,7 @@
             this.Supervision_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Supervision_lbl.AutoSize = true;
             this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervision_lbl.Location = new System.Drawing.Point(89, 368);
+            this.Supervision_lbl.Location = new System.Drawing.Point(365, 368);
             this.Supervision_lbl.Name = "Supervision_lbl";
             this.Supervision_lbl.Size = new System.Drawing.Size(267, 32);
             this.Supervision_lbl.TabIndex = 39;
@@ -207,29 +166,30 @@
             this.Next_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Next_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_btn.ForeColor = System.Drawing.Color.White;
-            this.Next_btn.Location = new System.Drawing.Point(801, 627);
+            this.Next_btn.Location = new System.Drawing.Point(1035, 601);
             this.Next_btn.Name = "Next_btn";
             this.Next_btn.Size = new System.Drawing.Size(174, 55);
             this.Next_btn.TabIndex = 38;
             this.Next_btn.Text = "Add";
+            this.Next_btn.Click += new System.EventHandler(this.Next_btn_Click);
             // 
             // Course_lbl
             // 
             this.Course_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Course_lbl.AutoSize = true;
             this.Course_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Course_lbl.Location = new System.Drawing.Point(89, 148);
+            this.Course_lbl.Location = new System.Drawing.Point(365, 148);
             this.Course_lbl.Name = "Course_lbl";
-            this.Course_lbl.Size = new System.Drawing.Size(254, 32);
+            this.Course_lbl.Size = new System.Drawing.Size(229, 32);
             this.Course_lbl.TabIndex = 36;
-            this.Course_lbl.Text = "Sechdule Courses:";
+            this.Course_lbl.Text = "Allocated Rooms";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(95, 203);
+            this.dataGridView1.Location = new System.Drawing.Point(371, 203);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -244,7 +204,7 @@
             this.panel2.Controls.Add(this.Workoad_lbl);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1042, 142);
+            this.panel2.Size = new System.Drawing.Size(1593, 142);
             this.panel2.TabIndex = 8;
             // 
             // Workoad_lbl
@@ -254,22 +214,77 @@
             this.Workoad_lbl.BackColor = System.Drawing.Color.MidnightBlue;
             this.Workoad_lbl.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Workoad_lbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.Workoad_lbl.Location = new System.Drawing.Point(333, 54);
+            this.Workoad_lbl.Location = new System.Drawing.Point(608, 54);
             this.Workoad_lbl.Name = "Workoad_lbl";
             this.Workoad_lbl.Size = new System.Drawing.Size(309, 49);
             this.Workoad_lbl.TabIndex = 1;
             this.Workoad_lbl.Text = "Manage Rooms";
+            // 
+            // semester_comboBox
+            // 
+            this.semester_comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.semester_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.semester_comboBox.FormattingEnabled = true;
+            this.semester_comboBox.Location = new System.Drawing.Point(908, 469);
+            this.semester_comboBox.Name = "semester_comboBox";
+            this.semester_comboBox.Size = new System.Drawing.Size(300, 24);
+            this.semester_comboBox.TabIndex = 51;
+            // 
+            // Update_btn
+            // 
+            this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Update_btn.BorderRadius = 20;
+            this.Update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Update_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Update_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_btn.ForeColor = System.Drawing.Color.White;
+            this.Update_btn.Location = new System.Drawing.Point(370, 707);
+            this.Update_btn.Name = "Update_btn";
+            this.Update_btn.Size = new System.Drawing.Size(174, 55);
+            this.Update_btn.TabIndex = 53;
+            this.Update_btn.Text = "Update";
+            this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Delete_btn.BorderRadius = 20;
+            this.Delete_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Delete_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Delete_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Delete_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Delete_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(1033, 707);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(174, 55);
+            this.Delete_btn.TabIndex = 54;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
+            // 
+            // reservedhres_txtbox
+            // 
+            this.reservedhres_txtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.reservedhres_txtbox.Location = new System.Drawing.Point(911, 522);
+            this.reservedhres_txtbox.Name = "reservedhres_txtbox";
+            this.reservedhres_txtbox.Size = new System.Drawing.Size(295, 22);
+            this.reservedhres_txtbox.TabIndex = 55;
             // 
             // ResourseAllocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1043, 704);
+            this.ClientSize = new System.Drawing.Size(1594, 794);
             this.Controls.Add(this.panel1);
             this.Name = "ResourseAllocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResourseAllocation";
+            this.Load += new System.EventHandler(this.ResourseAllocation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -285,12 +300,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Workoad_lbl;
         private Guna.UI2.WinForms.Guna2Button Back_lbl;
-        private System.Windows.Forms.DateTimePicker EndDate;
-        private System.Windows.Forms.DateTimePicker Startdate;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox roomname_txtbox;
-        private System.Windows.Forms.TextBox facultyname_txtbox;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -298,5 +307,11 @@
         private Guna.UI2.WinForms.Guna2Button Next_btn;
         private System.Windows.Forms.Label Course_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox faculty_comboBox;
+        private System.Windows.Forms.ComboBox Room_comboBox;
+        private System.Windows.Forms.ComboBox semester_comboBox;
+        private Guna.UI2.WinForms.Guna2Button Delete_btn;
+        private Guna.UI2.WinForms.Guna2Button Update_btn;
+        private System.Windows.Forms.TextBox reservedhres_txtbox;
     }
 }

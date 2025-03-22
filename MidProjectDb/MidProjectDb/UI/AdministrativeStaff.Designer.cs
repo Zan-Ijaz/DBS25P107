@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Consumeable_btn = new Guna.UI2.WinForms.Guna2Button();
             this.room_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Semester_btn = new Guna.UI2.WinForms.Guna2Button();
@@ -36,11 +37,9 @@
             this.ManageCourse_btn = new Guna.UI2.WinForms.Guna2Button();
             this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Processfaculty_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.CourseSechdule_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AdminStaff_lbl = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +54,6 @@
             this.guna2Panel1.Controls.Add(this.ManageCourse_btn);
             this.guna2Panel1.Controls.Add(this.logout_btn);
             this.guna2Panel1.Controls.Add(this.Processfaculty_btn);
-            this.guna2Panel1.Controls.Add(this.CourseSechdule_btn);
             this.guna2Panel1.Controls.Add(this.Update_btn);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,6 +61,24 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(800, 631);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(31, 245);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(253, 45);
+            this.guna2Button1.TabIndex = 17;
+            this.guna2Button1.Text = "Reports";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Consumeable_btn
             // 
@@ -190,24 +206,6 @@
             this.Processfaculty_btn.Text = "View Faculty Request";
             this.Processfaculty_btn.Click += new System.EventHandler(this.Processfaculty_btn_Click);
             // 
-            // CourseSechdule_btn
-            // 
-            this.CourseSechdule_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CourseSechdule_btn.BorderRadius = 20;
-            this.CourseSechdule_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CourseSechdule_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CourseSechdule_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CourseSechdule_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CourseSechdule_btn.FillColor = System.Drawing.Color.MidnightBlue;
-            this.CourseSechdule_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseSechdule_btn.ForeColor = System.Drawing.Color.White;
-            this.CourseSechdule_btn.Location = new System.Drawing.Point(31, 245);
-            this.CourseSechdule_btn.Name = "CourseSechdule_btn";
-            this.CourseSechdule_btn.Size = new System.Drawing.Size(253, 45);
-            this.CourseSechdule_btn.TabIndex = 9;
-            this.CourseSechdule_btn.Text = "Sechdule Courses";
-            this.CourseSechdule_btn.Click += new System.EventHandler(this.Courseallocation_btn_Click);
-            // 
             // Update_btn
             // 
             this.Update_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -250,24 +248,6 @@
             this.AdminStaff_lbl.TabIndex = 1;
             this.AdminStaff_lbl.Text = "Administrative Staff";
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(117, 449);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
-            this.guna2Button1.TabIndex = 17;
-            this.guna2Button1.Text = "Reports";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // AdministrativeStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,7 +269,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label AdminStaff_lbl;
-        private Guna.UI2.WinForms.Guna2Button CourseSechdule_btn;
         private Guna.UI2.WinForms.Guna2Button Update_btn;
         private Guna.UI2.WinForms.Guna2Button Processfaculty_btn;
         private Guna.UI2.WinForms.Guna2Button logout_btn;

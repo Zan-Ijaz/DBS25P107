@@ -8,6 +8,7 @@ using MidProjectDb.DL;
 using Mysqlx.Crud;
 using Org.BouncyCastle.Cms;
 using System.Runtime.Remoting.Messaging;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace MidProjectDb.BL
 {
@@ -160,6 +161,24 @@ namespace MidProjectDb.BL
         {
             List<CourseSechdule> sechdules = SechduleDL.GetData();
             return sechdules;
+        }
+        public static bool timespan(string start, string end)
+        {
+            try
+            {
+                if (TimeSpan.TryParse(start, out _) && TimeSpan.TryParse(end, out _))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

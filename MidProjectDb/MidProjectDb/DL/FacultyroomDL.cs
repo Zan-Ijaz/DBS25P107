@@ -15,7 +15,7 @@ namespace MidProjectDb.DL
         public List<Facultyroom> GetData()
         {
             List<Facultyroom> allocations = new List<Facultyroom>();
-            string query = "SELECT * from faculty_room_allocation";
+            string query = "SELECT * from faculty_room_allocations";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
 
             if (dt != null)
@@ -38,32 +38,32 @@ namespace MidProjectDb.DL
         }
         public void InsertFacultyRoom(Facultyroom fr)
         {
-            string query = $"Insert into faculty_room_allocation (reserved_hours, faculty_id, room_id, semester_id) Values ({fr.reservedHours}, {fr.facultyid}, {fr.roomid}, {fr.semesterid})";
+            string query = $"Insert into faculty_room_allocations (reserved_hours, faculty_id, room_id, semester_id) Values ({fr.reservedHours}, {fr.facultyid}, {fr.roomid}, {fr.semesterid})";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteFacultyRoom(int allocationid)
         {
-            string query = $"Delete from faculty_room_allocation where allocation_id = {allocationid}";
+            string query = $"Delete from faculty_room_allocations where allocation_id = {allocationid}";
             DatabaseHelper.Instance.Update(query);
         }
         public void UpdateFacultyRoom(Facultyroom fr)
         {
-            string query = $"Update faculty_room_allocation set reserved_hours = {fr.reservedHours}, faculty_id = {fr.facultyid}, room_id = {fr.roomid}, semester_id = {fr.semesterid} where allocation_id = {fr.allocationid}";
+            string query = $"Update faculty_room_allocations set reserved_hours = {fr.reservedHours}, faculty_id = {fr.facultyid}, room_id = {fr.roomid}, semester_id = {fr.semesterid} where allocation_id = {fr.allocationid}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteByFaculty(int facultyid)
         {
-            string query = $"Delete from faculty_room_allocation where faculty_id = {facultyid}";
+            string query = $"Delete from faculty_room_allocations where faculty_id = {facultyid}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteByRoom(int roomid)
         {
-            string query = $"Delete from faculty_room_allocation where room_id = {roomid}";
+            string query = $"Delete from faculty_room_allocations where room_id = {roomid}";
             DatabaseHelper.Instance.Update(query);
         }
         public void DeleteBySemester(int semesterid)
         {
-            string query = $"Delete from faculty_room_allocation where semester_id = {semesterid}";
+            string query = $"Delete from faculty_room_allocations where semester_id = {semesterid}";
             DatabaseHelper.Instance.Update(query);
         }
     }

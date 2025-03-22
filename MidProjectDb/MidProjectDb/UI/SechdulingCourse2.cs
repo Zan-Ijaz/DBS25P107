@@ -12,7 +12,7 @@ using MidProjectDb.DL;
 
 namespace MidProjectDb.UI
 {
-    public partial class SechdulingCourse2: Form
+    public partial class SechdulingCourse2 : Form
     {
         public SechdulingCourse2()
         {
@@ -21,10 +21,10 @@ namespace MidProjectDb.UI
 
         private void Back_lbl_Click(object sender, EventArgs e)
         {
-            AdministrativeStaff admin = new AdministrativeStaff();
-            admin.Show();
-            admin.Size = this.Size;
-            admin.Location = this.Location;
+            DepartmentHead head = new DepartmentHead();
+            head.Show();
+            head.Size = this.Size;
+            head.Location = this.Location;
             this.Close();
         }
 
@@ -32,7 +32,7 @@ namespace MidProjectDb.UI
         {
             loadDatagrid();
             List<CourseSechdule> courses = CourseSechdule.getData();
-            var facultyHours = new Dictionary<int, int>(); 
+            var facultyHours = new Dictionary<int, int>();
             foreach (var c in courses)
             {
                 if (!facultyHours.ContainsKey(c.facultycourseid))
@@ -69,7 +69,7 @@ namespace MidProjectDb.UI
                 loadComboBox();
                 loadDropDowns();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -85,7 +85,7 @@ namespace MidProjectDb.UI
                 room_comboBox.SelectedIndex = -1;
             }
             List<Facultycourse> fcourses = Facultycourse.getList();
-           
+
             var formattedList = fcourses.Select(fc => new
             {
                 facultyCourseid = fc.facultyCourseid,
@@ -116,7 +116,7 @@ namespace MidProjectDb.UI
                 facultyCourseid = fc.facultyCourseid,
                 DisplayText = $"{fc.facultymember.Name}-{fc.course.CourseName}({fc.course.ContactHours})-{fc.Semester.Term} {fc.Semester.Year}"
             }).ToList();
-            DataGridViewComboBoxColumn faccoursecomboBox= new DataGridViewComboBoxColumn();
+            DataGridViewComboBoxColumn faccoursecomboBox = new DataGridViewComboBoxColumn();
             faccoursecomboBox.Name = "facultycourseid";
             faccoursecomboBox.ValueMember = "facultycourseid";
             faccoursecomboBox.DataPropertyName = "facultycourseid";
@@ -142,11 +142,11 @@ namespace MidProjectDb.UI
                 dataGridView1.Columns.Remove("day");
             }
             DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
-                comboBoxColumn.Name = "day";
-                comboBoxColumn.DataPropertyName = "day";
-                comboBoxColumn.HeaderText = "Day";
-                comboBoxColumn.Items.AddRange(new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" });
-                dataGridView1.Columns.Add(comboBoxColumn);
+            comboBoxColumn.Name = "day";
+            comboBoxColumn.DataPropertyName = "day";
+            comboBoxColumn.HeaderText = "Day";
+            comboBoxColumn.Items.AddRange(new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" });
+            dataGridView1.Columns.Add(comboBoxColumn);
         }
 
         private void Next_btn_Click(object sender, EventArgs e)
@@ -213,26 +213,40 @@ namespace MidProjectDb.UI
 
         private void Update_btn_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.DataSource!= null)
+            try
             {
-                foreach(DataGridViewRow row in dataGridView1.Rows)
+                if (dataGridView1.DataSource != null)
                 {
-                    int sechduleid = Convert.ToInt32(row.Cells["Sechduleid"].Value);
-                    int facultycoursid = Convert.ToInt32(row.Cells["facultycourseid"].Value);
-                    int roomid = Convert.ToInt32(row.Cells["roomid"].Value);
-                    string day = row.Cells["day"].Value.ToString();
-                    TimeSpan startTimeSpan = (TimeSpan)row.Cells["starttime"].Value;
-                    TimeSpan endTimeSpan = (TimeSpan)row.Cells["Endtime"].Value;
-                    TimeSpan starttime = startTimeSpan;
-                    TimeSpan endtime = endTimeSpan;
-                    Room r = Room.findroom(roomid);
-                    Facultycourse fc = Facultycourse.findfacultycourse(facultycoursid);
-                    CourseSechdule cs = new CourseSechdule(sechduleid, facultycoursid, roomid, fc, r, day, starttime, endtime);
-                    if (!CourseSechdule.updateSechdule(cs))
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        MessageBox.Show("Either the room or faculty is not free or course has already been sechduled or the course is being sechduled for more than its contact hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        int sechduleid = Convert.ToInt32(row.Cells["Sechduleid"].Value);
+                        int facultycoursid = Convert.ToInt32(row.Cells["facultycourseid"].Value);
+                        int roomid = Convert.ToInt32(row.Cells["roomid"].Value);
+                        string day = row.Cells["day"].Value.ToString();
+                        Room r = Room.findroom(roomid);
+                        Facultycourse fc = Facultycourse.findfacultycourse(facultycoursid);
+                        if(CourseSechdule.timespan(row.Cells["starttime"].Value.ToString(), row.Cells["Endtime"].Value.ToString()))
+                        {
+                            TimeSpan startTimeSpan = (TimeSpan)row.Cells["starttime"].Value;
+                            TimeSpan endTimeSpan = (TimeSpan)row.Cells["Endtime"].Value;
+                            TimeSpan starttime = startTimeSpan;
+                            TimeSpan endtime = endTimeSpan;
+                            CourseSechdule cs = new CourseSechdule(sechduleid, facultycoursid, roomid, fc, r, day, starttime, endtime);
+                            if (!CourseSechdule.updateSechdule(cs))
+                            {
+                                MessageBox.Show("Either the room or faculty is not free or course has already been sechduled or the course is being sechduled for more than its contact hours", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong format of time added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             loadDatagrid();
         }

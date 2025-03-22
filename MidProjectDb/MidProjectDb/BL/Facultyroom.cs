@@ -98,5 +98,10 @@ namespace MidProjectDb.BL
         {
             facultyroomDLobj.DeleteBySemester(id);
         }
+        public static List<Facultyroom> getData()
+        {
+            List<Facultyroom> facultyrooms = facultyroomDLobj.GetData();
+            return facultyrooms;
+        }
     }
 }

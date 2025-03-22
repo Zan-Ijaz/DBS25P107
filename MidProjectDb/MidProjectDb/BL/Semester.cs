@@ -102,5 +102,10 @@ namespace MidProjectDb.BL
             }
             return null;
         }
+        public static List<Semester> getList()
+        {
+            List<Semester> sems = semsters.GetData();
+            return sems;
+        }
     }
 }

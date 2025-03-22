@@ -38,11 +38,11 @@ namespace MidProjectDb.UI
 
         private void Allocation_btn_Click(object sender, EventArgs e)
         {
-            //ResourseAllocation resourseAllocation = new ResourseAllocation();
-            //resourseAllocation.Show();
-            //resourseAllocation.Size = this.Size;
-            //resourseAllocation.Location = this.Location;
-            //this.Close();
+            SechdulingCourse2 sechduling = new SechdulingCourse2();
+            sechduling.Show();
+            sechduling.Size = this.Size;
+            sechduling.Location = this.Location;
+            this.Close();
         }
 
         private void logout_btn_Click(object sender, EventArgs e)
@@ -61,6 +61,15 @@ namespace MidProjectDb.UI
             Reports.Size = this.Size;
             Reports.Location = this.Location;
             Reports.Show();
+            this.Close();
+        }
+
+        private void RoomAllocation_btn_Click(object sender, EventArgs e)
+        {
+            ResourseAllocation resourseAllocation = new ResourseAllocation();
+            resourseAllocation.Show();
+            resourseAllocation.Size = this.Size;
+            resourseAllocation.Location = this.Location;
             this.Close();
         }
     }

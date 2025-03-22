@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Allocation_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Approvereq_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Assignworkload_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Department_lbl = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.RoomAllocation_btn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.RoomAllocation_btn);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.logout_btn);
             this.panel1.Controls.Add(this.Allocation_btn);
@@ -54,6 +56,24 @@
             this.panel1.Size = new System.Drawing.Size(1315, 586);
             this.panel1.TabIndex = 0;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(419, 445);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
+            this.guna2Button1.TabIndex = 10;
+            this.guna2Button1.Text = "Reports";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // logout_btn
             // 
             this.logout_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -65,7 +85,7 @@
             this.logout_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.logout_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(419, 459);
+            this.logout_btn.Location = new System.Drawing.Point(419, 516);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(496, 45);
             this.logout_btn.TabIndex = 9;
@@ -83,11 +103,11 @@
             this.Allocation_btn.FillColor = System.Drawing.Color.MidnightBlue;
             this.Allocation_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Allocation_btn.ForeColor = System.Drawing.Color.White;
-            this.Allocation_btn.Location = new System.Drawing.Point(419, 334);
+            this.Allocation_btn.Location = new System.Drawing.Point(419, 322);
             this.Allocation_btn.Name = "Allocation_btn";
             this.Allocation_btn.Size = new System.Drawing.Size(496, 45);
             this.Allocation_btn.TabIndex = 8;
-            this.Allocation_btn.Text = "Manage Resourse Allocation";
+            this.Allocation_btn.Text = "Sechdule Courses";
             this.Allocation_btn.Click += new System.EventHandler(this.Allocation_btn_Click);
             // 
             // Approvereq_btn
@@ -150,23 +170,23 @@
             this.Department_lbl.TabIndex = 1;
             this.Department_lbl.Text = "Department Head";
             // 
-            // guna2Button1
+            // RoomAllocation_btn
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(419, 397);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(496, 45);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "Reports";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.RoomAllocation_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RoomAllocation_btn.BorderRadius = 20;
+            this.RoomAllocation_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RoomAllocation_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RoomAllocation_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RoomAllocation_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RoomAllocation_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.RoomAllocation_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomAllocation_btn.ForeColor = System.Drawing.Color.White;
+            this.RoomAllocation_btn.Location = new System.Drawing.Point(419, 385);
+            this.RoomAllocation_btn.Name = "RoomAllocation_btn";
+            this.RoomAllocation_btn.Size = new System.Drawing.Size(496, 45);
+            this.RoomAllocation_btn.TabIndex = 11;
+            this.RoomAllocation_btn.Text = "Allocate Rooms";
+            this.RoomAllocation_btn.Click += new System.EventHandler(this.RoomAllocation_btn_Click);
             // 
             // DepartmentHead
             // 
@@ -194,5 +214,6 @@
         private Guna.UI2.WinForms.Guna2Button Allocation_btn;
         private Guna.UI2.WinForms.Guna2Button logout_btn;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button RoomAllocation_btn;
     }
 }

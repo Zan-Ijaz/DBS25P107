@@ -30,11 +30,7 @@ namespace MidProjectDb.UI
 
         private void Courseallocation_btn_Click(object sender, EventArgs e)
         {
-            SechdulingCourse2 sechduling = new SechdulingCourse2();
-            sechduling.Show();
-            sechduling.Size = this.Size;
-            sechduling.Location = this.Location;
-            this.Close();
+            
 
         }
 
