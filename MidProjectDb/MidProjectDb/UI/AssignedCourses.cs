@@ -68,7 +68,8 @@ namespace MidProjectDb.UI
             string email = dr["email"].ToString();
             Faculty f = Faculty.findFaculty(email);
             DataTable dt = CourseSechdule.report(f.FacultyId);
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"{f.Name} Course Schedule Report");
+            ReportGenerator.Instance.ExportDataTableToPDF("CourseScheduleReport", "CourseScheduleDataSet", dt);
+
         }
     }
 }

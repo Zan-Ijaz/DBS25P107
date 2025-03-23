@@ -103,7 +103,7 @@ namespace MidProjectDb.UI
                         type = dr["term"].ToString();
                         if (Utility.Utility.intValidatioin(dr["year"].ToString()))
                         {
-                            year = Convert.ToInt32(year_txtbox.Text);
+                            year = Convert.ToInt32(dr["year"]);
                         }
                         Semester s = new Semester(id,type, year);
                         Semester.update(s);

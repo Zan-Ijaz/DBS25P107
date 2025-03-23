@@ -53,7 +53,7 @@ namespace MidProjectDb.DL
         }
         public DataTable report()
         {
-            string query = $"Select c.item_name item ,Sum(fr.quantity) as \"Amount Requested\" From consumables c inner join faculty_requests fr on fr.item_id=c.consumable_id group by c.consumable_id";
+            string query = $"Select c.item_name Item ,Sum(fr.quantity) as AmountRequested From consumables c inner join faculty_requests fr on fr.item_id=c.consumable_id group by c.consumable_id";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }

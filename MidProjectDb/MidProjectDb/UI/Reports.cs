@@ -30,20 +30,30 @@ namespace MidProjectDb.UI
 
         private void Assignworkload_btn_Click(object sender, EventArgs e)
         {
-            DataTable dt = CourseSechdule.report();
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Course Schedule Report");
+            CourseReport reports = new CourseReport();
+            reports.Size = this.Size;
+            reports.Location = this.Location;
+            reports.Show();
+            this.Close();
+            
         }
 
         private void Adminduty_btn_Click(object sender, EventArgs e)
         {
-            DataTable dt = Facultyadmin.report();
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Admin Duties Report");
+            AdminDutiesReport reports = new AdminDutiesReport();
+            reports.Size = this.Size;
+            reports.Location = this.Location;
+            reports.Show();
+            this.Close();
 
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DataTable dt = Facultyproject.report();
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Project Report");
+            ProjectReport reports = new ProjectReport();
+            reports.Size = this.Size;
+            reports.Location = this.Location;
+            reports.Show();
+            this.Close();
         }
     }
 }

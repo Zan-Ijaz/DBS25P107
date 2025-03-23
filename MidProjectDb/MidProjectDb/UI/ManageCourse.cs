@@ -44,8 +44,8 @@ namespace MidProjectDb.UI
                 {
                     dataGridView1.DataSource = dt;
                     dataGridView1.Columns["course_id"].ReadOnly = true; 
-                    AddCourseTypeDropdown();
                 }
+                    AddCourseTypeDropdown();
             }
             catch (Exception ex)
             {
@@ -115,15 +115,18 @@ namespace MidProjectDb.UI
         }
         private void AddCourseTypeDropdown()
         {
-            if (dataGridView1.Columns["course_type"] != null)
+            if (dataGridView1.Columns.Contains("course_type"))
             {
-                dataGridView1.Columns["course_type"].Visible = false;
+                dataGridView1.Columns.Remove("course_type");
             }
-            DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn();
-            comboBoxColumn.DataPropertyName = "course_type";
-            comboBoxColumn.HeaderText = "course_type";
-            comboBoxColumn.Items.Add("Theory");
-            comboBoxColumn.Items.Add("Lab");
+            DataGridViewComboBoxColumn comboBoxColumn = new DataGridViewComboBoxColumn
+            {
+                DataPropertyName = "course_type",
+                HeaderText = "Course Type",
+                Name = "course_type",
+                ValueType = typeof(string),
+                DataSource = new List<string> { "Theory", "Lab" } 
+            };
             dataGridView1.Columns.Add(comboBoxColumn);
         }
 
@@ -167,7 +170,7 @@ namespace MidProjectDb.UI
                         }
                         if(title!=""&&type!=""&&credit!=-1&&contact!=-1)
                         {
-                            Course course = new Course(title, type, credit, contact);
+                            Course course = new Course(courseid,title, type, credit, contact);
                             Course.update(course);
                         }
                         loadDatagrid();

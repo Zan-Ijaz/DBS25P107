@@ -42,9 +42,6 @@
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
-    </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
@@ -159,6 +156,42 @@
     <Compile Include="DL\RoomDL.cs" />
     <Compile Include="DL\SemesterDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="Properties\DataSources\AdminDuty.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminDuty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\CourseScheduleDataSet.cs">
+      <DependentUpon>CourseScheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\CourseScheduleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseScheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\Faculty.cs">
+      <DependentUpon>Faculty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\Faculty.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Faculty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\Inventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\Project.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\RequestSummary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RequestSummary.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Addfac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +203,12 @@
     </Compile>
     <Compile Include="UI\AdminDuties.Designer.cs">
       <DependentUpon>AdminDuties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminDutiesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminDutiesReport.Designer.cs">
+      <DependentUpon>AdminDutiesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\AdministrativeStaff.cs">
       <SubType>Form</SubType>
@@ -219,11 +258,23 @@
     <Compile Include="UI\CourseAllocationfirst.Designer.cs">
       <DependentUpon>CourseAllocationfirst.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CourseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CourseReport.Designer.cs">
+      <DependentUpon>CourseReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DepartmentHead.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\DepartmentHead.Designer.cs">
       <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FacultyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FacultyReport.Designer.cs">
+      <DependentUpon>FacultyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FacultyRequest.cs">
       <SubType>Form</SubType>
@@ -249,6 +300,24 @@
     <Compile Include="BL\Lookup.cs" />
     <Compile Include="BL\Project.cs" />
     <Compile Include="BL\Room.cs" />
+    <Compile Include="UI\InventoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryReport.Designer.cs">
+      <DependentUpon>InventoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProjectReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProjectReport.Designer.cs">
+      <DependentUpon>ProjectReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RequestSummaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RequestSummaryReport.Designer.cs">
+      <DependentUpon>RequestSummaryReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Fulfulreqs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +405,12 @@
     </Compile>
     <Compile Include="Utility\PDFGenerator.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="BL\Reports\AdminDutyReport.rdlc" />
+    <EmbeddedResource Include="BL\Reports\CourseScheduleReport.rdlc" />
+    <EmbeddedResource Include="BL\Reports\FacultyReport.rdlc" />
+    <EmbeddedResource Include="BL\Reports\InventoryReport.rdlc" />
+    <EmbeddedResource Include="BL\Reports\ProjectReport.rdlc" />
+    <EmbeddedResource Include="BL\Reports\RequestSummary.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -351,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminDuties.resx">
       <DependentUpon>AdminDuties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminDutiesReport.resx">
+      <DependentUpon>AdminDutiesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdministrativeStaff.resx">
       <DependentUpon>AdministrativeStaff.cs</DependentUpon>
@@ -376,8 +454,14 @@
     <EmbeddedResource Include="UI\CourseAllocationfirst.resx">
       <DependentUpon>CourseAllocationfirst.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CourseReport.resx">
+      <DependentUpon>CourseReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DepartmentHead.resx">
       <DependentUpon>DepartmentHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FacultyReport.resx">
+      <DependentUpon>FacultyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FacultyRequest.resx">
       <DependentUpon>FacultyRequest.cs</DependentUpon>
@@ -391,14 +475,23 @@
     <EmbeddedResource Include="UI\Fulfulreqs.resx">
       <DependentUpon>Fulfulreqs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryReport.resx">
+      <DependentUpon>InventoryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ManageCourse.resx">
       <DependentUpon>ManageCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ManageProducts.resx">
       <DependentUpon>ManageProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProjectReport.resx">
+      <DependentUpon>ProjectReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RequestSummaryReport.resx">
+      <DependentUpon>RequestSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Requts%28Admin%29.resx">
       <DependentUpon>Requts%28Admin%29.cs</DependentUpon>
@@ -431,7 +524,73 @@
       <DependentUpon>WorkLoad.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AdminDuty.xsc">
+      <DependentUpon>AdminDuty.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\AdminDuty.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdminDuty.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\AdminDuty.xss">
+      <DependentUpon>AdminDuty.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CourseScheduleDataSet.xsc">
+      <DependentUpon>CourseScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CourseScheduleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseScheduleDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\CourseScheduleDataSet.xss">
+      <DependentUpon>CourseScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Faculty.xsc">
+      <DependentUpon>Faculty.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Faculty.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Faculty.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\Faculty.xss">
+      <DependentUpon>Faculty.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Inventory.xsc">
+      <DependentUpon>Inventory.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Inventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\Inventory.xss">
+      <DependentUpon>Inventory.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\MidProjectDb.BL.Facultycourse1.datasource" />
+    <None Include="Properties\DataSources\Project.xsc">
+      <DependentUpon>Project.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Project.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\Project.xss">
+      <DependentUpon>Project.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\RequestSummary.xsc">
+      <DependentUpon>RequestSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\RequestSummary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RequestSummary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\RequestSummary.xss">
+      <DependentUpon>RequestSummary.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -78,7 +78,7 @@ namespace MidProjectDb.DL
         }
         public DataTable report()
         {
-            string query = "Select f.name as Faculty, p.title as Project ,concat(s.term,' ', s.year) as Semester ,fp.supervision_hours as \"Superision Hours\", p.description as Description From faculty_projects fp Natural Join faculty as f natural join projects p Natural join semesters s";
+            string query = "Select f.name as Faculty, p.title as Project ,concat(s.term,' ', s.year) as Semester ,fp.supervision_hours as SuperisionHours, p.description as Description From faculty_projects fp Natural Join faculty as f natural join projects p Natural join semesters s";
             DataTable dt = DatabaseHelper.Instance.GetData(query);
             return dt;
         }

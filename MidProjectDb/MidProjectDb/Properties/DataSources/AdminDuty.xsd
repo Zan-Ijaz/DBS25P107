@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdminDuty" targetNamespace="http://tempuri.org/AdminDuty.xsd" xmlns:mstns="http://tempuri.org/AdminDuty.xsd" xmlns="http://tempuri.org/AdminDuty.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdminDuty" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="AdminDuty" msprop:Generator_DataSetName="AdminDuty">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AdminDuties" msprop:Generator_RowEvHandlerName="AdminDutiesRowChangeEventHandler" msprop:Generator_RowDeletedName="AdminDutiesRowDeleted" msprop:Generator_RowDeletingName="AdminDutiesRowDeleting" msprop:Generator_RowEvArgName="AdminDutiesRowChangeEvent" msprop:Generator_TablePropName="AdminDuties" msprop:Generator_RowChangedName="AdminDutiesRowChanged" msprop:Generator_RowChangingName="AdminDutiesRowChanging" msprop:Generator_TableClassName="AdminDutiesDataTable" msprop:Generator_RowClassName="AdminDutiesRow" msprop:Generator_TableVarName="tableAdminDuties" msprop:Generator_UserTableName="AdminDuties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Faculty" msprop:Generator_ColumnPropNameInRow="Faculty" msprop:Generator_ColumnPropNameInTable="FacultyColumn" msprop:Generator_ColumnVarNameInTable="columnFaculty" msprop:Generator_UserColumnName="Faculty" type="xs:string" minOccurs="0" />
+              <xs:element name="Role" msprop:Generator_ColumnPropNameInRow="Role" msprop:Generator_ColumnPropNameInTable="RoleColumn" msprop:Generator_ColumnVarNameInTable="columnRole" msprop:Generator_UserColumnName="Role" type="xs:string" minOccurs="0" />
+              <xs:element name="Semester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_UserColumnName="Semester" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

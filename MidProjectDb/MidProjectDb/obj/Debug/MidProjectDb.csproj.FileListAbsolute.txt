@@ -126,6 +126,10 @@ D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Reports.res
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AssignedDuties.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.Assignedprojects.resources
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AllocatedRoom.resources
-D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\itextsharp.dll
-D:\Git\DBS25P107\MidProjectDb\MidProjectDb\bin\Debug\itextsharp.xml
 D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdminReports.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.RequestSummaryReport.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.FacultyReport.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.InventoryReport.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.CourseReport.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.AdminDutiesReport.resources
+D:\Git\DBS25P107\MidProjectDb\MidProjectDb\obj\Debug\MidProjectDb.UI.ProjectReport.resources

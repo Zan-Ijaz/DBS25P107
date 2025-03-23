@@ -29,20 +29,30 @@ namespace MidProjectDb.UI
 
         private void Inventort_btn_Click(object sender, EventArgs e)
         {
-            DataTable dt = Consumable.report();
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Inventory Report");
+            InventoryReport reports = new InventoryReport();
+            reports.Size = this.Size;
+            reports.Location = this.Location;
+            reports.Show();
+            this.Close();
         }
 
         private void req_btn_Click(object sender, EventArgs e)
         {
-            DataTable dt = FacultyReq.report();
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Requests Report");
+            RequestSummaryReport reports = new RequestSummaryReport();
+            reports.Size = this.Size;
+            reports.Location = this.Location;
+            reports.Show();
+            this.Close();
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DataTable dt = Faculty.report();
-            ReportGenerator.Instance.ExportDataTableToPDF(dt, $"Faculty Report");
+            FacultyReport reports = new FacultyReport();
+            reports.Size = this.Size;
+            reports.Location = this.Location;
+            reports.Show();
+            this.Close();
         }
     }
 }
