@@ -210,7 +210,11 @@
       </Tablix>
     </ReportItems>
     <Height>1.275in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+      </Border>
+    </Style>
   </Body>
   <Width>7.40833in</Width>
   <Page>

@@ -19,7 +19,7 @@ namespace MidProjectDb.UI
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            AdminReports reports = new AdminReports();
+            Reports reports = new Reports();
             reports.Size = this.Size;
             reports.Location = this.Location;
             reports.Show();

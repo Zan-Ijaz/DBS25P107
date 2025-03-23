@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Del_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Update_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.sem_lbl = new System.Windows.Forms.Label();
             this.sem_comboBox = new System.Windows.Forms.ComboBox();
             this.faculty_comboBox = new System.Windows.Forms.ComboBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
+            this.assign_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Back_btn = new Guna.UI2.WinForms.Guna2Button();
             this.rolefacname_txtbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Supervision_lbl = new System.Windows.Forms.Label();
+            this.role_lbl = new System.Windows.Forms.Label();
+            this.fac_lbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cutterntDuty_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Workoad_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -52,16 +52,16 @@
             // 
             this.panel1.Controls.Add(this.Del_btn);
             this.panel1.Controls.Add(this.Update_btn);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.sem_lbl);
             this.panel1.Controls.Add(this.sem_comboBox);
             this.panel1.Controls.Add(this.faculty_comboBox);
-            this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Controls.Add(this.Back_lbl);
+            this.panel1.Controls.Add(this.assign_btn);
+            this.panel1.Controls.Add(this.Back_btn);
             this.panel1.Controls.Add(this.rolefacname_txtbox);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.Supervision_lbl);
+            this.panel1.Controls.Add(this.role_lbl);
+            this.panel1.Controls.Add(this.fac_lbl);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cutterntDuty_lbl);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -105,16 +105,16 @@
             this.Update_btn.Text = "Update";
             this.Update_btn.Click += new System.EventHandler(this.Update_btn_Click);
             // 
-            // label1
+            // sem_lbl
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(461, 549);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 32);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Select Semester:";
+            this.sem_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sem_lbl.AutoSize = true;
+            this.sem_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sem_lbl.Location = new System.Drawing.Point(461, 549);
+            this.sem_lbl.Name = "sem_lbl";
+            this.sem_lbl.Size = new System.Drawing.Size(230, 32);
+            this.sem_lbl.TabIndex = 34;
+            this.sem_lbl.Text = "Select Semester:";
             // 
             // sem_comboBox
             // 
@@ -136,41 +136,41 @@
             this.faculty_comboBox.Size = new System.Drawing.Size(309, 24);
             this.faculty_comboBox.TabIndex = 32;
             // 
-            // guna2Button1
+            // assign_btn
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1067, 610);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(174, 55);
-            this.guna2Button1.TabIndex = 31;
-            this.guna2Button1.Text = "Assign";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.assign_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.assign_btn.BorderRadius = 20;
+            this.assign_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.assign_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.assign_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.assign_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.assign_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.assign_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assign_btn.ForeColor = System.Drawing.Color.White;
+            this.assign_btn.Location = new System.Drawing.Point(1067, 610);
+            this.assign_btn.Name = "assign_btn";
+            this.assign_btn.Size = new System.Drawing.Size(174, 55);
+            this.assign_btn.TabIndex = 31;
+            this.assign_btn.Text = "Assign";
+            this.assign_btn.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // Back_lbl
+            // Back_btn
             // 
-            this.Back_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Back_lbl.BorderRadius = 20;
-            this.Back_lbl.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Back_lbl.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Back_lbl.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Back_lbl.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(467, 610);
-            this.Back_lbl.Name = "Back_lbl";
-            this.Back_lbl.Size = new System.Drawing.Size(174, 55);
-            this.Back_lbl.TabIndex = 30;
-            this.Back_lbl.Text = "Back";
-            this.Back_lbl.Click += new System.EventHandler(this.Back_lbl_Click);
+            this.Back_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Back_btn.BorderRadius = 20;
+            this.Back_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Back_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Back_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Back_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Back_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Back_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back_btn.ForeColor = System.Drawing.Color.White;
+            this.Back_btn.Location = new System.Drawing.Point(467, 610);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(174, 55);
+            this.Back_btn.TabIndex = 30;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.Click += new System.EventHandler(this.Back_lbl_Click);
             // 
             // rolefacname_txtbox
             // 
@@ -181,27 +181,27 @@
             this.rolefacname_txtbox.Size = new System.Drawing.Size(309, 27);
             this.rolefacname_txtbox.TabIndex = 19;
             // 
-            // label3
+            // role_lbl
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(461, 477);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 32);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Enter Role Name:";
+            this.role_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.role_lbl.AutoSize = true;
+            this.role_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.role_lbl.Location = new System.Drawing.Point(461, 477);
+            this.role_lbl.Name = "role_lbl";
+            this.role_lbl.Size = new System.Drawing.Size(238, 32);
+            this.role_lbl.TabIndex = 18;
+            this.role_lbl.Text = "Enter Role Name:";
             // 
-            // Supervision_lbl
+            // fac_lbl
             // 
-            this.Supervision_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Supervision_lbl.AutoSize = true;
-            this.Supervision_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervision_lbl.Location = new System.Drawing.Point(461, 413);
-            this.Supervision_lbl.Name = "Supervision_lbl";
-            this.Supervision_lbl.Size = new System.Drawing.Size(201, 32);
-            this.Supervision_lbl.TabIndex = 17;
-            this.Supervision_lbl.Text = "Select Faculty:";
+            this.fac_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fac_lbl.AutoSize = true;
+            this.fac_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fac_lbl.Location = new System.Drawing.Point(461, 413);
+            this.fac_lbl.Name = "fac_lbl";
+            this.fac_lbl.Size = new System.Drawing.Size(201, 32);
+            this.fac_lbl.TabIndex = 17;
+            this.fac_lbl.Text = "Select Faculty:";
             // 
             // dataGridView1
             // 
@@ -216,16 +216,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(770, 158);
             this.dataGridView1.TabIndex = 16;
             // 
-            // label2
+            // cutterntDuty_lbl
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(461, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 32);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Current Admin Duties:";
+            this.cutterntDuty_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cutterntDuty_lbl.AutoSize = true;
+            this.cutterntDuty_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutterntDuty_lbl.Location = new System.Drawing.Point(461, 163);
+            this.cutterntDuty_lbl.Name = "cutterntDuty_lbl";
+            this.cutterntDuty_lbl.Size = new System.Drawing.Size(292, 32);
+            this.cutterntDuty_lbl.TabIndex = 15;
+            this.cutterntDuty_lbl.Text = "Current Admin Duties:";
             // 
             // panel2
             // 
@@ -275,16 +275,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Workoad_lbl;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label cutterntDuty_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label Supervision_lbl;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label fac_lbl;
+        private System.Windows.Forms.Label role_lbl;
         private System.Windows.Forms.TextBox rolefacname_txtbox;
-        private Guna.UI2.WinForms.Guna2Button Back_lbl;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button Back_btn;
+        private Guna.UI2.WinForms.Guna2Button assign_btn;
         private System.Windows.Forms.ComboBox faculty_comboBox;
         private System.Windows.Forms.ComboBox sem_comboBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sem_lbl;
         private Guna.UI2.WinForms.Guna2Button Update_btn;
         private Guna.UI2.WinForms.Guna2Button Del_btn;
     }

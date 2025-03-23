@@ -38,7 +38,7 @@
             this.romType_lbl = new System.Windows.Forms.Label();
             this.Name_lbl = new System.Windows.Forms.Label();
             this.Add_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Back_lbl = new Guna.UI2.WinForms.Guna2Button();
+            this.Back_btn = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Rooms_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.romType_lbl);
             this.panel1.Controls.Add(this.Name_lbl);
             this.panel1.Controls.Add(this.Add_btn);
-            this.panel1.Controls.Add(this.Back_lbl);
+            this.panel1.Controls.Add(this.Back_btn);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.Rooms_lbl);
             this.panel1.Controls.Add(this.panel2);
@@ -187,23 +187,23 @@
             this.Add_btn.Text = "Add";
             this.Add_btn.Click += new System.EventHandler(this.Add_btn_Click);
             // 
-            // Back_lbl
+            // Back_btn
             // 
-            this.Back_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Back_lbl.BorderRadius = 20;
-            this.Back_lbl.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Back_lbl.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Back_lbl.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Back_lbl.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Back_lbl.FillColor = System.Drawing.Color.MidnightBlue;
-            this.Back_lbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back_lbl.ForeColor = System.Drawing.Color.White;
-            this.Back_lbl.Location = new System.Drawing.Point(535, 569);
-            this.Back_lbl.Name = "Back_lbl";
-            this.Back_lbl.Size = new System.Drawing.Size(174, 55);
-            this.Back_lbl.TabIndex = 28;
-            this.Back_lbl.Text = "Back";
-            this.Back_lbl.Click += new System.EventHandler(this.Back_lbl_Click);
+            this.Back_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Back_btn.BorderRadius = 20;
+            this.Back_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Back_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Back_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Back_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Back_btn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.Back_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back_btn.ForeColor = System.Drawing.Color.White;
+            this.Back_btn.Location = new System.Drawing.Point(535, 569);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(174, 55);
+            this.Back_btn.TabIndex = 28;
+            this.Back_btn.Text = "Back";
+            this.Back_btn.Click += new System.EventHandler(this.Back_lbl_Click);
             // 
             // dataGridView1
             // 
@@ -277,7 +277,7 @@
         private System.Windows.Forms.Label Addroom_lbl;
         private System.Windows.Forms.Label Rooms_lbl;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Guna.UI2.WinForms.Guna2Button Back_lbl;
+        private Guna.UI2.WinForms.Guna2Button Back_btn;
         private Guna.UI2.WinForms.Guna2Button Add_btn;
         private System.Windows.Forms.Label capacity_lbl;
         private System.Windows.Forms.Label romType_lbl;
